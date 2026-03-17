@@ -8,19 +8,19 @@ import { cn } from '@/lib/utils'
 
 const badges = [
   {
-    words: '10,000+ happy clients',
+    words: 'Centraliza toda tu academia',
     color: 'bg-yellow-500'
   },
   {
-    words: '98% Customer Satisfaction',
+    words: 'Automatiza procesos clave',
     color: 'bg-sky-500'
   },
   {
-    words: '100,000+ Expenses Tracked',
+    words: 'Más control, menos gestión manual',
     color: 'bg-red-500'
   },
   {
-    words: '500,000+ Transactions Secured',
+    words: 'Escala sin aumentar complejidad',
     color: 'bg-green-500'
   }
 ]
