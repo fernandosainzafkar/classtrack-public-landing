@@ -80,15 +80,10 @@ const HeroSection = () => {
             }}
             className='bg-card absolute top-[3.5%] left-[19%] flex -rotate-3 items-center gap-2 rounded-lg border px-3 py-1.5 max-lg:hidden'
           >
-            <img src='/images/brand-logo/amazon.webp' alt='Amazon logo' className='size-4 dark:hidden' />
-            <img
-              src='/images/brand-logo/amazon-dark.webp'
-              alt='Amazon logo dark'
-              className='hidden size-4 dark:inline-block'
-            />
-            <span className='font-medium'>Amazon</span>
-            <span className='text-muted-foreground text-xs font-light'>Shopping</span>
-            <span className='text-destructive ml-6 text-sm'>$800</span>
+            <span className='grid size-8 place-content-center rounded-full border shadow-sm'>🎓</span>
+            <span className='font-medium'>Nueva matrícula</span>
+            <span className='text-muted-foreground text-xs'>Marketing Digital</span>
+            <span className='ml-6 text-sm text-emerald-600'>+1 alumno</span>
           </MotionPreset>
 
           {/* Floating card 2 */}
@@ -123,8 +118,8 @@ const HeroSection = () => {
               <InfoIcon className='size-5.5' />
             </span>
             <div className='flex flex-col'>
-              <span className='font-medium'>Expense limit is near 🤔</span>
-              <span className='text-muted-foreground text-xs'>1:20</span>
+              <span className='font-medium'>3 grupos completos este mes</span>
+              <span className='text-muted-foreground text-xs'>Actualizado hace 1 min</span>
             </div>
           </MotionPreset>
 
@@ -150,16 +145,15 @@ const HeroSection = () => {
             }}
             className='bg-card absolute top-[7.5%] right-[10.5%] flex rotate-3 flex-col gap-1 rounded-xl border px-3 py-4 shadow-xl max-lg:hidden'
           >
-            <span className='text-muted-foreground text-sm'>Total expenses in 2 month</span>
+            <span className='text-muted-foreground text-sm'>Matrículas este mes</span>
             <div className='flex items-center justify-between gap-2'>
-              <span className='text-4xl font-semibold'>$13k</span>
+              <span className='text-4xl font-semibold'>128</span>
               <span className='flex h-5 items-center gap-1 rounded-full bg-green-600/10 px-1 text-green-600 dark:bg-green-400/10 dark:text-green-400'>
-                <span className='text-sm'>+38%</span>
+                <span className='text-sm'>+24%</span>
                 <ChevronUpIcon className='size-4' />
               </span>
             </div>
           </MotionPreset>
-
           {/* Floating card 4 */}
           <MotionPreset
             fade
