@@ -1,27 +1,26 @@
 export const faqData = [
   {
-    question: 'What is this app, and how can it help me?',
+    question: '¿Qué es ClassTrack y para qué sirve?',
     answer:
-      'This app helps you track your daily expenses, set budgets, and manage your finances more effectively. It provides you with the tools you need to understand your spending patterns.'
+      'ClassTrack es una plataforma integral diseñada para optimizar la gestión de academias deportivas. Simplifica la administración de alumnos, pagos, entrenamientos y comunicación, permitiendo a los entrenadores centrarse en el desarrollo deportivo de sus atletas.'
   },
   {
-    question: 'Is there a free trial available?',
+    question: '¿Qué necesito para empezar a usar la plataforma?',
     answer:
-      'Yes, we offer a 14-day free trial that gives you full access to all premium features. No credit card required to start your trial, and you can cancel anytime during the trial period.'
+      'Solo necesitas un dispositivo con conexión a internet y un navegador web. La plataforma es completamente online, por lo que no requiere instalaciones complejas. Puedes acceder desde tu computadora, tablet o smartphone en cualquier momento y lugar.'
   },
   {
-    question: 'Which payment methods do you accept?',
+    question: '¿Puedo importar mis datos actuales?',
     answer:
-      'We accept all major credit cards (Visa, MasterCard, American Express), PayPal, and bank transfers. All payments are processed securely through our encrypted payment gateway.'
+      'Sí, puedes importar tus datos actuales desde otras plataformas o archivos CSV. La plataforma está diseñada para facilitar la migración de datos, permitiéndote comenzar a usarla sin perder información valiosa.'
   },
   {
-    question: 'How does the app keep my financial data secure?',
+    question: '¿Cuanto tiempo lleva la implementación?',
     answer:
-      'We use bank-level 256-bit SSL encryption to protect your data. Your financial information is stored on secure servers and we never share your personal data with third parties without your explicit consent.'
+      'La implementación de la plataforma es rápida y sencilla. Puedes comenzar a usarla en cuestión de minutos, y nuestro equipo de soporte está disponible para ayudarte en todo el proceso.'
   },
   {
-    question: 'I need help with the app. How can I contact support?',
-    answer:
-      'You can reach our support team 24/7 through live chat, email at support@example.com, or by submitting a ticket through the app. We typically respond within 2-4 hours during business days.'
+    question: '¿Hay permanencia o compromiso mínimo?',
+    answer: 'No, puedes darte de baja cuando quieras'
   }
 ]

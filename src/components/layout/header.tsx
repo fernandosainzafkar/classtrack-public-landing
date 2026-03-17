@@ -7,7 +7,6 @@ import Link from 'next/link'
 import { PrimarySwipeButton } from '@/components/ui/swipe-button'
 import type { Navigation } from '@/components/blocks/header-navigation'
 
-
 import { HeaderNavigation, HeaderNavigationSmallScreen } from '@/components/blocks/header-navigation'
 
 import { cn } from '@/lib/utils'
@@ -55,16 +54,15 @@ const Header = ({ navigationData, className }: HeaderProps) => {
 
         {/* Actions */}
         <div className='flex items-center gap-3'>
-
           {/* Get started Button */}
           <PrimarySwipeButton className='rounded-full max-lg:hidden' asChild>
-            <Link href='#'>Get started</Link>
+            <Link href='#'>Empieza ahora</Link>
           </PrimarySwipeButton>
 
           {/* Navigation for small screens */}
           <div className='flex gap-3 lg:hidden'>
             <PrimarySwipeButton className='rounded-full max-sm:hidden' asChild>
-              <Link href='#'>Get started</Link>
+              <Link href='#'>Empieza ahora</Link>
             </PrimarySwipeButton>
 
             <HeaderNavigationSmallScreen navigationData={navigationData} />
