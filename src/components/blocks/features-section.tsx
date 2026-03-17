@@ -102,7 +102,7 @@ const Features = ({ features }: { features: FeatureItem[] }) => {
             delay={0.2}
             transition={{ duration: 0.7 }}
           >
-            Todo lo que necesitas para crecer sin fricciones.
+            Todo lo que necesitas para crecer sin fricciones
           </MotionPreset>
 
           <MotionPreset
