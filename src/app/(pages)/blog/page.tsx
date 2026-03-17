@@ -92,7 +92,7 @@ const BlogPage = async () => {
             <CardContent className='grid grid-cols-1 gap-16 px-6 max-lg:text-center md:px-20 lg:grid-cols-2'>
               <div className='col-span-1 flex-1 space-y-4 md:pb-16'>
                 <Badge className='border-primary text-primary px-3 py-1 text-sm [&>svg]:size-6' variant='outline'>
-                  <LogoVector className='animation-duration-[2s] size-6 animate-spin' /> Sign in
+                  Sign in
                 </Badge>
                 <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>
                   Smarter Money Decisions Start With Better Insights

@@ -31,7 +31,7 @@ const FAQ = ({ faqItems }: FAQComponentProps) => {
             <div className='mb-12 space-y-4 sm:mb-16 lg:mb-24'>
               <MotionPreset fade slide={{ direction: 'down', offset: 50 }} transition={{ duration: 0.7 }}>
                 <Badge className='border-primary text-primary px-3 py-1 text-sm [&>svg]:size-6' variant='outline'>
-                  <LogoVector className='animation-duration-[2s] size-6 animate-spin' /> FAQ
+                  FAQ
                 </Badge>
               </MotionPreset>
               <MotionPreset

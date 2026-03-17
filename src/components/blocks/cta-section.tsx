@@ -14,7 +14,7 @@ const CTASection = () => {
             <CardContent className='flex gap-16 px-6 max-xl:flex-col max-lg:text-center md:px-20'>
               <div className='flex-1 space-y-4 md:pb-16'>
                 <Badge className='border-primary text-primary px-3 py-1 text-sm [&>svg]:size-6' variant='outline'>
-                  <LogoVector className='animation-duration-[2s] size-6 animate-spin' /> Try now
+                  Try now
                 </Badge>
                 <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>
                   Ready to Take Control of Your Finances?

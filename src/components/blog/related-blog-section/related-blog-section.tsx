@@ -16,7 +16,7 @@ const RelatedBlogSection = ({ posts }: { posts: PostMetadata[] }) => {
         {/* Header */}
         <div className='space-y-4'>
           <Badge className='border-primary text-primary px-3 py-1 text-sm [&>svg]:size-6' variant='outline'>
-            <LogoVector className='animation-duration-[2s] size-6 animate-spin' /> TRENDING
+            TRENDING
           </Badge>
           <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>Related Post</h2>
           <p className='text-muted-foreground text-base md:text-xl'>

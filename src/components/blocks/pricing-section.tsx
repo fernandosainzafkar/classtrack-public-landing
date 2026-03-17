@@ -1,6 +1,5 @@
 'use client'
 
-
 import { CheckIcon, FlameIcon } from 'lucide-react'
 
 import LogoVector from '@/assets/svg/logo-vector'
@@ -21,7 +20,6 @@ type PricingProps = {
 }
 
 const PricingSection = ({ plans }: PricingProps) => {
-
   return (
     <section id='pricing' className='py-8 sm:py-16 lg:py-24'>
       <div className='mx-auto max-w-7xl space-y-14 px-4 sm:px-6 lg:px-8'>
@@ -29,7 +27,7 @@ const PricingSection = ({ plans }: PricingProps) => {
         <div className='mb-12 space-y-4 text-center'>
           <MotionPreset fade slide={{ direction: 'down', offset: 50 }} transition={{ duration: 0.7 }}>
             <Badge className='border-primary text-primary px-3 py-1 text-sm uppercase [&>svg]:size-6' variant='outline'>
-              <LogoVector className='animation-duration-[2s] size-6 animate-spin' /> Pricing
+              Pricing
             </Badge>
           </MotionPreset>
 
@@ -55,7 +53,6 @@ const PricingSection = ({ plans }: PricingProps) => {
             Precios flexibles diseñados para adaptarse a tu estilo de vida. Solo paga por las funciones que necesitas.
           </MotionPreset>
         </div>
-
 
         {/* Pricing Cards */}
         <div className='flex flex-col items-center justify-center gap-0 space-y-8 lg:flex-row'>
@@ -118,11 +115,7 @@ const PricingSection = ({ plans }: PricingProps) => {
                       {/* Price */}
                       <div className='flex items-baseline gap-1.5'>
                         <span className='text-xl font-semibold md:text-2xl lg:text-4xl'>
-                          <NumberTicker
-                            value={plan.price.monthly}
-                            decimalPlaces={2}
-                          />{' '}
-                          €
+                          <NumberTicker value={plan.price.monthly} decimalPlaces={2} /> €
                         </span>
                         <span
                           className={cn('text-muted-foreground', {

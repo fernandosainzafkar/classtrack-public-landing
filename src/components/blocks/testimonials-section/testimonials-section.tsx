@@ -25,7 +25,7 @@ const TestimonialsComponent = ({ testimonials }: TestimonialsComponentProps) => 
       {/* Header */}
       <div className='mb-12 space-y-4 text-center sm:mb-16 lg:mb-24'>
         <Badge className='border-primary text-primary px-3 py-1 text-sm uppercase [&>svg]:size-6' variant='outline'>
-          <LogoVector className='animation-duration-[2s] size-6 animate-spin' /> Testimonios
+          Testimonios
         </Badge>
 
         <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>Más de 1000 alumnos ya utilizan ClassTrack</h2>

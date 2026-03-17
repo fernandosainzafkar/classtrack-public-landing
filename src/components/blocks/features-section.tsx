@@ -89,8 +89,7 @@ const Features = ({ features }: { features: FeatureItem[] }) => {
         <div className='mb-12 space-y-4 text-center'>
           <MotionPreset fade slide={{ direction: 'down', offset: 50 }} transition={{ duration: 0.7 }}>
             <Badge className='border-primary text-primary px-3 py-1 text-sm uppercase [&>svg]:size-6' variant='outline'>
-              {/* <LogoVector className='animation-duration-[2s] size-6 animate-spin' /> */}
-              FUNCIONALIDADES PERRO
+              FUNCIONALIDADES
             </Badge>
           </MotionPreset>
 
@@ -122,7 +121,7 @@ const Features = ({ features }: { features: FeatureItem[] }) => {
           <div ref={containerRef} className='relative'>
             {/* Sticky Laptop */}
             <div className='pointer-events-none sticky top-4 z-10 flex w-full justify-center px-4 md:top-0 md:h-screen md:items-center md:justify-end lg:justify-center'>
-              <div className='relative flex w-[85%] sm:w-[90%] md:w-full max-w-md flex-col items-center md:mr-8 lg:mr-0 lg:max-w-[480px] xl:max-w-lg'>
+              <div className='relative flex w-[85%] max-w-md flex-col items-center sm:w-[90%] md:mr-8 md:w-full lg:mr-0 lg:max-w-[480px] xl:max-w-lg'>
                 {/* Laptop Top / Screen Border */}
                 <div className='relative w-full rounded-t-xl border-4 border-b-0 border-zinc-800 bg-zinc-900 p-1 sm:rounded-t-3xl sm:border-6 sm:p-1.5'>
                   {/* Camera */}

@@ -27,7 +27,7 @@ const BenefitsSection = ({
         <div className='mb-12 space-y-4 text-center sm:mb-16 lg:mb-24'>
           <MotionPreset fade slide={{ direction: 'down', offset: 50 }} transition={{ duration: 0.7 }}>
             <Badge className='border-primary text-primary px-3 py-1 text-sm uppercase [&>svg]:size-6' variant='outline'>
-              <LogoVector className='animation-duration-[2s] size-6 animate-spin' /> Beneficios
+              Beneficios
             </Badge>
           </MotionPreset>
 
