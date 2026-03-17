@@ -5,20 +5,20 @@ import { Badge } from '@/components/ui/badge'
 
 import { MotionPreset } from '@/components/ui/motion-preset'
 
-import AccountingOfTransaction from '@/components/blocks/benefits-section/accounting-of-transaction'
-import type { TransactionRow } from '@/components/blocks/benefits-section/accounting-of-transaction'
+import AcademyOperations from '@/components/blocks/benefits-section/accounting-of-transaction'
+import type { ActivityRow } from '@/components/blocks/benefits-section/accounting-of-transaction'
 import ExchangeCurrencyCard from '@/components/blocks/benefits-section/exchange-currency-card'
-import UpdatedBalanceCard from '@/components/blocks/benefits-section/updated-balanced-card'
-import type { TransactionItem } from '@/components/blocks/benefits-section/updated-balanced-card'
+import AcademyGrowthCard from '@/components/blocks/benefits-section/updated-balanced-card'
+import type { AcademyEventItem } from '@/components/blocks/benefits-section/updated-balanced-card'
 
 const BenefitsSection = ({
-  accountTransactions,
-  transactions,
-  spendingCategories
+  academyActivities,
+  academyEvents,
+  academyModules
 }: {
-  accountTransactions: TransactionRow[]
-  transactions: TransactionItem[]
-  spendingCategories: string[]
+  academyActivities: ActivityRow[]
+  academyEvents: AcademyEventItem[]
+  academyModules: string[]
 }) => {
   return (
     <section id='benefits' className='py-8 sm:py-16 lg:py-24'>
@@ -60,7 +60,7 @@ const BenefitsSection = ({
           <div className='grid grid-cols-1 gap-6 md:grid-cols-2'>
             {/* Card 1 */}
             <MotionPreset fade blur slide={{ direction: 'down', offset: 15 }} transition={{ duration: 0.5 }}>
-              <UpdatedBalanceCard balance={21432} transactions={transactions} categories={spendingCategories} />
+              <AcademyGrowthCard totalStudents={1248} events={academyEvents} modules={academyModules} />
             </MotionPreset>
 
             {/* Card 2 */}
@@ -71,7 +71,7 @@ const BenefitsSection = ({
               delay={0.6}
               transition={{ duration: 0.5 }}
             >
-              <AccountingOfTransaction transactions={accountTransactions} />
+              <AcademyOperations activities={academyActivities} />
             </MotionPreset>
           </div>
 

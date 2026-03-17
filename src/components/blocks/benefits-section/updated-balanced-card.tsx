@@ -13,24 +13,24 @@ import { Orbiting } from '@/components/ui/orbiting'
 
 import { cn } from '@/lib/utils'
 
-export type TransactionItem = {
+export type AcademyEventItem = {
   id: string
   amount: number
-  type: 'debit' | 'credit'
+  type: 'decrease' | 'increase'
 }
 
-const UpdatedBalanceCard = ({
-  balance,
-  transactions,
-  categories
+const AcademyGrowthCard = ({
+  totalStudents,
+  events,
+  modules
 }: {
-  balance: number
-  transactions: TransactionItem[]
-  categories: string[]
+  totalStudents: number
+  events: AcademyEventItem[]
+  modules: string[]
 }) => {
   const [apiLeft, setApiLeft] = useState<CarouselApi>()
   const [apiRight, setApiRight] = useState<CarouselApi>()
-  const [currentBalance, setCurrentBalance] = useState(balance)
+  const [currentTotal, setCurrentTotal] = useState(totalStudents)
   const [current, setCurrent] = useState(0)
   const [isFirstRender, setIsFirstRender] = useState(true)
 
@@ -65,13 +65,13 @@ const UpdatedBalanceCard = ({
       return
     }
 
-    setCurrentBalance(prev =>
-      transactions[current % transactions.length].type === 'credit'
-        ? prev + transactions[current % transactions.length].amount
-        : prev - transactions[current % transactions.length].amount
+    setCurrentTotal(prev =>
+      events[current % events.length].type === 'increase'
+        ? prev + events[current % events.length].amount
+        : prev - events[current % events.length].amount
     )
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [current, transactions])
+  }, [current, events])
 
   return (
     <Card className='group/palette bg-muted h-full border-0 shadow-none lg:col-span-2'>
@@ -88,6 +88,7 @@ const UpdatedBalanceCard = ({
             <div className='bg-border absolute inset-x-0 top-1/2 h-0.5 -translate-y-1/2' />
             <div className='from-muted pointer-events-none absolute top-1/2 left-0 h-1 w-[calc(50%-72px)] -translate-y-1/2 bg-linear-to-r to-transparent lg:w-[calc(50%-80px)]' />
             <div className='from-muted pointer-events-none absolute top-1/2 right-0 h-1 w-[calc(50%-72px)] -translate-y-1/2 bg-linear-to-l to-transparent lg:w-[calc(50%-80px)]' />
+
             <Carousel
               setApi={setApiLeft}
               opts={{
@@ -98,23 +99,24 @@ const UpdatedBalanceCard = ({
               className='w-[calc(50%-72px)] lg:w-[calc(50%-80px)]'
             >
               <CarouselContent className='ml-4 py-4'>
-                {transactions.map(transaction => (
-                  <CarouselItem key={transaction.id} className='pr-4 pl-0 sm:max-md:basis-1/2 xl:basis-1/2'>
+                {events.map(event => (
+                  <CarouselItem key={event.id} className='pr-4 pl-0 sm:max-md:basis-1/2 xl:basis-1/2'>
                     <span
                       className={cn(
                         'bg-card flex items-center justify-center gap-1 rounded-full px-3 py-2 text-sm shadow-xl',
                         {
-                          'text-destructive': transaction.type === 'debit',
-                          'text-green-600 dark:text-green-400': transaction.type === 'credit'
+                          'text-destructive': event.type === 'decrease',
+                          'text-green-600 dark:text-green-400': event.type === 'increase'
                         }
                       )}
                     >
-                      {transaction.type === 'debit' ? (
+                      {event.type === 'decrease' ? (
                         <MoveDownLeftIcon className='size-3.5 shrink-0' />
                       ) : (
                         <MoveUpRightIcon className='size-3.5 shrink-0' />
                       )}
-                      ${transaction.amount}
+                      {event.type === 'increase' ? '+' : '-'}
+                      {event.amount} alumnos
                     </span>
                   </CarouselItem>
                 ))}
@@ -122,9 +124,9 @@ const UpdatedBalanceCard = ({
             </Carousel>
 
             <div className='bg-background relative flex w-36 shrink-0 flex-col items-center rounded-xl border px-4.5 py-4 lg:w-40'>
-              <span className='text-muted-foreground text-sm lg:text-base'>Current balance</span>
+              <span className='text-muted-foreground text-sm lg:text-base'>Alumnos activos</span>
               <span className='text-xl font-semibold lg:text-2xl'>
-                $<NumberTicker value={currentBalance} delay={0.2} />
+                <NumberTicker value={currentTotal} delay={0.2} />
               </span>
               <span className='bg-border absolute top-1/2 left-0 -z-1 size-1.5 -translate-x-1 -translate-y-1/2 rounded-full' />
               <span className='bg-border absolute top-1/2 right-0 -z-1 size-1.5 translate-x-1 -translate-y-1/2 rounded-full' />
@@ -141,23 +143,24 @@ const UpdatedBalanceCard = ({
               className='w-[calc(50%-72px)] lg:w-[calc(50%-80px)]'
             >
               <CarouselContent className='mr-4 ml-0 py-4'>
-                {transactions.map(transaction => (
-                  <CarouselItem key={transaction.id} className='sm:max-md:basis-1/2 xl:basis-1/2'>
+                {events.map(event => (
+                  <CarouselItem key={event.id} className='sm:max-md:basis-1/2 xl:basis-1/2'>
                     <span
                       className={cn(
                         'bg-card flex items-center justify-center gap-1 rounded-full px-3 py-2 text-sm shadow-xl',
                         {
-                          'text-destructive': transaction.type === 'debit',
-                          'text-green-600 dark:text-green-400': transaction.type === 'credit'
+                          'text-destructive': event.type === 'decrease',
+                          'text-green-600 dark:text-green-400': event.type === 'increase'
                         }
                       )}
                     >
-                      {transaction.type === 'debit' ? (
+                      {event.type === 'decrease' ? (
                         <MoveDownLeftIcon className='size-3.5 shrink-0' />
                       ) : (
                         <MoveUpRightIcon className='size-3.5 shrink-0' />
                       )}
-                      ${transaction.amount}
+                      {event.type === 'increase' ? '+' : '-'}
+                      {event.amount} alumnos
                     </span>
                   </CarouselItem>
                 ))}
@@ -183,24 +186,25 @@ const UpdatedBalanceCard = ({
             <div className='bg-border absolute right-7.5 bottom-0 h-20 w-0.5 -translate-y-24'>
               <span className='bg-border absolute bottom-1 left-1/2 size-1.5 -translate-x-1/2 translate-y-full rounded-full' />
             </div>
+
             <div className='bg-card relative z-1 grid size-30 place-content-center rounded-full'>
               <img
                 src='/images/happy.webp'
-                alt='Happy Face'
+                alt='Crecimiento positivo'
                 className={cn(
                   'absolute top-1/2 left-1/2 size-22.5 -translate-x-1/2 -translate-y-1/2 transition-all duration-350 ease-in-out',
                   {
-                    'rotate-y-180 opacity-0!': transactions[current % transactions.length].type === 'debit'
+                    'rotate-y-180 opacity-0!': events[current % events.length].type === 'decrease'
                   }
                 )}
               />
               <img
                 src='/images/sad.webp'
-                alt='Sad Face'
+                alt='Alerta operativa'
                 className={cn(
                   'absolute top-1/2 left-1/2 size-22.5 -translate-x-1/2 -translate-y-1/2 transition-all duration-350 ease-in-out',
                   {
-                    'rotate-y-180 opacity-0!': transactions[current % transactions.length].type === 'credit'
+                    'rotate-y-180 opacity-0!': events[current % events.length].type === 'increase'
                   }
                 )}
               />
@@ -212,14 +216,14 @@ const UpdatedBalanceCard = ({
           <div className='relative flex size-200 flex-col items-center justify-center'>
             <Orbiting duration={54} radius={400} path={false} className='animate-orbiting'>
               {Array(3)
-                .fill(categories)
+                .fill(modules)
                 .flat()
-                .map((category, index) => (
+                .map((module, index) => (
                   <span
                     key={index}
                     className='bg-card text-muted-foreground flex min-w-25 justify-center rounded-full px-3 py-2 text-xs font-light shadow-xl'
                   >
-                    {category}
+                    {module}
                   </span>
                 ))}
             </Orbiting>
@@ -238,8 +242,9 @@ const UpdatedBalanceCard = ({
           transition={{ duration: 0.5 }}
           className='text-xl font-semibold md:text-center md:text-2xl'
         >
-          Know exactly where your money goes
+          Sigue el pulso de tu academia en tiempo real
         </MotionPreset>
+
         <MotionPreset
           component='p'
           fade
@@ -249,12 +254,12 @@ const UpdatedBalanceCard = ({
           transition={{ duration: 0.5 }}
           className='text-muted-foreground text-base md:text-center md:text-lg'
         >
-          Categorize your expenses and monitor your spending habits to make smarter decisions and stay within your
-          budget.
+          Visualiza la evolución de alumnos, matrículas y áreas clave de tu operación para tomar decisiones más rápidas
+          y gestionar el crecimiento con más control.
         </MotionPreset>
       </CardContent>
     </Card>
   )
 }
 
-export default UpdatedBalanceCard
+export default AcademyGrowthCard

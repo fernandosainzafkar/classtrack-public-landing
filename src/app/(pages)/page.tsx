@@ -8,7 +8,7 @@ import FAQ from '@/components/blocks/faq-section'
 import CTA from '@/components/blocks/cta-section'
 
 import { FeaturesData } from '@/assets/data/features-section'
-import { accountTransactions, spendingCategories, transactions } from '@/assets/data/benefits-section'
+import { academyActivities, academyModules, academyEvents } from '@/assets/data/benefits-section'
 import { testimonialsData } from '@/assets/data/testimonials'
 import { pricingPlans } from '@/assets/data/pricing-section'
 import { faqData } from '@/assets/data/faq-section'
@@ -35,9 +35,9 @@ const Home = () => {
       <HeroSection />
       <Features features={FeaturesData} />
       <Benefits
-        accountTransactions={accountTransactions}
-        transactions={transactions}
-        spendingCategories={spendingCategories}
+        academyActivities={academyActivities}
+        academyEvents={academyEvents}
+        academyModules={academyModules}
       />
       <Quote />
       <Testimonials testimonials={testimonialsData} />
