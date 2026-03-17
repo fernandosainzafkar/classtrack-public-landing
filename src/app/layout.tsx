@@ -27,8 +27,8 @@ const robotoMono = Roboto_Mono({
 
 export const metadata: Metadata = {
   title: {
-    template: 'Demo: %s - Swipe | Shadcn Studio',
-    default: 'Demo: Swipe - Mobile App Landing page | Shadcn Studio'
+    template: '%s - ClassTrack | Gestión integral de academias',
+    default: 'ClassTrack - Gestión integral de academias'
   },
   description:
     'Track expenses, manage budgets, and achieve your financial goals with Swipe - the app that puts you in control of your money.',
