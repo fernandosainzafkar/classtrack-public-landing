@@ -41,7 +41,7 @@ const Header = ({ navigationData, className }: HeaderProps) => {
       <div
         className={cn(
           'border-background relative flex h-14 w-full max-w-7xl items-center justify-between gap-4 rounded-full border px-4 transition-all duration-700 before:absolute before:inset-0 before:-z-1 before:rounded-full before:bg-linear-to-b before:from-white/50 before:to-white before:backdrop-blur-[6px] dark:before:from-black/50 dark:before:to-black',
-          { 'max-w-4xl': isScrolled, 'sm:px-6 lg:px-8': !isScrolled }
+          { 'max-w-5xl': isScrolled, 'sm:px-6 lg:px-8': !isScrolled }
         )}
       >
         {/* Logo */}
