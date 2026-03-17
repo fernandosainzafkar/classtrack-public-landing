@@ -47,7 +47,7 @@ const HeroSection = () => {
           >
             <PrimarySwipeButton size='lg' className='group grow' asChild>
               <Link href='#'>
-                Empieza ahora
+                Solicitar demo
                 <ChevronRightIcon className='transition-transform duration-300 group-hover:translate-x-1' />
               </Link>
             </PrimarySwipeButton>

@@ -114,16 +114,22 @@ const PricingSection = ({ plans }: PricingProps) => {
 
                       {/* Price */}
                       <div className='flex items-baseline gap-1.5'>
-                        <span className='text-xl font-semibold md:text-2xl lg:text-4xl'>
-                          <NumberTicker value={plan.price.monthly} decimalPlaces={2} /> €
-                        </span>
-                        <span
-                          className={cn('text-muted-foreground', {
-                            'text-foreground': plan.isHighlighted
-                          })}
-                        >
-                          /mes + IVA
-                        </span>
+                        {plan.customPriceLabel ? (
+                          <span className='text-xl font-semibold md:text-2xl lg:text-3xl'>{plan.customPriceLabel}</span>
+                        ) : (
+                          <>
+                            <span className='text-xl font-semibold md:text-2xl lg:text-4xl'>
+                              {plan.price !== undefined && <NumberTicker value={plan.price} decimalPlaces={2} />} €
+                            </span>
+                            <span
+                              className={cn('text-muted-foreground', {
+                                'text-foreground': plan.isHighlighted
+                              })}
+                            >
+                              {plan.priceSuffix}
+                            </span>
+                          </>
+                        )}
                       </div>
                     </div>
 
@@ -144,12 +150,12 @@ const PricingSection = ({ plans }: PricingProps) => {
 
                     {!plan.isHighlighted && (
                       <SecondarySwipeButton size='lg' className='rounded-full'>
-                        See pricing
+                        Solicitar demo
                       </SecondarySwipeButton>
                     )}
                     {plan.isHighlighted && (
                       <PrimarySwipeButton size='lg' className='rounded-full'>
-                        See pricing
+                        Solicitar demo
                       </PrimarySwipeButton>
                     )}
                   </CardContent>

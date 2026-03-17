@@ -42,12 +42,12 @@ const FAQ = ({ faqItems }: FAQComponentProps) => {
                 delay={0.2}
                 transition={{ duration: 0.7 }}
               >
-                Have more questions?
+                ¿Tienes más preguntas?
               </MotionPreset>
               <MotionPreset fade slide={{ direction: 'down', offset: 50 }} delay={0.4} transition={{ duration: 0.7 }}>
                 <p className='text-muted-foreground text-base leading-relaxed'>
-                  Our app is designed to make managing your finances easy and stress-free. With intuitive features, you
-                  can track your spending and savings effortlessly.
+                  Si no encuentras la respuesta que buscas, nuestro equipo de soporte está listo para ayudarte en lo que
+                  necesites.
                 </p>
               </MotionPreset>
             </div>
@@ -55,16 +55,15 @@ const FAQ = ({ faqItems }: FAQComponentProps) => {
               <Card>
                 <CardContent className='space-y-6'>
                   <div className='space-y-2.5'>
-                    <h3 className='text-xl font-medium md:text-2xl'>Can&apos;t find answers?</h3>
+                    <h3 className='text-xl font-medium md:text-2xl'>¿No encuentras lo que buscas?</h3>
                     <p className='text-muted-foreground leading-relaxed'>
-                      We&apos;re here to help you out whenever you need! Get in touch with our dedicated support team
-                      for personalized assistance anytime.
+                      Nuestro equipo de soporte está listo para ayudarte en lo que necesites.
                     </p>
                   </div>
 
                   <PrimarySwipeButton size='lg' asChild className='group has-[>svg]:px-6'>
                     <Link href='#'>
-                      Contact us
+                      Contactanos
                       <ArrowRightIcon className='size-5 rotate-310 transition-transform duration-200' />
                     </Link>
                   </PrimarySwipeButton>

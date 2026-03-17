@@ -56,13 +56,13 @@ const Header = ({ navigationData, className }: HeaderProps) => {
         <div className='flex items-center gap-3'>
           {/* Get started Button */}
           <PrimarySwipeButton className='rounded-full max-lg:hidden' asChild>
-            <Link href='#'>Empieza ahora</Link>
+            <Link href='#'>Solicitar demo</Link>
           </PrimarySwipeButton>
 
           {/* Navigation for small screens */}
           <div className='flex gap-3 lg:hidden'>
             <PrimarySwipeButton className='rounded-full max-sm:hidden' asChild>
-              <Link href='#'>Empieza ahora</Link>
+              <Link href='#'>Solicitar demo</Link>
             </PrimarySwipeButton>
 
             <HeaderNavigationSmallScreen navigationData={navigationData} />

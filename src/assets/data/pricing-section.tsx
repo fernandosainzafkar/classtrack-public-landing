@@ -7,10 +7,9 @@ import Messages from '@/assets/svg/messages'
 export type PricingPlan = {
   name: string
   icon: ReactNode
-  price: {
-    monthly: number
-    yearly: number
-  }
+  price?: number
+  priceSuffix?: string
+  customPriceLabel?: string
   description: string
   features: string[]
   isHighlighted?: boolean
@@ -21,10 +20,8 @@ export const pricingPlans: PricingPlan[] = [
   {
     name: 'Básico',
     icon: <Users />,
-    price: {
-      monthly: 149,
-      yearly: 119
-    },
+    price: 149,
+    priceSuffix: '/mes',
     description: 'Hasta 100 alumnos.',
     features: [
       '2 usuarios administradores',
@@ -37,10 +34,8 @@ export const pricingPlans: PricingPlan[] = [
   {
     name: 'Pro',
     icon: <Astronomy />,
-    price: {
-      monthly: 10.99,
-      yearly: 9.99
-    },
+    price: 2,
+    priceSuffix: '/alumno',
     description: 'For individuals who want a fully comprehensive solution to manage every aspect of their finances.',
     features: [
       '5 usuarios administradores',
@@ -55,10 +50,7 @@ export const pricingPlans: PricingPlan[] = [
   {
     name: 'Enterprise',
     icon: <Messages />,
-    price: {
-      monthly: 15.99,
-      yearly: 14.99
-    },
+    customPriceLabel: 'Contactar con ventas',
     description: 'For those who want to go a step further with more in-depth budgeting and tracking features.',
     features: [
       'Usuarios administradores ilimitados',
