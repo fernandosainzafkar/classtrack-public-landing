@@ -6,11 +6,8 @@ import { Accordion as AccordionPrimitive } from 'radix-ui'
 
 import { Accordion, AccordionContent, AccordionItem } from '@/components/ui/accordion'
 import { Badge } from '@/components/ui/badge'
-import { PrimarySwipeButton } from '@/components/ui/swipe-button'
 import { Card, CardContent } from '@/components/ui/card'
 import { MotionPreset } from '@/components/ui/motion-preset'
-
-import LogoVector from '@/assets/svg/logo-vector'
 
 type FAQItem = {
   question: string
@@ -61,12 +58,13 @@ const FAQ = ({ faqItems }: FAQComponentProps) => {
                     </p>
                   </div>
 
-                  <PrimarySwipeButton size='lg' asChild className='group has-[>svg]:px-6'>
-                    <Link href='#'>
-                      Contactanos
-                      <ArrowRightIcon className='size-5 rotate-310 transition-transform duration-200' />
-                    </Link>
-                  </PrimarySwipeButton>
+                  <Link
+                    href='/contact'
+                    className='bg-primary text-primary-foreground inline-flex items-center gap-2 rounded-lg px-6 py-3 text-base font-medium transition-opacity hover:opacity-90'
+                  >
+                    Contáctanos
+                    <ArrowRightIcon className='size-5 rotate-310 transition-transform duration-200' />
+                  </Link>
                 </CardContent>
               </Card>
             </MotionPreset>

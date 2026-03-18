@@ -23,16 +23,16 @@ const Footer = () => {
                 <h3 className='text-foreground text-lg font-semibold'>Company</h3>
                 <div className='flex flex-col gap-3'>
                   <Link href='/#features' className='hover:text-foreground transition-colors duration-300'>
-                    Features
+                    Funcionalidades
                   </Link>
                   <Link href='/#benefits' className='hover:text-foreground transition-colors duration-300'>
-                    Benefits
+                    Beneficios
                   </Link>
                   <Link href='/#testimonials' className='hover:text-foreground transition-colors duration-300'>
-                    Testimonials
+                    Testimonios
                   </Link>
                   <Link href='/#pricing' className='hover:text-foreground transition-colors duration-300'>
-                    Pricing
+                    Precios
                   </Link>
                   <Link href='/blog' className='hover:text-foreground transition-colors duration-300'>
                     Blog
@@ -43,14 +43,14 @@ const Footer = () => {
               <div className='flex flex-col gap-5'>
                 <h3 className='text-foreground text-lg font-semibold'>Help</h3>
                 <div className='flex flex-col gap-3'>
-                  <Link href='#' className='hover:text-foreground transition-colors duration-300'>
+                  {/* <Link href='#' className='hover:text-foreground transition-colors duration-300'>
                     Customer Support
+                  </Link> */}
+                  <Link href='#' className='hover:text-foreground transition-colors duration-300'>
+                    Términos y Condiciones
                   </Link>
                   <Link href='#' className='hover:text-foreground transition-colors duration-300'>
-                    Terms & Conditions
-                  </Link>
-                  <Link href='#' className='hover:text-foreground transition-colors duration-300'>
-                    Privacy Policy
+                    Política de Privacidad
                   </Link>
                 </div>
               </div>

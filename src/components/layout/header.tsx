@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react'
 
 import Link from 'next/link'
 
-import { PrimarySwipeButton } from '@/components/ui/swipe-button'
 import type { Navigation } from '@/components/blocks/header-navigation'
 
 import { HeaderNavigation, HeaderNavigationSmallScreen } from '@/components/blocks/header-navigation'
@@ -55,15 +54,21 @@ const Header = ({ navigationData, className }: HeaderProps) => {
         {/* Actions */}
         <div className='flex items-center gap-3'>
           {/* Get started Button */}
-          <PrimarySwipeButton className='rounded-full max-lg:hidden' asChild>
-            <Link href='#'>Solicitar demo</Link>
-          </PrimarySwipeButton>
+          <Link
+            href='#'
+            className='bg-primary text-primary-foreground inline-flex items-center justify-center rounded-lg px-5 py-2 text-sm font-medium transition-opacity hover:opacity-90 max-lg:hidden'
+          >
+            Solicitar demo
+          </Link>
 
           {/* Navigation for small screens */}
           <div className='flex gap-3 lg:hidden'>
-            <PrimarySwipeButton className='rounded-full max-sm:hidden' asChild>
-              <Link href='#'>Solicitar demo</Link>
-            </PrimarySwipeButton>
+            <Link
+              href='#'
+              className='bg-primary text-primary-foreground inline-flex items-center justify-center rounded-lg px-5 py-2 text-sm font-medium transition-opacity hover:opacity-90 max-sm:hidden'
+            >
+              Solicitar demo
+            </Link>
 
             <HeaderNavigationSmallScreen navigationData={navigationData} />
           </div>

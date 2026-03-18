@@ -1,11 +1,11 @@
 'use client'
 
+import Link from 'next/link'
+
 import { CheckIcon, FlameIcon } from 'lucide-react'
 
-import LogoVector from '@/assets/svg/logo-vector'
 
 import { Badge } from '@/components/ui/badge'
-import { PrimarySwipeButton, SecondarySwipeButton } from '@/components/ui/swipe-button'
 import { Card, CardContent } from '@/components/ui/card'
 import { MotionPreset } from '@/components/ui/motion-preset'
 
@@ -149,14 +149,20 @@ const PricingSection = ({ plans }: PricingProps) => {
                     </div>
 
                     {!plan.isHighlighted && (
-                      <SecondarySwipeButton size='lg' className='rounded-full'>
+                      <Link
+                        href='/contact'
+                        className='border-border bg-background text-foreground hover:bg-accent inline-flex w-full items-center justify-center rounded-lg border px-6 py-3 text-base font-medium transition-colors'
+                      >
                         Solicitar demo
-                      </SecondarySwipeButton>
+                      </Link>
                     )}
                     {plan.isHighlighted && (
-                      <PrimarySwipeButton size='lg' className='rounded-full'>
+                      <Link
+                        href='/contact'
+                        className='bg-primary text-primary-foreground inline-flex w-full items-center justify-center rounded-lg px-6 py-3 text-base font-medium transition-opacity hover:opacity-90'
+                      >
                         Solicitar demo
-                      </PrimarySwipeButton>
+                      </Link>
                     )}
                   </CardContent>
                 </Card>

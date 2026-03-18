@@ -7,7 +7,7 @@ import { MotionPreset } from '@/components/ui/motion-preset'
 
 import AcademyOperations from '@/components/blocks/benefits-section/accounting-of-transaction'
 import type { ActivityRow } from '@/components/blocks/benefits-section/accounting-of-transaction'
-import ExchangeCurrencyCard from '@/components/blocks/benefits-section/exchange-currency-card'
+import AcademyIntegrationsCard from '@/components/blocks/benefits-section/academy-integrations-card'
 import AcademyGrowthCard from '@/components/blocks/benefits-section/updated-balanced-card'
 import type { AcademyEventItem } from '@/components/blocks/benefits-section/updated-balanced-card'
 
@@ -27,7 +27,7 @@ const BenefitsSection = ({
         <div className='mb-12 space-y-4 text-center sm:mb-16 lg:mb-24'>
           <MotionPreset fade slide={{ direction: 'down', offset: 50 }} transition={{ duration: 0.7 }}>
             <Badge className='border-primary text-primary px-3 py-1 text-sm uppercase [&>svg]:size-6' variant='outline'>
-              Beneficios
+              Ventajas
             </Badge>
           </MotionPreset>
 
@@ -39,7 +39,7 @@ const BenefitsSection = ({
             delay={0.2}
             transition={{ duration: 0.7 }}
           >
-            Menos gestión, más enseñanza
+            Menos fricción operativa. Más control para crecer.
           </MotionPreset>
 
           <MotionPreset
@@ -50,10 +50,11 @@ const BenefitsSection = ({
             delay={0.4}
             transition={{ duration: 0.7 }}
           >
-            Descubre cómo ClassTrack transforma la gestión de tu academia, automatizando tareas repetitivas y liberando
-            tu tiempo para que puedas enfocarte en lo que realmente importa: enseñar y hacer crecer tu comunidad.
+            ClassTrack centraliza la captación, la gestión académica y la operativa diaria de tu academia para que tu
+            equipo trabaje con más claridad, menos tareas manuales y una mejor experiencia para el alumno.
           </MotionPreset>
         </div>
+
         {/* Grid Section */}
         <div className='space-y-6'>
           {/* Grid Row 1 */}
@@ -77,7 +78,7 @@ const BenefitsSection = ({
 
           {/* Grid Row 2 */}
           <div className='grid gap-6 xl:grid-cols-5'>
-            {/* Card 3 - Beautiful and Clean UI */}
+            {/* Card 3 */}
             <MotionPreset
               fade
               blur
@@ -88,7 +89,7 @@ const BenefitsSection = ({
             >
               <Card className='group bg-muted relative h-full overflow-hidden border-0 shadow-none'>
                 <CardContent className='flex h-full items-center justify-between gap-6 max-md:flex-col'>
-                  <div className='flex flex-col gap-4 md:max-w-70.25'>
+                  <div className='flex flex-col gap-4 md:max-w-96'>
                     <MotionPreset
                       component='h3'
                       fade
@@ -97,8 +98,9 @@ const BenefitsSection = ({
                       delay={1.35}
                       className='text-2xl font-semibold md:text-3xl lg:text-4xl'
                     >
-                      Beautiful and Clean UI
+                      Una experiencia clara para tu equipo y tus alumnos
                     </MotionPreset>
+
                     <MotionPreset
                       component='p'
                       fade
@@ -107,8 +109,8 @@ const BenefitsSection = ({
                       delay={1.5}
                       className='text-muted-foreground text-base md:text-lg'
                     >
-                      A sleek and intuitive interface, so you can navigate your finances effortlessly and you can save
-                      time & money every day.
+                      Diseñado para simplificar procesos complejos: matrículas, seguimiento del alumno, pagos,
+                      comunicación y gestión diaria en una interfaz intuitiva y fácil de adoptar.
                     </MotionPreset>
                   </div>
 
@@ -121,12 +123,12 @@ const BenefitsSection = ({
                   >
                     <img
                       src='/images/clean-ui-mobile.webp'
-                      alt='Mobile image'
+                      alt='Vista de la plataforma ClassTrack'
                       className='absolute -bottom-6 h-86.25 transition-transform duration-300 group-hover:scale-105 max-md:left-1/2 max-md:-translate-x-1/2 md:right-10 dark:hidden'
                     />
                     <img
                       src='/images/clean-ui-mobile-dark.webp'
-                      alt='Mobile image dark'
+                      alt='Vista de la plataforma ClassTrack en modo oscuro'
                       className='absolute -bottom-6 hidden h-86.25 transition-transform duration-300 group-hover:scale-105 max-md:left-1/2 max-md:-translate-x-1/2 md:right-10 dark:block'
                     />
                   </MotionPreset>
@@ -134,7 +136,7 @@ const BenefitsSection = ({
               </Card>
             </MotionPreset>
 
-            {/* Card 4 - Exchange Currency */}
+            {/* Card 4 */}
             <MotionPreset
               fade
               blur
@@ -143,7 +145,7 @@ const BenefitsSection = ({
               transition={{ duration: 0.5 }}
               className='xl:col-span-2'
             >
-              <ExchangeCurrencyCard />
+              <AcademyIntegrationsCard />
             </MotionPreset>
           </div>
         </div>

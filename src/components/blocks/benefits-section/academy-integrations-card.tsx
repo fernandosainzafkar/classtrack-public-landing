@@ -11,7 +11,8 @@ import {
   CheckIcon,
   CreditCardIcon,
   GraduationCapIcon,
-  UsersIcon
+  UsersIcon,
+  BookOpenIcon
 } from 'lucide-react'
 
 import { Card, CardContent } from '@/components/ui/card'

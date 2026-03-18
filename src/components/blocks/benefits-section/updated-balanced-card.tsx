@@ -100,7 +100,7 @@ const AcademyGrowthCard = ({
             >
               <CarouselContent className='ml-4 py-4'>
                 {events.map(event => (
-                  <CarouselItem key={event.id} className='pr-4 pl-0 sm:max-md:basis-1/2 xl:basis-1/2'>
+                  <CarouselItem key={event.id} className='pr-4 pl-0 sm:max-md:basis-1/2 xl:basis-4/5'>
                     <span
                       className={cn(
                         'bg-card flex items-center justify-center gap-1 rounded-full px-3 py-2 text-sm shadow-xl',
@@ -144,7 +144,7 @@ const AcademyGrowthCard = ({
             >
               <CarouselContent className='mr-4 ml-0 py-4'>
                 {events.map(event => (
-                  <CarouselItem key={event.id} className='sm:max-md:basis-1/2 xl:basis-1/2'>
+                  <CarouselItem key={event.id} className='pr-4 pl-0 sm:max-md:basis-1/2 xl:basis-4/5'>
                     <span
                       className={cn(
                         'bg-card flex items-center justify-center gap-1 rounded-full px-3 py-2 text-sm shadow-xl',

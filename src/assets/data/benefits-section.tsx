@@ -1,5 +1,3 @@
-
-
 import type { ActivityRow } from '@/components/blocks/benefits-section/accounting-of-transaction'
 import type { AcademyEventItem } from '@/components/blocks/benefits-section/updated-balanced-card'
 
@@ -11,16 +9,7 @@ export const academyEvents: AcademyEventItem[] = [
   { id: '5', amount: 2, type: 'decrease' }
 ]
 
-export const academyModules = [
-  'CRM',
-  'Matrículas',
-  'Pagos',
-  'Cursos',
-  'Alumnos',
-  'Reportes',
-  'Automatizaciones',
-  'Moodle'
-]
+export const academyModules = ['Kárate', 'Inglés', 'Matemáticas', 'Yoga', 'Ajedrez', 'Piano', 'Ballet', 'Violín']
 
 export const academyActivities: ActivityRow[] = [
   {

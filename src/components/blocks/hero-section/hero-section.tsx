@@ -2,7 +2,6 @@ import Link from 'next/link'
 
 import { ChevronRightIcon, ChevronUpIcon } from 'lucide-react'
 
-import { PrimarySwipeButton, SecondarySwipeButton } from '@/components/ui/swipe-button'
 import { Marquee } from '@/components/ui/marquee'
 import { MotionPreset } from '@/components/ui/motion-preset'
 
@@ -45,15 +44,19 @@ const HeroSection = () => {
             transition={{ duration: 0.5, ease: 'easeOut' }}
             className='flex flex-wrap items-center gap-4'
           >
-            <PrimarySwipeButton size='lg' className='group grow' asChild>
-              <Link href='#'>
-                Solicitar demo
-                <ChevronRightIcon className='transition-transform duration-300 group-hover:translate-x-1' />
-              </Link>
-            </PrimarySwipeButton>
-            <SecondarySwipeButton size='lg' className='grow' asChild>
-              <Link href='#pricing'>Ver precios</Link>
-            </SecondarySwipeButton>
+            <Link
+              href='#'
+              className='bg-primary text-primary-foreground group inline-flex grow items-center justify-center gap-2 rounded-lg px-6 py-3 text-base font-medium transition-opacity hover:opacity-90'
+            >
+              Solicitar demo
+              <ChevronRightIcon className='transition-transform duration-300 group-hover:translate-x-1' />
+            </Link>
+            <Link
+              href='#pricing'
+              className='border-border bg-background text-foreground hover:bg-accent inline-flex grow items-center justify-center rounded-lg border px-6 py-3 text-base font-medium transition-colors'
+            >
+              Ver precios
+            </Link>
           </MotionPreset>
         </div>
 

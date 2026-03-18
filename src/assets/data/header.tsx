@@ -5,34 +5,34 @@ import type { Navigation } from '@/components/blocks/header-navigation'
 export const navigationData: Navigation[] = [
   {
     title: 'Funcionalidades',
-    subtitle: 'Core Features',
-    imgSubtitle: 'Advance feature',
+    subtitle: 'Plataforma',
+    imgSubtitle: 'Gestión integral',
     contentClassName: '!w-140',
     items: [
       {
         icon: <CircleDollarSignIcon className='size-4' />,
-        title: 'Personalized Budgeting',
+        title: 'Gestión de matrículas y pagos',
         href: '/#personalized-budgeting',
-        description: 'Set tailored budgets and stay on track effortlessly.'
+        description: 'Centraliza cobros, matrículas y facturación en un solo lugar.'
       },
       {
         icon: <ReceiptTextIcon className='size-4' />,
-        title: 'Smart Expense Tracking',
+        title: 'Control de alumnos y actividad',
         href: '/#smart-expense-tracking',
-        description: 'Track purchases and monitor spending habits instantly.'
+        description: 'Gestiona alumnos, cursos y seguimiento académico de forma sencilla.'
       },
       {
         icon: <SendIcon className='size-4' />,
-        title: 'Seamless Transactions',
+        title: 'Automatización de procesos',
         href: '/#seamless-transactions',
-        description: 'Send and receive money securely with just taps.'
+        description: 'Reduce tareas manuales conectando tu operación en una única plataforma.'
       }
     ],
     imageSection: {
       img: '/images/website.webp',
       href: '/#goal-oriented-savings',
-      title: 'Goal-Oriented Savings',
-      description: 'Save for what matters with automatic reminders.'
+      title: 'Impulsa el crecimiento de tu academia',
+      description: 'Mejora tu captación, organización y control con una solución centralizada.'
     }
   },
   {
