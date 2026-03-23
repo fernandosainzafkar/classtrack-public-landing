@@ -41,7 +41,7 @@ const Footer = () => {
               </div>
 
               <div className='flex flex-col gap-5'>
-                <h3 className='text-foreground text-lg font-semibold'>Help</h3>
+                <h3 className='text-foreground text-lg font-semibold'>Ayuda</h3>
                 <div className='flex flex-col gap-3'>
                   {/* <Link href='#' className='hover:text-foreground transition-colors duration-300'>
                     Customer Support
