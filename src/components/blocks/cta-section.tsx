@@ -43,7 +43,10 @@ const CTASection = () => {
 
                 <p className='text-muted-foreground text-sm'>
                   Nuestro equipo de soporte está listo para ayudarte en lo que necesites.{' '}
-                  <Link href='/contact' className='text-foreground underline underline-offset-4 hover:opacity-70 transition-opacity'>
+                  <Link
+                    href='/contact'
+                    className='text-foreground underline underline-offset-4 transition-opacity hover:opacity-70'
+                  >
                     Contáctanos →
                   </Link>
                 </p>
@@ -51,12 +54,12 @@ const CTASection = () => {
 
               <div className='flex flex-1 items-end justify-center'>
                 <img
-                  src='/images/cta-mobile.webp'
+                  src='/images/cta-mobile.png'
                   alt='Panel de gestión de ClassTrack'
                   className='transition-transform duration-300 group-hover:scale-105 md:max-xl:w-100 dark:hidden'
                 />
                 <img
-                  src='/images/cta-mobile-dark.webp'
+                  src='/images/cta-mobile.png'
                   alt='Panel de gestión de ClassTrack en modo oscuro'
                   className='hidden transition-transform duration-300 group-hover:scale-105 md:max-xl:w-100 dark:block'
                 />

@@ -122,12 +122,12 @@ const BenefitsSection = ({
                     className='relative size-full'
                   >
                     <img
-                      src='/images/clean-ui-mobile.webp'
+                      src='/images/clean-ui-mobile.png'
                       alt='Vista de la plataforma ClassTrack'
                       className='absolute -bottom-6 h-86.25 transition-transform duration-300 group-hover:scale-105 max-md:left-1/2 max-md:-translate-x-1/2 md:right-10 dark:hidden'
                     />
                     <img
-                      src='/images/clean-ui-mobile-dark.webp'
+                      src='/images/clean-ui-mobile.png'
                       alt='Vista de la plataforma ClassTrack en modo oscuro'
                       className='absolute -bottom-6 hidden h-86.25 transition-transform duration-300 group-hover:scale-105 max-md:left-1/2 max-md:-translate-x-1/2 md:right-10 dark:block'
                     />

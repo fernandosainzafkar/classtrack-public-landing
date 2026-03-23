@@ -115,12 +115,12 @@ const BlogPage = async () => {
               <div className='col-span-1 flex flex-1 items-end justify-center'>
                 <MotionPreset fade blur slide={{ direction: 'down' }} delay={0.6} transition={{ duration: 0.5 }}>
                   <img
-                    src='/images/cta-mobile.webp'
+                    src='/images/cta-mobile.png'
                     alt='Swipe App Interface'
                     className='transition-transform duration-300 group-hover:scale-105 dark:hidden'
                   />
                   <img
-                    src='/images/cta-mobile-dark.webp'
+                    src='/images/cta-mobile.png'
                     alt='Swipe App Interface'
                     className='hidden transition-transform duration-300 group-hover:scale-105 dark:block'
                   />

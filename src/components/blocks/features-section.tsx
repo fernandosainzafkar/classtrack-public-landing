@@ -132,13 +132,13 @@ const Features = ({ features }: { features: FeatureItem[] }) => {
                     style={{ aspectRatio: '14/10' }}
                   >
                     <motion.img
-                      src='/images/perplexity.webp'
+                      src='/images/perplexity.jpg'
                       alt='App Content'
                       className='h-auto w-full dark:hidden'
                       style={{ originY: 0, y: imageY }}
                     />
                     <motion.img
-                      src='/images/perplexity-dark.webp'
+                      src='/images/perplexity.jpg'
                       alt='App Content'
                       className='hidden h-auto w-full dark:inline-block'
                       style={{ originY: 0, y: imageY }}

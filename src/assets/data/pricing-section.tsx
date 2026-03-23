@@ -45,7 +45,7 @@ export const pricingPlans: PricingPlan[] = [
       'Soporta vía account manager dedicado',
       'Acompañamiento personalizado a la implementación'
     ],
-    isHighlighted: true
+    isHighlighted: false
   },
   {
     name: 'Enterprise',
@@ -58,6 +58,6 @@ export const pricingPlans: PricingPlan[] = [
       'APIs e integraciones avanzadas con sistemas externos',
       'Gestión multicampus y franquicias'
     ],
-    isLimited: true
+    isLimited: false
   }
 ]

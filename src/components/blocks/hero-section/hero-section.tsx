@@ -217,8 +217,8 @@ const HeroSection = () => {
             transition={{ duration: 0.7 }}
             className='absolute right-1/2 bottom-0 w-[32.25%] -translate-x-[38%] max-sm:hidden'
           >
-            <img src='/images/widget-left.webp' alt='Widget Left' className='dark:hidden' />
-            <img src='/images/widget-left-dark.webp' alt='Widget Left' className='hidden dark:inline-block' />
+            <img src='/images/widget-left.png' alt='Widget Left' className='dark:hidden' />
+            <img src='/images/widget-left.png' alt='Widget Left' className='hidden dark:inline-block' />
           </MotionPreset>
 
           {/* Widget card right */}
@@ -230,8 +230,8 @@ const HeroSection = () => {
             transition={{ duration: 0.7 }}
             className='absolute bottom-0 left-1/2 w-[32.25%] translate-x-[38%] max-sm:hidden'
           >
-            <img src='/images/widget-right.webp' alt='Widget Right' className='dark:hidden' />
-            <img src='/images/widget-right-dark.webp' alt='Widget Right' className='hidden dark:inline-block' />
+            <img src='/images/widget-right.png' alt='Widget Right' className='dark:hidden' />
+            <img src='/images/widget-right.png' alt='Widget Right' className='hidden dark:inline-block' />
           </MotionPreset>
 
           {/* Mobile Phone */}
@@ -243,8 +243,8 @@ const HeroSection = () => {
             transition={{ duration: 0.7 }}
             className='w-full max-w-[37.5%] min-w-xs'
           >
-            <img src='/images/hero-mobile.webp' alt='Mobile Phone' className='dark:hidden' />
-            <img src='/images/hero-mobile-dark.webp' alt='Mobile Phone Dark' className='hidden dark:inline-block' />
+            <img src='/images/hero-mobile.png' alt='Mobile Phone' className='dark:hidden' />
+            <img src='/images/hero-mobile.png' alt='Mobile Phone Dark' className='hidden dark:inline-block' />
           </MotionPreset>
         </div>
         <div className='from-background absolute inset-x-0 bottom-0 h-16 bg-linear-to-t to-transparent' />

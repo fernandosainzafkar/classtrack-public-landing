@@ -20,7 +20,7 @@ const Footer = () => {
 
             <div className='flex gap-20 max-sm:flex-col max-sm:gap-8'>
               <div className='flex flex-col gap-5'>
-                <h3 className='text-foreground text-lg font-semibold'>Company</h3>
+                <h3 className='text-foreground text-lg font-semibold'>ClassTrack</h3>
                 <div className='flex flex-col gap-3'>
                   <Link href='/#features' className='hover:text-foreground transition-colors duration-300'>
                     Funcionalidades
