@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent } from '@/components/ui/card'
 import { MotionPreset } from '@/components/ui/motion-preset'
+import { CalendlyButton } from '@/components/ui/calendly-button'
 
 const CTASection = () => {
   return (
@@ -26,15 +27,14 @@ const CTASection = () => {
                 </p>
 
                 <div className='flex flex-wrap items-center gap-4 max-lg:justify-center max-md:w-full max-md:flex-col'>
-                  <Link
-                    href='/contact'
+                  <CalendlyButton
                     className='bg-primary text-primary-foreground inline-flex min-w-50 items-center justify-center rounded-lg px-6 py-3 text-base font-medium transition-opacity hover:opacity-90'
                   >
                     Solicitar demo
-                  </Link>
+                  </CalendlyButton>
 
                   <Link
-                    href='/pricing'
+                    href='#pricing'
                     className='border-border bg-background text-foreground hover:bg-accent inline-flex min-w-50 items-center justify-center rounded-lg border px-6 py-3 text-base font-medium transition-colors'
                   >
                     Ver planes
@@ -44,7 +44,7 @@ const CTASection = () => {
                 <p className='text-muted-foreground text-sm'>
                   Nuestro equipo de soporte está listo para ayudarte en lo que necesites.{' '}
                   <Link
-                    href='/contact'
+                    href='mailto:info@classtrack.academy'
                     className='text-foreground underline underline-offset-4 transition-opacity hover:opacity-70'
                   >
                     Contáctanos →

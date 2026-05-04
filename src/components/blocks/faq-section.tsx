@@ -59,7 +59,7 @@ const FAQ = ({ faqItems }: FAQComponentProps) => {
                   </div>
 
                   <Link
-                    href='/contact'
+                    href='mailto:info@classtrack.academy'
                     className='bg-primary text-primary-foreground inline-flex items-center gap-2 rounded-lg px-6 py-3 text-base font-medium transition-opacity hover:opacity-90'
                   >
                     Contáctanos

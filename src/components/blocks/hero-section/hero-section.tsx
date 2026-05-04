@@ -1,4 +1,9 @@
+'use client'
+
+import { useEffect, useState } from 'react'
+
 import Link from 'next/link'
+import { CalendlyButton } from '@/components/ui/calendly-button'
 
 import { ChevronRightIcon, ChevronUpIcon } from 'lucide-react'
 
@@ -11,6 +16,8 @@ import InfoIcon from '@/assets/svg/info-icon'
 import StarBadge from '@/assets/svg/star-badge'
 
 const HeroSection = () => {
+
+
   return (
     <section className='relative -mt-20 overflow-hidden bg-[url(/images/bg-pattern.webp)] pt-28 sm:pt-36 lg:pt-44'>
       <div className='mx-auto flex max-w-7xl flex-col items-center gap-12 px-4 sm:gap-16 sm:px-6 lg:gap-24 lg:px-8'>
@@ -44,13 +51,12 @@ const HeroSection = () => {
             transition={{ duration: 0.5, ease: 'easeOut' }}
             className='flex flex-wrap items-center gap-4'
           >
-            <Link
-              href='#'
+            <CalendlyButton
               className='bg-primary text-primary-foreground group inline-flex grow items-center justify-center gap-2 rounded-lg px-6 py-3 text-base font-medium transition-opacity hover:opacity-90'
             >
               Solicitar demo
               <ChevronRightIcon className='transition-transform duration-300 group-hover:translate-x-1' />
-            </Link>
+            </CalendlyButton>
             <Link
               href='#pricing'
               className='border-border bg-background text-foreground hover:bg-accent inline-flex grow items-center justify-center rounded-lg border px-6 py-3 text-base font-medium transition-colors'
@@ -260,6 +266,7 @@ const HeroSection = () => {
           className='inset-0 hidden opacity-40 dark:inline-block'
         />
       </Marquee>
+
     </section>
   )
 }

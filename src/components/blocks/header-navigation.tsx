@@ -9,6 +9,8 @@ import Link from 'next/link'
 import { useMedia } from 'react-use'
 import { ChevronRightIcon, CircleSmallIcon, MenuIcon } from 'lucide-react'
 
+import { CalendlyButton } from '@/components/ui/calendly-button'
+
 import { useActiveSection } from '@/hooks/use-active-section'
 
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible'
@@ -330,9 +332,7 @@ const HeaderNavigationSmallScreen = ({
 
   const activeSection = useActiveSection(sectionIds)
 
-  const handleLinkClick = () => {
-    setOpen(false)
-  }
+
 
   useEffect(() => {
     if (!isMobile) {
@@ -342,6 +342,7 @@ const HeaderNavigationSmallScreen = ({
   }, [isMobile])
 
   return (
+    <>
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
         <PrimarySwipeButton size='icon' className={cn('inline-flex lg:hidden', triggerClassName)}>
@@ -353,7 +354,7 @@ const HeaderNavigationSmallScreen = ({
         <SheetHeader className='p-4'>
           <SheetTitle hidden />
           <SheetDescription hidden />
-          <Link href='#' onClick={handleLinkClick}>
+          <Link href='#' onClick={() => setOpen(false)}>
             <Logo />
           </Link>
         </SheetHeader>
@@ -375,7 +376,7 @@ const HeaderNavigationSmallScreen = ({
                   href={navItem.href}
                   data-active={isActive}
                   className='hover:bg-accent data-[active=true]:bg-accent flex items-center gap-2 rounded-sm px-3 py-2 text-sm data-[active=true]:font-medium'
-                  onClick={handleLinkClick}
+                  onClick={() => setOpen(false)}
                 >
                   {navItem.title}
                 </Link>
@@ -422,7 +423,7 @@ const HeaderNavigationSmallScreen = ({
                         href={item.href}
                         data-active={isActive}
                         className='hover:bg-accent data-[active=true]:text-primary ml-3 flex items-center gap-2 rounded-sm px-3 py-2 text-sm data-[active=true]:font-medium'
-                        onClick={handleLinkClick}
+                        onClick={() => setOpen(false)}
                       >
                         {item.icon ? item.icon : <CircleSmallIcon className='size-4' />}
                         {item.title}
@@ -433,16 +434,16 @@ const HeaderNavigationSmallScreen = ({
               </Collapsible>
             )
           })}
-          <Link
-            href='#'
+          <CalendlyButton
             className='hover:bg-accent flex items-center gap-2 rounded-sm px-3 py-2 text-sm sm:hidden'
-            onClick={handleLinkClick}
+            onClick={() => setOpen(false)}
           >
             Solicitar demo
-          </Link>
+          </CalendlyButton>
         </div>
       </SheetContent>
     </Sheet>
+    </>
   )
 }
 

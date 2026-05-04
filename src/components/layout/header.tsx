@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react'
 
 import Link from 'next/link'
 
+import { CalendlyButton } from '@/components/ui/calendly-button'
+
 import type { Navigation } from '@/components/blocks/header-navigation'
 
 import { HeaderNavigation, HeaderNavigationSmallScreen } from '@/components/blocks/header-navigation'
@@ -33,6 +35,8 @@ const Header = ({ navigationData, className }: HeaderProps) => {
     }
   }, [])
 
+
+
   return (
     <header
       className={cn('sticky top-0 z-50 flex h-20 w-full items-end justify-center px-4 sm:px-6 lg:px-8', className)}
@@ -54,26 +58,21 @@ const Header = ({ navigationData, className }: HeaderProps) => {
         {/* Actions */}
         <div className='flex items-center gap-3'>
           {/* Get started Button */}
-          <Link
-            href='#'
-            className='bg-primary text-primary-foreground inline-flex items-center justify-center rounded-lg px-5 py-2 text-sm font-medium transition-opacity hover:opacity-90 max-lg:hidden'
-          >
+          <CalendlyButton className='bg-primary text-primary-foreground inline-flex items-center justify-center rounded-lg px-5 py-2 text-sm font-medium transition-opacity hover:opacity-90 max-lg:hidden'>
             Solicitar demo
-          </Link>
+          </CalendlyButton>
 
           {/* Navigation for small screens */}
           <div className='flex gap-3 lg:hidden'>
-            <Link
-              href='#'
-              className='bg-primary text-primary-foreground inline-flex items-center justify-center rounded-lg px-5 py-2 text-sm font-medium transition-opacity hover:opacity-90 max-sm:hidden'
-            >
+            <CalendlyButton className='bg-primary text-primary-foreground inline-flex items-center justify-center rounded-lg px-5 py-2 text-sm font-medium transition-opacity hover:opacity-90 max-sm:hidden'>
               Solicitar demo
-            </Link>
+            </CalendlyButton>
 
             <HeaderNavigationSmallScreen navigationData={navigationData} />
           </div>
         </div>
       </div>
+
     </header>
   )
 }

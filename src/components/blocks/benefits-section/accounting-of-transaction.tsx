@@ -57,14 +57,14 @@ const AcademyOperations = ({ activities }: { activities: ActivityRow[] }) => {
                 <div className='grid'>
                   <span className='text-muted-foreground text-xs'>{activity.title}</span>
                   <div className='flex items-center gap-1'>
-                    <span className='text-base font-medium'>{activity.value.toLocaleString()}</span>
+                    <span className='text-base font-medium'>{activity.value.toLocaleString('es-ES')}</span>
                     <span
                       className={cn('text-xs', {
                         'text-destructive': activity.type === 'warning',
                         'text-green-600 dark:text-green-400': activity.type === 'positive'
                       })}
                     >
-                      {`${activity.type === 'warning' ? '-' : '+'}${activity.difference.toLocaleString()}`}
+                      {`${activity.type === 'warning' ? '-' : '+'}${activity.difference.toLocaleString('es-ES')}`}
                     </span>
                   </div>
                 </div>

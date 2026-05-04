@@ -14,6 +14,7 @@ import { cn } from '@/lib/utils'
 import type { PricingPlan } from '@/assets/data/pricing-section'
 
 import { NumberTicker } from '@/components/ui/number-ticker'
+import { CalendlyButton } from '@/components/ui/calendly-button'
 
 type PricingProps = {
   plans: PricingPlan[]
@@ -149,20 +150,18 @@ const PricingSection = ({ plans }: PricingProps) => {
                     </div>
 
                     {!plan.isHighlighted && (
-                      <Link
-                        href='/contact'
+                      <CalendlyButton
                         className='border-border bg-background text-foreground hover:bg-accent inline-flex w-full items-center justify-center rounded-lg border px-6 py-3 text-base font-medium transition-colors'
                       >
                         Solicitar demo
-                      </Link>
+                      </CalendlyButton>
                     )}
                     {plan.isHighlighted && (
-                      <Link
-                        href='/contact'
+                      <CalendlyButton
                         className='bg-primary text-primary-foreground inline-flex w-full items-center justify-center rounded-lg px-6 py-3 text-base font-medium transition-opacity hover:opacity-90'
                       >
                         Solicitar demo
-                      </Link>
+                      </CalendlyButton>
                     )}
                   </CardContent>
                 </Card>

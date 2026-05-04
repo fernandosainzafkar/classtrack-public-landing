@@ -7,12 +7,8 @@ import TestimonialCard from '@/components/blocks/testimonials-section/testimonia
 
 export type TestimonialItem = {
   name: string
-  handle: string
-  avatar: string
   rating: number
   content: string
-  platformName: string
-  platformIcon: string
 }
 
 type TestimonialsComponentProps = {

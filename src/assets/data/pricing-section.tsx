@@ -22,7 +22,7 @@ export const pricingPlans: PricingPlan[] = [
     icon: <Users />,
     price: 149,
     priceSuffix: '/mes',
-    description: 'Hasta 100 alumnos.',
+    description: 'Si tienes hasta 100 alumnos',
     features: [
       '2 usuarios administradores',
       'Módulo de gestión académica',
@@ -36,7 +36,7 @@ export const pricingPlans: PricingPlan[] = [
     icon: <Astronomy />,
     price: 2,
     priceSuffix: '/alumno',
-    description: 'For individuals who want a fully comprehensive solution to manage every aspect of their finances.',
+    description: 'Si tienes entre 101 y 500 alumnos',
     features: [
       '5 usuarios administradores',
       'Módulo de gestión académica',
@@ -51,7 +51,7 @@ export const pricingPlans: PricingPlan[] = [
     name: 'Enterprise',
     icon: <Messages />,
     customPriceLabel: 'Contactar con ventas',
-    description: 'For those who want to go a step further with more in-depth budgeting and tracking features.',
+    description: 'Si tienes más de 500 alumnos o necesitas una solución personalizada',
     features: [
       'Usuarios administradores ilimitados',
       'Módulos personalizados',

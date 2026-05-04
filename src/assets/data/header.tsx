@@ -40,15 +40,7 @@ export const navigationData: Navigation[] = [
     href: '/#benefits'
   },
   {
-    title: 'Testimonios',
-    href: '/#testimonials'
-  },
-  {
     title: 'Precios',
     href: '/#pricing'
-  },
-  {
-    title: 'Blog',
-    href: '/blog'
   }
 ]
