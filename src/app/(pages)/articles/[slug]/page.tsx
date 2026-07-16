@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     description: metadata.description,
     keywords: metadata.keywords,
     alternates: {
-      canonical: `${process.env.NEXT_PUBLIC_APP_URL}/blog/${metadata.slug}`
+      canonical: `${process.env.NEXT_PUBLIC_APP_URL}/articles/${metadata.slug}`
     }
   }
 }
@@ -95,13 +95,13 @@ const BlogDetailsPage = async ({ params }: { params: Promise<{ slug: string }> }
         '@id': `${process.env.NEXT_PUBLIC_APP_URL}#webpage`,
         name: `Blog: ${metadata.title}`,
         description: metadata.description,
-        url: `${process.env.NEXT_PUBLIC_APP_URL}/blog/${metadata.slug}`,
+        url: `${process.env.NEXT_PUBLIC_APP_URL}/articles/${metadata.slug}`,
         isPartOf: {
           '@id': `${process.env.NEXT_PUBLIC_APP_URL}#website`
         },
         potentialAction: {
           '@type': 'ReadAction',
-          target: [`${process.env.NEXT_PUBLIC_APP_URL}/blog/${metadata.slug}`]
+          target: [`${process.env.NEXT_PUBLIC_APP_URL}/articles/${metadata.slug}`]
         }
       },
       {
@@ -118,13 +118,13 @@ const BlogDetailsPage = async ({ params }: { params: Promise<{ slug: string }> }
             '@type': 'ListItem',
             position: 2,
             name: 'Blog',
-            item: `${process.env.NEXT_PUBLIC_APP_URL}/blog`
+            item: `${process.env.NEXT_PUBLIC_APP_URL}/articles`
           },
           {
             '@type': 'ListItem',
             position: 3,
             name: metadata.title,
-            item: `${process.env.NEXT_PUBLIC_APP_URL}/blog/${metadata.slug}`
+            item: `${process.env.NEXT_PUBLIC_APP_URL}/articles/${metadata.slug}`
           }
         ]
       }
@@ -148,7 +148,7 @@ const BlogDetailsPage = async ({ params }: { params: Promise<{ slug: string }> }
                 <BreadcrumbSeparator children='/' />
                 <BreadcrumbItem>
                   <BreadcrumbLink asChild>
-                    <Link href='/blog' className='text-muted-foreground hover:text-foreground'>
+                    <Link href='/articles' className='text-muted-foreground hover:text-foreground'>
                       Blog
                     </Link>
                   </BreadcrumbLink>
@@ -204,7 +204,7 @@ const BlogDetailsPage = async ({ params }: { params: Promise<{ slug: string }> }
           <div className='flex items-center justify-between gap-4'>
             {previousPost ? (
               <SecondarySwipeButton size='lg' asChild>
-                <Link href={`/blog/${previousPost.slug}`}>
+                <Link href={`/articles/${previousPost.slug}`}>
                   <ChevronLeftIcon className='transition-transform duration-300 group-hover:-translate-x-1' />
                   Previous Post
                 </Link>
@@ -217,7 +217,7 @@ const BlogDetailsPage = async ({ params }: { params: Promise<{ slug: string }> }
             )}
             {nextPost ? (
               <SecondarySwipeButton size='lg' asChild>
-                <Link href={`/blog/${nextPost.slug}`}>
+                <Link href={`/articles/${nextPost.slug}`}>
                   Next Post
                   <ChevronRightIcon className='transition-transform duration-300 group-hover:translate-x-1' />
                 </Link>

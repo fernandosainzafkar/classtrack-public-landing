@@ -31,7 +31,7 @@ const BlogGrid = ({
           key={`${post.slug} ${index}`}
           className='group h-full overflow-hidden pt-0 shadow-none transition-all duration-300'
         >
-          <Link href={`/blog/${post.slug}`} className='block overflow-hidden'>
+          <Link href={`/articles/${post.slug}`} className='block overflow-hidden'>
             <img
               src={post.image}
               alt={post.title}
@@ -58,7 +58,7 @@ const BlogGrid = ({
               </Badge>
             </div>
 
-            <Link href={`/blog/${post.slug}`} className='block'>
+            <Link href={`/articles/${post.slug}`} className='block'>
               <h3 className='line-clamp-2 text-lg font-medium transition-colors md:text-xl'>{post.title}</h3>
             </Link>
             <p className='text-muted-foreground line-clamp-2'>{post.description}</p>
@@ -69,7 +69,7 @@ const BlogGrid = ({
                 className='group-hover:bg-primary hover:bg-primary group-hover:text-primary-foreground hover:text-primary-foreground rounded-full'
                 asChild
               >
-                <Link href={`/blog/${post.slug}`}>
+                <Link href={`/articles/${post.slug}`}>
                   <ArrowUpRightIcon className='size-4' />
                   <span className='sr-only'>Read more: {post.title}</span>
                 </Link>

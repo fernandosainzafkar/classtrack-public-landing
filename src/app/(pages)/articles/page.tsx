@@ -8,7 +8,6 @@ import { Card, CardContent } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 
 import { PrimarySwipeButton } from '@/components/ui/swipe-button'
-import LogoVector from '@/assets/svg/logo-vector'
 import { MotionPreset } from '@/components/ui/motion-preset'
 
 export const metadata: Metadata = {
@@ -17,7 +16,7 @@ export const metadata: Metadata = {
     'Practical insights and real stories to guide your product from vision to reality, ensuring a smooth transition through each development phase.',
   keywords: ['practical insights', 'product development', 'real stories'],
   alternates: {
-    canonical: `${process.env.NEXT_PUBLIC_APP_URL}/blog`
+    canonical: `${process.env.NEXT_PUBLIC_APP_URL}/articles`
   }
 }
 
@@ -41,13 +40,13 @@ const jsonLd = {
       name: 'Blog',
       description:
         'Practical insights and real stories to guide your product from vision to reality, ensuring a smooth transition through each development phase.',
-      url: `${process.env.NEXT_PUBLIC_APP_URL}/blog`,
+      url: `${process.env.NEXT_PUBLIC_APP_URL}/articles`,
       isPartOf: {
         '@id': `${process.env.NEXT_PUBLIC_APP_URL}#website`
       },
       potentialAction: {
         '@type': 'ReadAction',
-        target: [`${process.env.NEXT_PUBLIC_APP_URL}/blog`]
+        target: [`${process.env.NEXT_PUBLIC_APP_URL}/articles`]
       }
     }
   ]

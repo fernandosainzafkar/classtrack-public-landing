@@ -7,8 +7,6 @@ import { SecondarySwipeButton } from '@/components/ui/swipe-button'
 import { Card, CardContent } from '@/components/ui/card'
 import type { PostMetadata } from '@/lib/posts'
 
-import LogoVector from '@/assets/svg/logo-vector'
-
 const RelatedBlogSection = ({ posts }: { posts: PostMetadata[] }) => {
   return (
     <section className='py-8 sm:py-16 lg:py-24'>
@@ -27,7 +25,7 @@ const RelatedBlogSection = ({ posts }: { posts: PostMetadata[] }) => {
         {/* Blog Grid */}
         <div className='grid gap-6 sm:grid-cols-2 lg:grid-cols-3'>
           {posts.map(post => (
-            <Link key={post.slug} href={`/blog/${post.slug}`}>
+            <Link key={post.slug} href={`/articles/${post.slug}`}>
               <Card className='group h-full overflow-hidden pt-0 shadow-none transition-all duration-300'>
                 <div className='overflow-hidden'>
                   <img
