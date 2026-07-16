@@ -2,6 +2,7 @@ import type { ReactNode } from 'react'
 
 import { Inter, Lora, Roboto_Mono } from 'next/font/google'
 import type { Metadata } from 'next'
+import Script from 'next/script'
 
 import { ThemeProvider } from '@/components/theme-provider'
 import { TooltipProvider } from '@/components/ui/tooltip'
@@ -115,6 +116,8 @@ const RootLayout = ({ children }: Readonly<{ children: ReactNode }>) => {
         <ThemeProvider attribute='class' enableSystem={false} disableTransitionOnChange>
           <TooltipProvider>{children}</TooltipProvider>
         </ThemeProvider>
+        <div id='soro-blog'></div>
+        <Script src='https://app.trysoro.com/api/embed/0a7474dc-0774-436d-b11e-e614351e484d' strategy='afterInteractive' />
       </body>
     </html>
   )

@@ -50,8 +50,6 @@ const Home = () => {
           __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c')
         }}
       />
-      <div id="soro-blog"></div>
-      <script src="https://app.trysoro.com/api/embed/0a7474dc-0774-436d-b11e-e614351e484d" defer></script>
     </>
   )
 }
