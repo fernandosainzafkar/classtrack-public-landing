@@ -1,3 +1,5 @@
+import Script from 'next/script'
+
 import HeroSection from '@/components/blocks/hero-section/hero-section'
 import Features from '@/components/blocks/features-section'
 import Benefits from '@/components/blocks/benefits-section/benefits-section'
@@ -43,6 +45,8 @@ const Home = () => {
       <Testimonials testimonials={testimonialsData} />
       <PricingSection plans={pricingPlans} />
       <FAQ faqItems={faqData} />
+      <div id='soro-blog'></div>
+      <Script src='https://app.trysoro.com/api/embed/0a7474dc-0774-436d-b11e-e614351e484d' strategy='afterInteractive' />
       <CTA />
       <script
         type='application/ld+json'
