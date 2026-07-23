@@ -1,7 +1,5 @@
 'use client'
 
-import { useEffect, useState } from 'react'
-
 import Link from 'next/link'
 import { CalendlyButton } from '@/components/ui/calendly-button'
 
@@ -32,7 +30,7 @@ const HeroSection = () => {
             transition={{ duration: 0.5, ease: 'easeOut' }}
             className='text-2xl font-semibold sm:text-3xl lg:text-6xl'
           >
-            La gestión de tu Academia en un solo lugar
+            Software para academias todo en uno
           </MotionPreset>
           <MotionPreset
             component='p'
@@ -42,7 +40,7 @@ const HeroSection = () => {
             transition={{ duration: 0.5, ease: 'easeOut' }}
             className='text-muted-foreground max-w-4xl text-xl'
           >
-            Gestiona tus alumnos, clases, pagos y comunicaciones desde un solo lugar.
+            Crea la web de tu academia, automatiza matrículas y centraliza alumnos, pagos y comunicación desde una única plataforma.
           </MotionPreset>
           <MotionPreset
             fade
@@ -61,7 +59,7 @@ const HeroSection = () => {
               href='#pricing'
               className='border-border bg-background text-foreground hover:bg-accent inline-flex grow items-center justify-center rounded-lg border px-6 py-3 text-base font-medium transition-colors'
             >
-              Ver precios
+              Ver planes
             </Link>
           </MotionPreset>
         </div>
@@ -223,8 +221,12 @@ const HeroSection = () => {
             transition={{ duration: 0.7 }}
             className='absolute right-1/2 bottom-0 w-[32.25%] -translate-x-[38%] max-sm:hidden'
           >
-            <img src='/images/widget-left.png' alt='Widget Left' className='dark:hidden' />
-            <img src='/images/widget-left.png' alt='Widget Left' className='hidden dark:inline-block' />
+            <img src='/images/widget-left.png' alt='Panel de gestión académica de ClassTrack' className='dark:hidden' />
+            <img
+              src='/images/widget-left.png'
+              alt='Panel de gestión académica de ClassTrack'
+              className='hidden dark:inline-block'
+            />
           </MotionPreset>
 
           {/* Widget card right */}
@@ -236,8 +238,12 @@ const HeroSection = () => {
             transition={{ duration: 0.7 }}
             className='absolute bottom-0 left-1/2 w-[32.25%] translate-x-[38%] max-sm:hidden'
           >
-            <img src='/images/widget-right.png' alt='Widget Right' className='dark:hidden' />
-            <img src='/images/widget-right.png' alt='Widget Right' className='hidden dark:inline-block' />
+            <img src='/images/widget-right.png' alt='Módulos de automatización para academias' className='dark:hidden' />
+            <img
+              src='/images/widget-right.png'
+              alt='Módulos de automatización para academias'
+              className='hidden dark:inline-block'
+            />
           </MotionPreset>
 
           {/* Mobile Phone */}
@@ -249,8 +255,12 @@ const HeroSection = () => {
             transition={{ duration: 0.7 }}
             className='w-full max-w-[37.5%] min-w-xs'
           >
-            <img src='/images/hero-mobile.png' alt='Mobile Phone' className='dark:hidden' />
-            <img src='/images/hero-mobile.png' alt='Mobile Phone Dark' className='hidden dark:inline-block' />
+            <img src='/images/hero-mobile.png' alt='Software para academias ClassTrack' className='dark:hidden' />
+            <img
+              src='/images/hero-mobile.png'
+              alt='Software para academias ClassTrack'
+              className='hidden dark:inline-block'
+            />
           </MotionPreset>
         </div>
         <div className='from-background absolute inset-x-0 bottom-0 h-16 bg-linear-to-t to-transparent' />

@@ -2,7 +2,6 @@ import { InstagramIcon, MailIcon, TwitchIcon, YoutubeIcon } from 'lucide-react'
 
 import Link from 'next/link'
 
-import HoverText from '@/components/layout/footer/hover-text'
 import Logo from '@/components/logo'
 
 const Footer = () => {
@@ -35,7 +34,7 @@ const Footer = () => {
                     Precios
                   </Link>
                   <Link href='/articles' className='hover:text-foreground transition-colors duration-300'>
-                    Blog
+                    Artículos
                   </Link>
                 </div>
               </div>
@@ -63,7 +62,7 @@ const Footer = () => {
               <Link href='/#home' className='hover:text-foreground transition-colors duration-300'>
                 ClassTrack
               </Link>
-              , Made with ❤️ for a better education.
+              , software para modernizar la gestión de academias.
             </span>
             <div className='flex items-center gap-4'>
               <Link href='#' className='hover:text-foreground transition-colors duration-300' aria-label='Instagram'>

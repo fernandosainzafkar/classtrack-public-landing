@@ -43,7 +43,7 @@ const BlogGrid = ({
               <div className='text-muted-foreground flex items-center gap-1.5'>
                 <CalendarDaysIcon className='size-4.5' />
                 <span className='text-sm'>
-                  {new Date(post.publishedAt ?? '').toLocaleDateString('en-US', {
+                  {new Date(post.publishedAt ?? '').toLocaleDateString('es-ES', {
                     year: 'numeric',
                     month: 'long',
                     day: '2-digit'
@@ -71,7 +71,7 @@ const BlogGrid = ({
               >
                 <Link href={`/articles/${post.slug}`}>
                   <ArrowUpRightIcon className='size-4' />
-                  <span className='sr-only'>Read more: {post.title}</span>
+                  <span className='sr-only'>Leer más: {post.title}</span>
                 </Link>
               </SecondarySwipeButton>
             </div>
@@ -83,11 +83,11 @@ const BlogGrid = ({
 }
 
 const BlogSection = ({ posts }: { posts: PostMetadata[] }) => {
-  const [selectedTab, setSelectedTab] = useState('All')
+  const [selectedTab, setSelectedTab] = useState('Todos')
   const [searchQuery, setSearchQuery] = useState('')
 
   const filterCategories = Array.from(new Set(posts.map(post => post.category))).filter(Boolean) as string[]
-  const categories = ['All', ...filterCategories]
+  const categories = ['Todos', ...filterCategories]
 
   const handleTabChange = (tab: string) => {
     setSelectedTab(tab)
@@ -95,7 +95,7 @@ const BlogSection = ({ posts }: { posts: PostMetadata[] }) => {
 
   const filteredPosts = posts.filter(post => {
     // Category filter
-    const matchesCategory = selectedTab === 'All' || post.category === selectedTab
+    const matchesCategory = selectedTab === 'Todos' || post.category === selectedTab
 
     // Search filter
     if (!searchQuery) return matchesCategory
@@ -141,11 +141,11 @@ const BlogSection = ({ posts }: { posts: PostMetadata[] }) => {
               <div className='relative max-md:w-full'>
                 <div className='text-muted-foreground pointer-events-none absolute inset-y-0 left-0 flex items-center justify-center pl-3 peer-disabled:opacity-50'>
                   <SearchIcon className='size-4' />
-                  <span className='sr-only'>Search</span>
+                  <span className='sr-only'>Buscar</span>
                 </div>
                 <Input
                   type='search'
-                  placeholder='Search articles...'
+                  placeholder='Buscar artículos...'
                   className='peer h-10 rounded-full px-9 lg:w-72 [&::-webkit-search-cancel-button]:appearance-none [&::-webkit-search-decoration]:appearance-none [&::-webkit-search-results-button]:appearance-none [&::-webkit-search-results-decoration]:appearance-none'
                   value={searchQuery}
                   onChange={e => setSearchQuery(e.target.value)}
@@ -162,16 +162,16 @@ const BlogSection = ({ posts }: { posts: PostMetadata[] }) => {
                   <div className='text-muted-foreground flex min-h-100 flex-col items-center justify-center space-y-4 rounded-lg border border-dashed p-8 text-center'>
                     <SearchIcon className='size-12 opacity-50' />
                     <div className='space-y-2'>
-                      <h3 className='text-foreground text-lg font-medium'>No posts found</h3>
+                      <h3 className='text-foreground text-lg font-medium'>No se han encontrado artículos</h3>
                       <p className='text-sm'>
                         {searchQuery
-                          ? `No results in "${category}" for "${searchQuery}".`
-                          : `No posts in "${category}" category yet.`}
+                          ? `No hay resultados en "${category}" para "${searchQuery}".`
+                          : `Todavía no hay artículos en la categoría "${category}".`}
                       </p>
                     </div>
                     {searchQuery && (
                       <Button variant='outline' size='sm' onClick={() => setSearchQuery('')}>
-                        Clear search
+                        Limpiar búsqueda
                       </Button>
                     )}
                   </div>

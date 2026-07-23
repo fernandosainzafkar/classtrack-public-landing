@@ -2,25 +2,31 @@ export const faqData = [
   {
     question: '¿Qué es ClassTrack y para qué sirve?',
     answer:
-      'ClassTrack es una plataforma integral diseñada para optimizar la gestión de academias deportivas. Simplifica la administración de alumnos, pagos, entrenamientos y comunicación, permitiendo a los entrenadores centrarse en el desarrollo deportivo de sus atletas.'
+      'ClassTrack es un software de gestión para academias y centros de formación que te ayuda a crear tu web, gestionar matrículas, centralizar alumnos, pagos, comunicación y operativa diaria desde una sola plataforma.'
   },
   {
-    question: '¿Qué necesito para empezar a usar la plataforma?',
+    question: '¿Para qué tipo de academias está pensado ClassTrack?',
     answer:
-      'Solo necesitas un dispositivo con conexión a internet y un navegador web. La plataforma es completamente online, por lo que no requiere instalaciones complejas. Puedes acceder desde tu computadora, tablet o smartphone en cualquier momento y lugar.'
+      'ClassTrack está pensado para academias, escuelas y centros formativos que necesitan digitalizar captación, inscripciones, gestión de alumnos, pagos y comunicación, independientemente de su tamaño o especialidad.'
   },
   {
-    question: '¿Puedo importar mis datos actuales?',
+    question: '¿Puedo crear la web de mi academia y gestionar matrículas online?',
     answer:
-      'Sí, puedes importar tus datos actuales desde otras plataformas o archivos CSV. La plataforma está diseñada para facilitar la migración de datos, permitiéndote comenzar a usarla sin perder información valiosa.'
+      'Sí. Con ClassTrack puedes tener una web profesional para tu academia y conectar el proceso de matrícula online con tu gestión interna para reducir pasos manuales y mejorar la experiencia del alumno.'
   },
   {
-    question: '¿Cuanto tiempo lleva la implementación?',
+    question: '¿Qué procesos puedo centralizar con ClassTrack?',
     answer:
-      'La implementación de la plataforma es rápida y sencilla. Puedes comenzar a usarla en cuestión de minutos, y nuestro equipo de soporte está disponible para ayudarte en todo el proceso.'
+      'Puedes centralizar la gestión de alumnos, grupos, matrículas, pagos, asistencia, comunicación y seguimiento comercial en una única herramienta adaptada a la operativa de tu academia.'
+  },
+  {
+    question: '¿La implantación y migración son complicadas?',
+    answer:
+      'No. El proceso de implantación está pensado para ser ágil y acompañarte en la puesta en marcha. Además, podemos ayudarte a migrar datos desde hojas de cálculo u otras herramientas para que empieces sin fricciones.'
   },
   {
     question: '¿Hay permanencia o compromiso mínimo?',
-    answer: 'No, puedes darte de baja cuando quieras'
+    answer:
+      'No hay permanencias innecesarias. Puedes valorar la plataforma con nuestro equipo y elegir el plan que mejor encaje con tu academia y su fase de crecimiento.'
   }
 ]

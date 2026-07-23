@@ -14,11 +14,11 @@ const RelatedBlogSection = ({ posts }: { posts: PostMetadata[] }) => {
         {/* Header */}
         <div className='space-y-4'>
           <Badge className='border-primary text-primary px-3 py-1 text-sm [&>svg]:size-6' variant='outline'>
-            TRENDING
+            ARTÍCULOS
           </Badge>
-          <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>Related Post</h2>
+          <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>Sigue explorando recursos para academias</h2>
           <p className='text-muted-foreground text-base md:text-xl'>
-            Expand your knowledge with these helpful reads on managing money smarter.
+            Descubre más contenidos sobre digitalización, matrículas, gestión de alumnos y crecimiento de tu centro.
           </p>
         </div>
 
@@ -39,7 +39,7 @@ const RelatedBlogSection = ({ posts }: { posts: PostMetadata[] }) => {
                     <div className='text-muted-foreground flex items-center gap-1.5'>
                       <CalendarDaysIcon className='size-4.5' />
                       <span className='text-sm'>
-                        {new Date(post.publishedAt ?? '').toLocaleDateString('en-US', {
+                        {new Date(post.publishedAt ?? '').toLocaleDateString('es-ES', {
                           year: 'numeric',
                           month: 'long',
                           day: '2-digit'
@@ -58,7 +58,7 @@ const RelatedBlogSection = ({ posts }: { posts: PostMetadata[] }) => {
                       className='group-hover:bg-primary hover:bg-primary group-hover:text-primary-foreground hover:text-primary-foreground cursor-pointer rounded-full'
                     >
                       <ArrowUpRightIcon className='size-4' />
-                      <span className='sr-only'>Read more: {post.title}</span>
+                      <span className='sr-only'>Leer más: {post.title}</span>
                     </SecondarySwipeButton>
                   </div>
                 </CardContent>

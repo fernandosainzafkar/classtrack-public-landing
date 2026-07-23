@@ -2,6 +2,7 @@ import type { ReactNode } from 'react'
 
 import { Inter, Lora, Roboto_Mono } from 'next/font/google'
 import type { Metadata } from 'next'
+import Script from 'next/script'
 
 import { ThemeProvider } from '@/components/theme-provider'
 import { TooltipProvider } from '@/components/ui/tooltip'
@@ -9,6 +10,8 @@ import { TooltipProvider } from '@/components/ui/tooltip'
 import { cn } from '@/lib/utils'
 
 import './globals.css'
+
+const siteUrl = process.env.NEXT_PUBLIC_APP_URL ?? 'https://www.classtrack.academy'
 
 const inter = Inter({
   variable: '--font-sans',
@@ -31,9 +34,19 @@ export const metadata: Metadata = {
     default: 'ClassTrack - Gestión integral de academias'
   },
   description:
-    'Track expenses, manage budgets, and achieve your financial goals with Swipe - the app that puts you in control of your money.',
+    'Software de gestión para academias en España: crea tu web, automatiza matrículas y centraliza alumnos, pagos y comunicación en una sola plataforma.',
   robots: 'index,follow',
-  keywords: ['expense tracking', 'budget management', 'financial goals', 'money management'],
+  applicationName: 'ClassTrack',
+  keywords: [
+    'software para academias',
+    'software de gestión para academias',
+    'programa para academias',
+    'gestión de academias',
+    'matrículas online para academias',
+    'software para centros de formación',
+    'gestión de alumnos y pagos',
+    'software academias España'
+  ],
   icons: {
     icon: [
       {
@@ -74,16 +87,18 @@ export const metadata: Metadata = {
       }
     ]
   },
-  metadataBase: new URL(`${process.env.NEXT_PUBLIC_APP_URL ?? 'http://localhost:3000'}`),
+  metadataBase: new URL(siteUrl),
   openGraph: {
     title: {
       template: 'ClassTrack - Gestión integral de academias',
       default: 'ClassTrack - Gestión integral de academias'
     },
-    description: 'Gestión integral de academias',
+    description:
+      'Impulsa tu academia con una plataforma todo en uno para web, matrículas, gestión de alumnos, pagos y comunicación.',
     type: 'website',
     siteName: 'ClassTrack',
-    url: `${process.env.NEXT_PUBLIC_APP_URL ?? 'http://localhost:3000'}`,
+    url: siteUrl,
+    locale: 'es_ES',
     images: [
       {
         url: '/images/og-image.png',
@@ -100,18 +115,28 @@ export const metadata: Metadata = {
       template: 'ClassTrack - Gestión integral de academias',
       default: 'ClassTrack - Gestión integral de academias'
     },
-    description: 'Gestión integral de academias'
+    description:
+      'Software para academias con web, matrículas, alumnos, pagos y comunicación centralizados en una sola plataforma.'
   }
 }
 
 const RootLayout = ({ children }: Readonly<{ children: ReactNode }>) => {
   return (
     <html
-      lang='en'
+      lang='es'
       className={cn(inter.variable, lora.variable, robotoMono.variable, 'flex min-h-full w-full scroll-smooth')}
       suppressHydrationWarning
     >
       <body className='flex min-h-full w-full flex-auto flex-col'>
+        <Script src='https://www.googletagmanager.com/gtag/js?id=G-JNWWC7G94Y' strategy='afterInteractive' />
+        <Script id='google-analytics' strategy='afterInteractive'>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-JNWWC7G94Y');
+          `}
+        </Script>
         <ThemeProvider attribute='class' enableSystem={false} disableTransitionOnChange>
           <TooltipProvider>{children}</TooltipProvider>
         </ThemeProvider>

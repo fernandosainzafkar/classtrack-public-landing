@@ -10,13 +10,21 @@ import { Input } from '@/components/ui/input'
 import { PrimarySwipeButton } from '@/components/ui/swipe-button'
 import { MotionPreset } from '@/components/ui/motion-preset'
 
+const siteUrl = process.env.NEXT_PUBLIC_APP_URL ?? 'https://www.classtrack.academy'
+
 export const metadata: Metadata = {
-  title: 'Blog',
+  title: 'Artículos y recursos para academias',
   description:
-    'Practical insights and real stories to guide your product from vision to reality, ensuring a smooth transition through each development phase.',
-  keywords: ['practical insights', 'product development', 'real stories'],
+    'Guías, ideas y recursos sobre gestión de academias, matrículas, captación de alumnos, pagos y digitalización de centros formativos.',
+  keywords: [
+    'artículos para academias',
+    'recursos para academias',
+    'gestión de academias',
+    'matrículas online',
+    'captación de alumnos'
+  ],
   alternates: {
-    canonical: `${process.env.NEXT_PUBLIC_APP_URL}/articles`
+    canonical: `${siteUrl}/articles`
   }
 }
 
@@ -26,33 +34,33 @@ const jsonLd = {
     {
       '@context': 'https://schema.org',
       '@type': 'WebSite',
-      '@id': `${process.env.NEXT_PUBLIC_APP_URL}#website`,
-      name: 'Swipe',
+      '@id': `${siteUrl}#website`,
+      name: 'ClassTrack',
       description:
-        'Track expenses, manage budgets, and achieve your financial goals with Swipe - the app that puts you in control of your money.',
-      url: `${process.env.NEXT_PUBLIC_APP_URL}`,
-      inLanguage: 'en-US'
+        'Software para academias con web, matrículas, alumnos, pagos y comunicación en una sola plataforma.',
+      url: siteUrl,
+      inLanguage: 'es-ES'
     },
     {
       '@context': 'https://schema.org',
-      '@type': 'WebPage',
-      '@id': `${process.env.NEXT_PUBLIC_APP_URL}#webpage`,
-      name: 'Blog',
+      '@type': 'CollectionPage',
+      '@id': `${siteUrl}/articles#webpage`,
+      name: 'Artículos y recursos para academias',
       description:
-        'Practical insights and real stories to guide your product from vision to reality, ensuring a smooth transition through each development phase.',
-      url: `${process.env.NEXT_PUBLIC_APP_URL}/articles`,
+        'Colección de artículos y recursos sobre gestión, digitalización, matrículas y crecimiento de academias.',
+      url: `${siteUrl}/articles`,
       isPartOf: {
-        '@id': `${process.env.NEXT_PUBLIC_APP_URL}#website`
+        '@id': `${siteUrl}#website`
       },
       potentialAction: {
         '@type': 'ReadAction',
-        target: [`${process.env.NEXT_PUBLIC_APP_URL}/articles`]
+        target: [`${siteUrl}/articles`]
       }
     }
   ]
 }
 
-const BlogPage = async () => {
+const ArticlesPage = async () => {
   const posts = await getPosts()
 
   return (
@@ -68,7 +76,7 @@ const BlogPage = async () => {
           transition={{ duration: 0.5, ease: 'easeOut' }}
           className='text-2xl font-semibold md:text-3xl lg:text-5xl'
         >
-          Build Better Products with Insights & Inspiration.
+          Recursos y guías para gestionar tu academia
         </MotionPreset>
         <MotionPreset
           component='p'
@@ -78,8 +86,8 @@ const BlogPage = async () => {
           transition={{ duration: 0.5, ease: 'easeOut' }}
           className='text-muted-foreground text-xl'
         >
-          Practical insights and real stories to guide your product from vision to reality, ensuring a smooth transition
-          through each development phase.
+          Explora artículos sobre matrículas, captación de alumnos, pagos, automatización y gestión diaria para academias
+          y centros formativos.
         </MotionPreset>
       </section>
 
@@ -91,36 +99,36 @@ const BlogPage = async () => {
             <CardContent className='grid grid-cols-1 gap-16 px-6 max-lg:text-center md:px-20 lg:grid-cols-2'>
               <div className='col-span-1 flex-1 space-y-4 md:pb-16'>
                 <Badge className='border-primary text-primary px-3 py-1 text-sm [&>svg]:size-6' variant='outline'>
-                  Sign in
+                  Demo
                 </Badge>
                 <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>
-                  Smarter Money Decisions Start With Better Insights
+                  ¿Quieres digitalizar tu academia?
                 </h2>
                 <p className='text-muted-foreground mb-8 text-xl'>
-                  Learn how to track spending, build better budgeting habits, and reach your savings goals through
-                  practical tips, real-life examples, and simple financial guidance.
+                  Descubre cómo centralizar web, matrículas, alumnos, pagos y comunicación desde una única plataforma
+                  diseñada para academias.
                 </p>
                 <form className='flex gap-3 max-lg:justify-center max-md:flex-col'>
                   <Input
                     type='email'
-                    placeholder='Your email'
+                    placeholder='Tu email profesional'
                     name='email'
                     className='w-full rounded-full md:max-w-72'
                     required
                   />
-                  <PrimarySwipeButton>Get Money Tips</PrimarySwipeButton>
+                  <PrimarySwipeButton>Solicitar demo</PrimarySwipeButton>
                 </form>
               </div>
               <div className='col-span-1 flex flex-1 items-end justify-center'>
                 <MotionPreset fade blur slide={{ direction: 'down' }} delay={0.6} transition={{ duration: 0.5 }}>
                   <img
                     src='/images/cta-mobile.png'
-                    alt='Swipe App Interface'
+                    alt='Panel de gestión para academias'
                     className='transition-transform duration-300 group-hover:scale-105 dark:hidden'
                   />
                   <img
                     src='/images/cta-mobile.png'
-                    alt='Swipe App Interface'
+                    alt='Panel de gestión para academias'
                     className='hidden transition-transform duration-300 group-hover:scale-105 dark:block'
                   />
                 </MotionPreset>
@@ -141,4 +149,4 @@ const BlogPage = async () => {
   )
 }
 
-export default BlogPage
+export default ArticlesPage

@@ -1,7 +1,7 @@
 {
-  "name": "Swipe - Mobile App Landing page",
-  "short_name": "Swipe",
-  "description": "Track expenses, manage budgets, and achieve your financial goals with Swipe - the app that puts you in control of your money.",
+  "name": "ClassTrack - Software de gestión para academias",
+  "short_name": "ClassTrack",
+  "description": "Software de gestión para academias con web, matrículas online, alumnos, pagos y comunicación en una sola plataforma.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
@@ -9,10 +9,10 @@
   "theme_color": "#1EB8CE",
   "orientation": "portrait-primary",
   "categories": [
-    "expense tracking",
-    "budget management",
-    "financial goals",
-    "money management"
+    "education",
+    "business",
+    "productivity",
+    "software"
   ],
   "icons": [
     {
@@ -51,16 +51,16 @@
   ],
   "shortcuts": [
     {
-      "name": "Home",
-      "short_name": "Home",
-      "description": "Go to homepage",
+      "name": "Inicio",
+      "short_name": "Inicio",
+      "description": "Ir a la página principal",
       "url": "/"
     },
     {
-      "name": "Blog",
-      "short_name": "Blog",
-      "description": "Read our blog",
-      "url": "/blog"
+      "name": "Artículos",
+      "short_name": "Artículos",
+      "description": "Explorar recursos para academias",
+      "url": "/articles"
     }
   ]
 }

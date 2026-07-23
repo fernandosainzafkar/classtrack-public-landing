@@ -2,8 +2,7 @@ User-Agent: *
 Allow: /
 
 # Sitemap locations
-Sitemap: https://shadcn-nextjs-swipe-landing-page.vercel.app/sitemap.xml
+Sitemap: https://www.classtrack.academy/sitemap.xml
 
 # Disallow specific paths
 Disallow: /private/*
-Disallow: /*?*                        # Disallow URLs with a query string

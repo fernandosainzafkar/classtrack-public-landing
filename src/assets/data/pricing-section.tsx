@@ -22,7 +22,7 @@ export const pricingPlans: PricingPlan[] = [
     icon: <Users />,
     price: 149,
     priceSuffix: '/mes',
-    description: 'Si tienes hasta 100 alumnos',
+    description: 'Ideal para academias de hasta 100 alumnos',
     features: [
       '2 usuarios administradores',
       'Módulo de gestión académica',
@@ -36,13 +36,13 @@ export const pricingPlans: PricingPlan[] = [
     icon: <Astronomy />,
     price: 2,
     priceSuffix: '/alumno',
-    description: 'Si tienes entre 101 y 500 alumnos',
+    description: 'Pensado para academias en crecimiento de 101 a 500 alumnos',
     features: [
       '5 usuarios administradores',
       'Módulo de gestión académica',
       'Integración con Holded',
       'Integración con Moodle',
-      'Soporta vía account manager dedicado',
+      'Soporte vía account manager dedicado',
       'Acompañamiento personalizado a la implementación'
     ],
     isHighlighted: false
@@ -51,7 +51,7 @@ export const pricingPlans: PricingPlan[] = [
     name: 'Enterprise',
     icon: <Messages />,
     customPriceLabel: 'Contactar con ventas',
-    description: 'Si tienes más de 500 alumnos o necesitas una solución personalizada',
+    description: 'Para academias, redes o multicampus con más de 500 alumnos y necesidades avanzadas',
     features: [
       'Usuarios administradores ilimitados',
       'Módulos personalizados',

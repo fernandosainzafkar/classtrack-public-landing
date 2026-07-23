@@ -8,40 +8,41 @@ export const FeaturesData = [
   {
     id: 'personalized-budgeting',
     icon: <UserId />,
-    title: 'Haz que tu academia venda sola.',
+    title: 'Crea la web de tu academia y capta más matrículas.',
     description:
-      'Tu academia merece una página moderna adaptada a tu imagen, pensada para que tus futuros alumnos encuentren toda la información, elijan su curso ideal y se matriculen online sin fricciones.',
+      'Publica una web profesional adaptada a tu marca para que tus futuros alumnos descubran tu oferta formativa, encuentren la información clave y completen su matrícula online sin fricción.',
     position: 'left' as const
   },
   {
     id: 'smart-expense-tracking',
     icon: <ChecklistMinimalistic />,
-    title: 'Optimiza cada etapa del recorrido de tus alumnos.',
-    description: 'Acompaña a tus alumnos en cada etapa, desde el primer clic hasta después de su último curso. ',
+    title: 'Automatiza matrículas, formularios e inscripciones.',
+    description:
+      'Optimiza el proceso de captación y admisión con formularios, solicitudes y matrículas digitales que reducen tareas manuales y mejoran la conversión.',
     position: 'right' as const
   },
   {
     id: 'seamless-transactions',
     icon: <UsersArrow />,
-    title: 'Simplifica la gestión administrativa.',
+    title: 'Gestiona alumnos, grupos y operativa diaria.',
     description:
-      'Automatiza las tareas tediosas y repetitivas de tu academia, reduce errores y gana tiempo para enfocarte en enseñar y hacer crecer tu comunidad.',
+      'Centraliza alumnos, clases, grupos, seguimiento y tareas administrativas para que tu equipo trabaje con más orden, menos errores y mayor eficiencia.',
     position: 'left' as const
   },
   {
     id: 'goal-oriented-savings',
     icon: <Target />,
-    title: 'Impulsa el crecimiento de tu academia.',
+    title: 'Controla pagos, asistencia y rendimiento en tiempo real.',
     description:
-      'Toma decisiones estratégicas basadas en datos reales. Analiza el rendimiento de tus cursos, identifica oportunidades de mejora y planifica el futuro de tu academia con información precisa y actualizada.',
+      'Consulta métricas clave de tu academia, visualiza la evolución de matrículas y pagos, y toma decisiones apoyadas en datos reales de tu negocio.',
     position: 'right' as const
   },
   {
     id: 'instant-financial-insights',
     icon: <PhoneNotification />,
-    title: 'Todo lo que necesitas, integrado y accesible.',
+    title: 'Todo tu centro formativo en una sola plataforma.',
     description:
-      'Centraliza la información de tus alumnos, cursos, pagos y comunicaciones en una única plataforma intuitiva y segura. Accede desde cualquier dispositivo y gestiona tu academia con total tranquilidad.',
+      'Integra web, gestión académica, pagos, comunicación y automatizaciones en una solución intuitiva y segura accesible desde cualquier dispositivo.',
     position: 'left' as const
   }
 ]

@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Script from 'next/script'
 
 import HeroSection from '@/components/blocks/hero-section/hero-section'
@@ -15,18 +16,69 @@ import { testimonialsData } from '@/assets/data/testimonials'
 import { pricingPlans } from '@/assets/data/pricing-section'
 import { faqData } from '@/assets/data/faq-section'
 
+const siteUrl = process.env.NEXT_PUBLIC_APP_URL ?? 'https://www.classtrack.academy'
+
+export const metadata: Metadata = {
+  title: 'Software para academias en España',
+  description:
+    'ClassTrack es el software de gestión para academias con web, matrículas online, alumnos, pagos y comunicación centralizados en una sola plataforma.',
+  keywords: [
+    'software para academias',
+    'software de gestión para academias',
+    'programa para academias',
+    'matrículas online para academias',
+    'software para centros de formación'
+  ],
+  alternates: {
+    canonical: siteUrl
+  }
+}
+
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
       '@context': 'https://schema.org',
       '@type': 'WebSite',
-      '@id': `${process.env.NEXT_PUBLIC_APP_URL}#website`,
-      name: 'Swipe',
+      '@id': `${siteUrl}#website`,
+      name: 'ClassTrack',
       description:
-        'Track expenses, manage budgets, and achieve your financial goals with Swipe - the app that puts you in control of your money.',
-      url: `${process.env.NEXT_PUBLIC_APP_URL}`,
-      inLanguage: 'en-US'
+        'Software de gestión para academias con web, matrículas, alumnos, pagos y comunicación en una sola plataforma.',
+      url: siteUrl,
+      inLanguage: 'es-ES'
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      '@id': `${siteUrl}#organization`,
+      name: 'ClassTrack',
+      url: siteUrl,
+      logo: `${siteUrl}/favicon/android-chrome-512x512.png`
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'SoftwareApplication',
+      name: 'ClassTrack',
+      applicationCategory: 'BusinessApplication',
+      operatingSystem: 'Web',
+      description:
+        'Software para academias que centraliza captación, matrículas, gestión de alumnos, pagos y comunicación con familias y alumnos.',
+      url: siteUrl,
+      publisher: {
+        '@id': `${siteUrl}#organization`
+      }
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqData.map(item => ({
+        '@type': 'Question',
+        name: item.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: item.answer
+        }
+      }))
     }
   ]
 }

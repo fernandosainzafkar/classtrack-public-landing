@@ -1,7 +1,5 @@
 'use client'
 
-import Link from 'next/link'
-
 import { CheckIcon, FlameIcon } from 'lucide-react'
 
 
@@ -28,7 +26,7 @@ const PricingSection = ({ plans }: PricingProps) => {
         <div className='mb-12 space-y-4 text-center'>
           <MotionPreset fade slide={{ direction: 'down', offset: 50 }} transition={{ duration: 0.7 }}>
             <Badge className='border-primary text-primary px-3 py-1 text-sm uppercase [&>svg]:size-6' variant='outline'>
-              Pricing
+              Planes
             </Badge>
           </MotionPreset>
 
@@ -40,7 +38,7 @@ const PricingSection = ({ plans }: PricingProps) => {
             delay={0.2}
             transition={{ duration: 0.7 }}
           >
-            Precios que se adaptan a ti
+            Planes para academias de todos los tamaños
           </MotionPreset>
 
           <MotionPreset
@@ -51,7 +49,7 @@ const PricingSection = ({ plans }: PricingProps) => {
             delay={0.4}
             transition={{ duration: 0.7 }}
           >
-            Precios flexibles diseñados para adaptarse a tu estilo de vida. Solo paga por las funciones que necesitas.
+            Desde academias pequeñas hasta centros con cientos de alumnos. Elige el plan que mejor se adapta a tu operativa, equipo y ritmo de crecimiento.
           </MotionPreset>
         </div>
 
@@ -104,7 +102,7 @@ const PricingSection = ({ plans }: PricingProps) => {
                                   <span className='absolute inline-flex h-full w-full animate-ping rounded-full bg-green-600 opacity-75 dark:bg-green-400'></span>
                                   <span className='relative inline-flex size-2 rounded-full bg-green-600 dark:bg-green-400'></span>
                                 </span>
-                                Limited availability
+                                Disponibilidad limitada
                               </div>
                             </>
                           )}

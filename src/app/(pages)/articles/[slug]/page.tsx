@@ -21,6 +21,8 @@ import CTA from '@/components/blocks/cta-section'
 
 import { getPostBySlug, getPosts } from '@/lib/posts'
 
+const siteUrl = process.env.NEXT_PUBLIC_APP_URL ?? 'https://www.classtrack.academy'
+
 export async function generateStaticParams() {
   const posts = await getPosts()
 
@@ -38,12 +40,31 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   const { metadata } = post
 
+  const articleImage = metadata.image
+    ? metadata.image.startsWith('http')
+      ? metadata.image
+      : `${siteUrl}${metadata.image}`
+    : undefined
+
   return {
-    title: `Blog: ${metadata.title}`,
+    title: metadata.title,
     description: metadata.description,
     keywords: metadata.keywords,
     alternates: {
-      canonical: `${process.env.NEXT_PUBLIC_APP_URL}/articles/${metadata.slug}`
+      canonical: `${siteUrl}/articles/${metadata.slug}`
+    },
+    openGraph: {
+      type: 'article',
+      title: metadata.title,
+      description: metadata.description,
+      url: `${siteUrl}/articles/${metadata.slug}`,
+      images: articleImage ? [{ url: articleImage, alt: metadata.title }] : undefined
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: metadata.title,
+      description: metadata.description,
+      images: articleImage ? [articleImage] : undefined
     }
   }
 }
@@ -61,6 +82,11 @@ const BlogDetailsPage = async ({ params }: { params: Promise<{ slug: string }> }
   }
 
   const { metadata, content } = post
+  const articleImage = metadata.image
+    ? metadata.image.startsWith('http')
+      ? metadata.image
+      : `${siteUrl}${metadata.image}`
+    : undefined
 
   // Sort posts by published date
   const allPosts = posts.sort(
@@ -82,26 +108,49 @@ const BlogDetailsPage = async ({ params }: { params: Promise<{ slug: string }> }
       {
         '@context': 'https://schema.org',
         '@type': 'WebSite',
-        '@id': `${process.env.NEXT_PUBLIC_APP_URL}#website`,
-        name: 'Swipe',
+        '@id': `${siteUrl}#website`,
+        name: 'ClassTrack',
         description:
-          'Track expenses, manage budgets, and achieve your financial goals with Swipe - the app that puts you in control of your money.',
-        url: `${process.env.NEXT_PUBLIC_APP_URL}`,
-        inLanguage: 'en-US'
+          'Software para academias con web, matrículas, alumnos, pagos y comunicación en una sola plataforma.',
+        url: siteUrl,
+        inLanguage: 'es-ES'
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        '@id': `${siteUrl}/articles/${metadata.slug}#article`,
+        headline: metadata.title,
+        description: metadata.description,
+        url: `${siteUrl}/articles/${metadata.slug}`,
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': `${siteUrl}/articles/${metadata.slug}`
+        },
+        image: articleImage ? [articleImage] : undefined,
+        author: metadata.author?.name
+          ? {
+              '@type': 'Person',
+              name: metadata.author.name
+            }
+          : undefined,
+        publisher: {
+          '@type': 'Organization',
+          name: 'ClassTrack',
+          logo: {
+            '@type': 'ImageObject',
+            url: `${siteUrl}/favicon/android-chrome-512x512.png`
+          }
+        }
       },
       {
         '@context': 'https://schema.org',
         '@type': 'WebPage',
-        '@id': `${process.env.NEXT_PUBLIC_APP_URL}#webpage`,
-        name: `Blog: ${metadata.title}`,
+        '@id': `${siteUrl}/articles/${metadata.slug}`,
+        name: metadata.title,
+        url: `${siteUrl}/articles/${metadata.slug}`,
         description: metadata.description,
-        url: `${process.env.NEXT_PUBLIC_APP_URL}/articles/${metadata.slug}`,
         isPartOf: {
-          '@id': `${process.env.NEXT_PUBLIC_APP_URL}#website`
-        },
-        potentialAction: {
-          '@type': 'ReadAction',
-          target: [`${process.env.NEXT_PUBLIC_APP_URL}/articles/${metadata.slug}`]
+          '@id': `${siteUrl}#website`
         }
       },
       {
@@ -111,20 +160,20 @@ const BlogDetailsPage = async ({ params }: { params: Promise<{ slug: string }> }
           {
             '@type': 'ListItem',
             position: 1,
-            name: 'Home',
-            item: `${process.env.NEXT_PUBLIC_APP_URL}`
+            name: 'Inicio',
+            item: siteUrl
           },
           {
             '@type': 'ListItem',
             position: 2,
-            name: 'Blog',
-            item: `${process.env.NEXT_PUBLIC_APP_URL}/articles`
+            name: 'Artículos',
+            item: `${siteUrl}/articles`
           },
           {
             '@type': 'ListItem',
             position: 3,
             name: metadata.title,
-            item: `${process.env.NEXT_PUBLIC_APP_URL}/articles/${metadata.slug}`
+            item: `${siteUrl}/articles/${metadata.slug}`
           }
         ]
       }
@@ -141,7 +190,7 @@ const BlogDetailsPage = async ({ params }: { params: Promise<{ slug: string }> }
                 <BreadcrumbItem>
                   <BreadcrumbLink asChild>
                     <Link href='/' className='text-muted-foreground hover:text-foreground'>
-                      Home
+                      Inicio
                     </Link>
                   </BreadcrumbLink>
                 </BreadcrumbItem>
@@ -149,7 +198,7 @@ const BlogDetailsPage = async ({ params }: { params: Promise<{ slug: string }> }
                 <BreadcrumbItem>
                   <BreadcrumbLink asChild>
                     <Link href='/articles' className='text-muted-foreground hover:text-foreground'>
-                      Blog
+                      Artículos
                     </Link>
                   </BreadcrumbLink>
                 </BreadcrumbItem>
@@ -178,20 +227,20 @@ const BlogDetailsPage = async ({ params }: { params: Promise<{ slug: string }> }
                 </AvatarFallback>
               </Avatar>
               <div className='flex flex-col space-y-1'>
-                <span className='text-muted-foreground text-sm'>Written by</span>
+                <span className='text-muted-foreground text-sm'>Escrito por</span>
                 <span className='text-sm font-medium'>{metadata.author?.name}</span>
               </div>
             </div>
 
             <div className='flex flex-col space-y-1'>
-              <span className='text-muted-foreground text-sm'>Read Time</span>
-              <span className='text-sm font-medium'>{metadata.readTime} read</span>
+              <span className='text-muted-foreground text-sm'>Tiempo de lectura</span>
+              <span className='text-sm font-medium'>{metadata.readTime}</span>
             </div>
 
             <div className='flex flex-col space-y-1'>
-              <span className='text-muted-foreground text-sm'>Posted on</span>
+              <span className='text-muted-foreground text-sm'>Publicado el</span>
               <span className='text-sm font-medium'>
-                {new Date(metadata.publishedAt ?? '').toLocaleDateString('en-US', {
+                {new Date(metadata.publishedAt ?? '').toLocaleDateString('es-ES', {
                   year: 'numeric',
                   month: 'long',
                   day: '2-digit'
@@ -206,25 +255,25 @@ const BlogDetailsPage = async ({ params }: { params: Promise<{ slug: string }> }
               <SecondarySwipeButton size='lg' asChild>
                 <Link href={`/articles/${previousPost.slug}`}>
                   <ChevronLeftIcon className='transition-transform duration-300 group-hover:-translate-x-1' />
-                  Previous Post
+                  Artículo anterior
                 </Link>
               </SecondarySwipeButton>
             ) : (
               <SecondarySwipeButton size='lg' disabled>
                 <ChevronLeftIcon className='transition-transform duration-300 group-hover:-translate-x-1' />
-                Previous Post
+                Artículo anterior
               </SecondarySwipeButton>
             )}
             {nextPost ? (
               <SecondarySwipeButton size='lg' asChild>
                 <Link href={`/articles/${nextPost.slug}`}>
-                  Next Post
+                  Siguiente artículo
                   <ChevronRightIcon className='transition-transform duration-300 group-hover:translate-x-1' />
                 </Link>
               </SecondarySwipeButton>
             ) : (
               <SecondarySwipeButton size='lg' disabled>
-                Next Post
+                Siguiente artículo
                 <ChevronRightIcon className='transition-transform duration-300 group-hover:translate-x-1' />
               </SecondarySwipeButton>
             )}
