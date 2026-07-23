@@ -17,6 +17,24 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: undefined,
       changeFrequency: 'weekly' as const,
       priority: 0.8
+    },
+    {
+      path: '/software-para-academias',
+      lastModified: undefined,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9
+    },
+    {
+      path: '/gestion-de-academias',
+      lastModified: undefined,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9
+    },
+    {
+      path: '/matriculas-online-para-academias',
+      lastModified: undefined,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9
     }
   ]
 

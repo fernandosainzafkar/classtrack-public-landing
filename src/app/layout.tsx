@@ -128,13 +128,13 @@ const RootLayout = ({ children }: Readonly<{ children: ReactNode }>) => {
       suppressHydrationWarning
     >
       <body className='flex min-h-full w-full flex-auto flex-col'>
-        <Script src='https://www.googletagmanager.com/gtag/js?id=G-JNWWC7G94Y' strategy='afterInteractive' />
+        <Script src='https://www.googletagmanager.com/gtag/js?id=G-RLTRQ32PGE' strategy='afterInteractive' />
         <Script id='google-analytics' strategy='afterInteractive'>
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-JNWWC7G94Y');
+            gtag('config', 'G-RLTRQ32PGE');
           `}
         </Script>
         <ThemeProvider attribute='class' enableSystem={false} disableTransitionOnChange>

@@ -21,17 +21,17 @@ const Footer = () => {
               <div className='flex flex-col gap-5'>
                 <h3 className='text-foreground text-lg font-semibold'>ClassTrack</h3>
                 <div className='flex flex-col gap-3'>
-                  <Link href='/#features' className='hover:text-foreground transition-colors duration-300'>
-                    Funcionalidades
+                  <Link href='/software-para-academias' className='hover:text-foreground transition-colors duration-300'>
+                    Software para academias
                   </Link>
-                  <Link href='/#benefits' className='hover:text-foreground transition-colors duration-300'>
-                    Beneficios
+                  <Link href='/gestion-de-academias' className='hover:text-foreground transition-colors duration-300'>
+                    Gestión de academias
                   </Link>
-                  <Link href='/#testimonials' className='hover:text-foreground transition-colors duration-300'>
-                    Testimonios
-                  </Link>
-                  <Link href='/#pricing' className='hover:text-foreground transition-colors duration-300'>
-                    Precios
+                  <Link
+                    href='/matriculas-online-para-academias'
+                    className='hover:text-foreground transition-colors duration-300'
+                  >
+                    Matrículas online
                   </Link>
                   <Link href='/articles' className='hover:text-foreground transition-colors duration-300'>
                     Artículos
