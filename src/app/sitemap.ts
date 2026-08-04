@@ -35,6 +35,48 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: undefined,
       changeFrequency: 'weekly' as const,
       priority: 0.9
+    },
+    {
+      path: '/empresas/academias-de-idiomas',
+      lastModified: undefined,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8
+    },
+    {
+      path: '/empresas/academias-de-refuerzo-escolar',
+      lastModified: undefined,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8
+    },
+    {
+      path: '/empresas/academias-de-oposiciones',
+      lastModified: undefined,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8
+    },
+    {
+      path: '/empresas/academias-de-musica',
+      lastModified: undefined,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8
+    },
+    {
+      path: '/empresas/gimnasios',
+      lastModified: undefined,
+      changeFrequency: 'weekly' as const,
+      priority: 0.7
+    },
+    {
+      path: '/empresas/psicologos',
+      lastModified: undefined,
+      changeFrequency: 'weekly' as const,
+      priority: 0.7
+    },
+    {
+      path: '/empresas/coaches',
+      lastModified: undefined,
+      changeFrequency: 'weekly' as const,
+      priority: 0.7
     }
   ]
 

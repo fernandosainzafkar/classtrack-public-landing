@@ -30,6 +30,9 @@ import { cn } from '@/lib/utils'
 
 import Logo from '@/components/logo'
 
+const loginUrl = 'https://admin.classtrack.academy'
+const signupUrl = 'https://admin.classtrack.academy/signup'
+
 type NavigationItem = {
   title: string
   href: string
@@ -57,17 +60,10 @@ type Navigation = {
     }
   | {
       href?: never
-      subtitle?: never
-      imgSubtitle?: never
-      items?: NavigationItem[]
-      imageSection?: never
-    }
-  | {
-      href?: never
-      subtitle: string
-      imgSubtitle: string
-      items?: NavigationItem[]
-      imageSection: ImageSection
+      items: NavigationItem[]
+      subtitle?: string
+      imgSubtitle?: string
+      imageSection?: ImageSection
     }
 )
 
@@ -188,7 +184,7 @@ const HeaderNavigation = ({ navigationData, className }: { navigationData: Navig
   return (
     <div className={cn('flex items-center', className)}>
       <NavigationMenu viewport={false}>
-        <NavigationMenuList className='flex-wrap gap-0'>
+        <NavigationMenuList className='flex-nowrap gap-0'>
           {navigationData.map(navItem => {
             // Simple link (no dropdown)
             if (navItem.href) {
@@ -440,6 +436,20 @@ const HeaderNavigationSmallScreen = ({
           >
             Solicitar demo
           </CalendlyButton>
+          <Link
+            href={loginUrl}
+            className='hover:bg-accent flex items-center gap-2 rounded-sm px-3 py-2 text-sm'
+            onClick={() => setOpen(false)}
+          >
+            Iniciar sesión
+          </Link>
+          <Link
+            href={signupUrl}
+            className='bg-primary text-primary-foreground hover:bg-primary/90 mt-2 flex items-center justify-center rounded-lg px-3 py-2 text-sm font-medium'
+            onClick={() => setOpen(false)}
+          >
+            Prueba gratis
+          </Link>
         </div>
       </SheetContent>
     </Sheet>

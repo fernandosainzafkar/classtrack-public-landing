@@ -7,6 +7,7 @@ import { ChevronRightIcon, ChevronUpIcon } from 'lucide-react'
 
 import { Marquee } from '@/components/ui/marquee'
 import { MotionPreset } from '@/components/ui/motion-preset'
+import RotatingText from '@/components/ui/rotating-text'
 
 import HeroBadge from '@/components/blocks/hero-section/hero-badge'
 
@@ -28,9 +29,25 @@ const HeroSection = () => {
             slide={{ direction: 'down', offset: 50 }}
             delay={0.2}
             transition={{ duration: 0.5, ease: 'easeOut' }}
-            className='text-2xl font-semibold sm:text-3xl lg:text-6xl'
+            className='font-serif text-4xl leading-[0.95] font-semibold tracking-[-0.03em] text-balance sm:text-5xl lg:text-7xl'
           >
-            Software para academias todo en uno
+            <span className='flex flex-wrap items-center justify-center gap-x-3 gap-y-1.5'>
+              <span>Software para</span>
+              <RotatingText
+                texts={['academias', 'gimnasios', 'psicólogos', 'coaches']}
+                mainClassName='mt-4 bg-transparent !text-primary overflow-visible px-1 pt-1.5 pb-3 sm:pt-2 sm:pb-3.5'
+                staggerFrom='last'
+                initial={{ y: '100%' }}
+                animate={{ y: 0 }}
+                exit={{ y: '-105%' }}
+                staggerDuration={0.03}
+                splitLevelClassName='overflow-hidden pb-2 sm:pb-2.5'
+                elementLevelClassName='leading-[1.1]'
+                transition={{ type: 'spring', damping: 30, stiffness: 400 }}
+                rotationInterval={4000}
+              />
+              <span>todo en uno</span>
+            </span>
           </MotionPreset>
           <MotionPreset
             component='p'
