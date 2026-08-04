@@ -79,16 +79,18 @@ const Header = ({ navigationData, className }: HeaderProps) => {
             Iniciar sesión
           </Link>
 
+          
+
+          <CalendlyButton className='border-border bg-background text-foreground hover:bg-accent hidden items-center justify-center rounded-lg border px-5 py-2 text-sm font-medium transition-colors lg:inline-flex'>
+            Reservar demo
+          </CalendlyButton>
+
           <Link
             href={signupUrl}
-            className='bg-secondary text-secondary-foreground hover:bg-secondary/90 hidden items-center justify-center rounded-lg px-5 py-2 text-sm font-medium transition-colors lg:inline-flex'
+            className='bg-primary text-primary-foreground hover:bg-secondary/90 hidden items-center justify-center rounded-lg px-5 py-2 text-sm font-medium transition-colors lg:inline-flex'
           >
             Prueba gratis
           </Link>
-
-          <CalendlyButton className='bg-primary text-primary-foreground hidden items-center justify-center rounded-lg px-5 py-2 text-sm font-medium transition-opacity hover:opacity-90 lg:inline-flex'>
-            Solicitar demo
-          </CalendlyButton>
 
           {/* Navigation for small screens */}
           <div className='flex gap-3 lg:hidden'>

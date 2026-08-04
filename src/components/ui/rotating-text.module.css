@@ -17,6 +17,19 @@
   border: 0;
 }
 
+.measureContainer {
+  position: absolute;
+  visibility: hidden;
+  pointer-events: none;
+  inset: 0 auto auto 0;
+  white-space: nowrap;
+}
+
+.measureText {
+  display: inline-flex;
+  white-space: nowrap;
+}
+
 .word {
   display: inline-flex;
 }

@@ -1,9 +1,8 @@
 'use client'
 
 import Link from 'next/link'
-import { CalendlyButton } from '@/components/ui/calendly-button'
 
-import { ChevronRightIcon, ChevronUpIcon } from 'lucide-react'
+import { ChevronUpIcon } from 'lucide-react'
 
 import { Marquee } from '@/components/ui/marquee'
 import { MotionPreset } from '@/components/ui/motion-preset'
@@ -29,7 +28,7 @@ const HeroSection = () => {
             slide={{ direction: 'down', offset: 50 }}
             delay={0.2}
             transition={{ duration: 0.5, ease: 'easeOut' }}
-            className='font-serif text-4xl leading-[0.95] font-semibold tracking-[-0.03em] text-balance sm:text-5xl lg:text-7xl'
+            className='max-w-5xl text-5xl font-semibold leading-[0.95] tracking-[-0.04em] text-balance sm:text-6xl lg:text-7xl'
           >
             <span className='flex flex-wrap items-center justify-center gap-x-3 gap-y-1.5'>
               <span>Software para</span>
@@ -46,7 +45,8 @@ const HeroSection = () => {
                 transition={{ type: 'spring', damping: 30, stiffness: 400 }}
                 rotationInterval={4000}
               />
-              <span>todo en uno</span>
+              <span>y mucho más</span>
+              <span className='text-primary'>.</span>
             </span>
           </MotionPreset>
           <MotionPreset
@@ -55,29 +55,57 @@ const HeroSection = () => {
             slide={{ direction: 'down', offset: 50 }}
             delay={0.4}
             transition={{ duration: 0.5, ease: 'easeOut' }}
-            className='text-muted-foreground max-w-4xl text-xl'
+            className='text-muted-foreground max-w-3xl text-lg sm:text-xl'
           >
-            Crea la web de tu academia, automatiza matrículas y centraliza alumnos, pagos y comunicación desde una única plataforma.
+            Crea tu web, automatiza matrículas online y centraliza alumnos, pagos y comunicación desde una única plataforma pensada para captar más clientes y reducir gestión manual.
           </MotionPreset>
           <MotionPreset
             fade
             slide={{ direction: 'down', offset: 50 }}
             delay={0.6}
             transition={{ duration: 0.5, ease: 'easeOut' }}
-            className='flex flex-wrap items-center gap-4'
+            className='flex flex-wrap items-center justify-center gap-4'
           >
-            <CalendlyButton
-              className='bg-primary text-primary-foreground group inline-flex grow items-center justify-center gap-2 rounded-lg px-6 py-3 text-base font-medium transition-opacity hover:opacity-90'
-            >
-              Solicitar demo
-              <ChevronRightIcon className='transition-transform duration-300 group-hover:translate-x-1' />
-            </CalendlyButton>
             <Link
-              href='#pricing'
-              className='border-border bg-background text-foreground hover:bg-accent inline-flex grow items-center justify-center rounded-lg border px-6 py-3 text-base font-medium transition-colors'
+              href='https://admin.classtrack.academy/signup'
+              className='bg-primary text-primary-foreground inline-flex min-w-60 items-center justify-center rounded-lg px-6 py-3 text-base font-medium transition-opacity hover:opacity-90'
             >
-              Ver planes
+              Empieza tu prueba de 14 días gratis
             </Link>
+            <Link
+              href='https://admin.classtrack.academy/signup'
+              className='border-border bg-background text-foreground inline-flex min-w-60 items-center justify-center gap-3 rounded-lg border px-6 py-3 text-base font-medium transition-colors hover:bg-accent'
+            >
+              <svg aria-hidden='true' viewBox='0 0 24 24' className='size-5 shrink-0'>
+                <path
+                  d='M21.805 10.023h-9.78v3.955h5.605c-.242 1.272-.967 2.35-2.06 3.073v2.545h3.333c1.95-1.795 3.072-4.44 3.072-7.573 0-.673-.06-1.32-.17-1.95Z'
+                  fill='#4285F4'
+                />
+                <path
+                  d='M12.025 22c2.79 0 5.13-.925 6.84-2.505l-3.333-2.545c-.925.62-2.105.985-3.507.985-2.694 0-4.975-1.82-5.79-4.265H2.79v2.625A10.327 10.327 0 0 0 12.025 22Z'
+                  fill='#34A853'
+                />
+                <path
+                  d='M6.235 13.67a6.203 6.203 0 0 1-.325-1.97c0-.684.117-1.35.325-1.97V7.105H2.79a10.327 10.327 0 0 0 0 9.19l3.445-2.625Z'
+                  fill='#FBBC05'
+                />
+                <path
+                  d='M12.025 5.465c1.517 0 2.88.522 3.95 1.547l2.965-2.965C17.15 2.375 14.815 1.4 12.025 1.4A10.327 10.327 0 0 0 2.79 7.105L6.235 9.73c.815-2.445 3.096-4.265 5.79-4.265Z'
+                  fill='#EA4335'
+                />
+              </svg>
+              Empieza con Google
+            </Link>
+          </MotionPreset>
+          <MotionPreset
+            component='p'
+            fade
+            slide={{ direction: 'down', offset: 30 }}
+            delay={0.75}
+            transition={{ duration: 0.45, ease: 'easeOut' }}
+            className='text-muted-foreground text-sm'
+          >
+            Sin tarjeta de crédito · Cancela cuando quieras
           </MotionPreset>
         </div>
 
@@ -272,7 +300,7 @@ const HeroSection = () => {
             transition={{ duration: 0.7 }}
             className='w-full max-w-[37.5%] min-w-xs'
           >
-            <img src='/images/hero-mobile.png' alt='Software para academias ClassTrack' className='dark:hidden' />
+            <img src='/images/hero-mobile.png' alt='El software para academias ClassTrack' className='dark:hidden' />
             <img
               src='/images/hero-mobile.png'
               alt='Software para academias ClassTrack'

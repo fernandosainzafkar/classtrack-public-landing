@@ -1,6 +1,6 @@
 'use client'
 
-import { forwardRef, useCallback, useEffect, useImperativeHandle, useMemo, useState } from 'react'
+import { forwardRef, useCallback, useEffect, useImperativeHandle, useMemo, useRef, useState } from 'react'
 
 import { AnimatePresence, motion } from 'motion/react'
 
@@ -67,6 +67,8 @@ const RotatingText = forwardRef<RotatingTextRef, RotatingTextProps>(
     ref
   ) => {
     const [currentTextIndex, setCurrentTextIndex] = useState(0)
+    const [measuredWidths, setMeasuredWidths] = useState<number[]>([])
+    const measureRefs = useRef<(HTMLSpanElement | null)[]>([])
 
     const splitIntoCharacters = useCallback((text: string) => {
       if (typeof Intl !== 'undefined' && Intl.Segmenter) {
@@ -172,6 +174,32 @@ const RotatingText = forwardRef<RotatingTextRef, RotatingTextProps>(
       }
     }, [auto, next, rotationInterval, texts.length])
 
+    useEffect(() => {
+      const updateWidths = () => {
+        const nextWidths = texts.map((_, index) => measureRefs.current[index]?.offsetWidth ?? 0)
+        setMeasuredWidths(previousWidths => {
+          if (
+            previousWidths.length === nextWidths.length &&
+            previousWidths.every((width, index) => width === nextWidths[index])
+          ) {
+            return previousWidths
+          }
+
+          return nextWidths
+        })
+      }
+
+      updateWidths()
+
+      const timeoutId = window.setTimeout(updateWidths, 150)
+      window.addEventListener('resize', updateWidths)
+
+      return () => {
+        window.clearTimeout(timeoutId)
+        window.removeEventListener('resize', updateWidths)
+      }
+    }, [texts])
+
     const getStaggerDelay = (index: number, totalChars: number) => {
       if (staggerFrom === 'first') {
         return index * staggerDuration
@@ -197,11 +225,25 @@ const RotatingText = forwardRef<RotatingTextRef, RotatingTextProps>(
     return (
       <motion.span
         className={cn(styles.textRotate, className, mainClassName)}
-        layout
+        layout='size'
+        animate={measuredWidths[currentTextIndex] ? { width: measuredWidths[currentTextIndex] } : undefined}
         transition={transition}
         {...rest}
       >
         <span className={styles.srOnly}>{texts[currentTextIndex]}</span>
+        <span className={styles.measureContainer} aria-hidden='true'>
+          {texts.map((text, index) => (
+            <span
+              key={`${text}-${index}`}
+              ref={element => {
+                measureRefs.current[index] = element
+              }}
+              className={cn(styles.measureText, className, mainClassName, elementLevelClassName)}
+            >
+              {text}
+            </span>
+          ))}
+        </span>
 
         <AnimatePresence mode={animatePresenceMode} initial={animatePresenceInitial}>
           <motion.span
