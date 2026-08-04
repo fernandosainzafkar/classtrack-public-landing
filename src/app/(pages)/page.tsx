@@ -99,8 +99,6 @@ const Home = () => {
       <Testimonials testimonials={testimonialsData} />
       <PricingSection plans={pricingPlans} />
       <FAQ faqItems={faqData} />
-      <div id='soro-blog'></div>
-      <Script src='https://app.trysoro.com/api/embed/0a7474dc-0774-436d-b11e-e614351e484d' strategy='afterInteractive' />
       <CTA />
       <script
         type='application/ld+json'

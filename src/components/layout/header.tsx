@@ -87,7 +87,7 @@ const Header = ({ navigationData, className }: HeaderProps) => {
 
           <Link
             href={signupUrl}
-            className='bg-primary text-primary-foreground hover:bg-secondary/90 hidden items-center justify-center rounded-lg px-5 py-2 text-sm font-medium transition-colors lg:inline-flex'
+            className='bg-primary text-primary-foreground hover:bg-primary/90 hidden items-center justify-center rounded-lg px-5 py-2 text-sm font-medium transition-colors lg:inline-flex'
           >
             Prueba gratis
           </Link>
