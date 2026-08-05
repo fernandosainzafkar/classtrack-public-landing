@@ -21,7 +21,7 @@ const BenefitsSection = ({
   academyModules: string[]
 }) => {
   return (
-    <section id='benefits' className='py-8 sm:py-16 lg:py-24'>
+    <section id='benefits' className='pt-6 pb-8 sm:pt-10 sm:pb-16 lg:pt-14 lg:pb-24'>
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         {/* Header */}
         <div className='mb-12 space-y-4 text-center sm:mb-16 lg:mb-24'>

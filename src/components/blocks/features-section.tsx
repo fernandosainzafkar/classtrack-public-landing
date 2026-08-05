@@ -47,7 +47,7 @@ function FeatureCard({ feature, isMobile = false }: { feature: FeatureItem; isMo
       ref={ref}
       id={feature.id}
       className={
-        isMobile ? 'flex min-h-[30vh] justify-center px-4 pb-8' : 'flex min-h-screen items-center justify-center pt-20'
+        isMobile ? 'flex min-h-[30vh] justify-center px-4 pb-8' : 'flex min-h-[60vh] items-center justify-center pt-8'
       }
     >
       <motion.div
@@ -83,7 +83,7 @@ const Features = ({ features }: { features: FeatureItem[] }) => {
   const isMobileScreen = useIsMobile()
 
   return (
-    <section id='features' className='py-8 sm:py-16 lg:py-24'>
+    <section id='features' className='pt-8 pb-0 sm:pt-16 sm:pb-4 lg:pt-24 lg:pb-8'>
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         {/* Header */}
         <div className='mb-12 space-y-4 text-center'>
@@ -154,7 +154,7 @@ const Features = ({ features }: { features: FeatureItem[] }) => {
             </div>
 
             {/* Mobile Feature Cards */}
-            <div className='relative max-md:mt-[55vh] md:-mt-[100vh]'>
+            <div className='relative max-md:mt-[55vh] md:-mt-[80vh]'>
               {features.map(feature => (
                 <FeatureCard key={feature.id} feature={feature} isMobile={isMobileScreen} />
               ))}
