@@ -17,10 +17,10 @@ const HeroSection = () => {
 
 
   return (
-    <section className='relative -mt-20 overflow-hidden bg-[url(/images/bg-pattern.webp)] pt-28 sm:pt-36 lg:pt-44'>
-      <div className='mx-auto flex max-w-7xl flex-col items-center gap-12 px-4 sm:gap-16 sm:px-6 lg:gap-24 lg:px-8'>
+    <section className='relative -mt-20 overflow-hidden bg-[url(/images/bg-pattern.webp)] pt-24 sm:pt-36 lg:pt-44'>
+      <div className='mx-auto flex max-w-7xl flex-col items-center gap-10 px-4 sm:gap-16 sm:px-6 lg:gap-24 lg:px-8'>
         {/* Hero Content */}
-        <div className='flex flex-col items-center gap-4 text-center'>
+        <div className='flex flex-col items-center gap-3 text-center sm:gap-4'>
           <HeroBadge />
           <MotionPreset
             component='h1'
@@ -28,7 +28,7 @@ const HeroSection = () => {
             slide={{ direction: 'down', offset: 50 }}
             delay={0.2}
             transition={{ duration: 0.5, ease: 'easeOut' }}
-            className='max-w-5xl text-5xl font-semibold leading-[0.95] tracking-[-0.04em] text-balance sm:text-6xl lg:text-7xl'
+            className='max-w-5xl text-4xl font-semibold leading-[0.98] tracking-[-0.04em] text-balance sm:text-6xl lg:text-7xl'
           >
             <span className='flex flex-wrap items-center justify-center gap-x-3 gap-y-1.5'>
               <span>Software para</span>
@@ -55,7 +55,7 @@ const HeroSection = () => {
             slide={{ direction: 'down', offset: 50 }}
             delay={0.4}
             transition={{ duration: 0.5, ease: 'easeOut' }}
-            className='text-muted-foreground max-w-3xl text-lg sm:text-xl'
+            className='text-muted-foreground max-w-3xl text-base leading-relaxed sm:text-xl'
           >
             Crea tu web, automatiza matrículas online y centraliza alumnos, pagos y comunicación desde una única plataforma pensada para captar más clientes y reducir gestión manual.
           </MotionPreset>
@@ -64,17 +64,17 @@ const HeroSection = () => {
             slide={{ direction: 'down', offset: 50 }}
             delay={0.6}
             transition={{ duration: 0.5, ease: 'easeOut' }}
-            className='flex flex-wrap items-center justify-center gap-4'
+            className='flex w-full flex-col items-center justify-center gap-3 sm:w-auto sm:flex-row sm:gap-4'
           >
             <Link
               href='https://admin.classtrack.academy/signup'
-              className='bg-primary text-primary-foreground inline-flex min-w-60 items-center justify-center rounded-lg px-6 py-3 text-base font-medium transition-opacity hover:opacity-90'
+              className='bg-primary text-primary-foreground inline-flex w-full max-w-sm items-center justify-center rounded-lg px-5 py-2.5 text-sm font-medium transition-opacity hover:opacity-90 sm:min-w-60 sm:px-6 sm:py-3 sm:text-base'
             >
               Empieza tu prueba de 14 días gratis
             </Link>
             <Link
               href='https://admin.classtrack.academy/signup'
-              className='border-border bg-background text-foreground inline-flex min-w-60 items-center justify-center gap-3 rounded-lg border px-6 py-3 text-base font-medium transition-colors hover:bg-accent'
+              className='border-border bg-background text-foreground inline-flex w-full max-w-sm items-center justify-center gap-3 rounded-lg border px-5 py-2.5 text-sm font-medium transition-colors hover:bg-accent sm:min-w-60 sm:px-6 sm:py-3 sm:text-base'
             >
               <svg aria-hidden='true' viewBox='0 0 24 24' className='size-5 shrink-0'>
                 <path
@@ -103,7 +103,7 @@ const HeroSection = () => {
             slide={{ direction: 'down', offset: 30 }}
             delay={0.75}
             transition={{ duration: 0.45, ease: 'easeOut' }}
-            className='text-muted-foreground text-sm'
+            className='text-muted-foreground text-xs sm:text-sm'
           >
             Sin tarjeta de crédito · Cancela cuando quieras
           </MotionPreset>

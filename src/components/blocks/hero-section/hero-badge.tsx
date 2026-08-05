@@ -9,7 +9,7 @@ const HeroBadge = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.45, ease: 'easeOut' }}
-      className='border-primary/15 bg-background/80 text-foreground flex items-center gap-4 rounded-full border px-5 py-3 text-sm shadow-sm backdrop-blur-sm sm:px-7 sm:text-base'
+      className='border-primary/15 bg-background/80 text-foreground flex items-center gap-3 rounded-full border px-4 py-2 text-xs shadow-sm backdrop-blur-sm sm:gap-4 sm:px-7 sm:py-3 sm:text-base'
     >
       <span className='bg-primary size-3 rounded-full' />
       <span className='text-balance'>
