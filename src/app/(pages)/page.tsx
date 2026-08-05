@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import Script from 'next/script'
 
 import HeroSection from '@/components/blocks/hero-section/hero-section'
-import PlatformStrip from '@/components/blocks/platform-strip'
 import Features from '@/components/blocks/features-section'
 import Benefits from '@/components/blocks/benefits-section/benefits-section'
 import Quote from '@/components/blocks/quote-section'
@@ -88,7 +87,6 @@ const Home = () => {
   return (
     <>
       <HeroSection />
-      <PlatformStrip />
       <Features features={FeaturesData} />
       <Benefits
         academyActivities={academyActivities}

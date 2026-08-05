@@ -4,11 +4,12 @@ import Link from 'next/link'
 
 import { ChevronUpIcon } from 'lucide-react'
 
-import { Marquee } from '@/components/ui/marquee'
 import { MotionPreset } from '@/components/ui/motion-preset'
+import Orb from '@/components/ui/orb'
 import RotatingText from '@/components/ui/rotating-text'
 
 import HeroBadge from '@/components/blocks/hero-section/hero-badge'
+import PlatformStrip from '@/components/blocks/platform-strip'
 
 import InfoIcon from '@/assets/svg/info-icon'
 import StarBadge from '@/assets/svg/star-badge'
@@ -17,8 +18,12 @@ const HeroSection = () => {
 
 
   return (
-    <section className='relative -mt-20 overflow-hidden bg-[url(/images/bg-pattern.webp)] pt-24 sm:pt-36 lg:pt-44'>
-      <div className='mx-auto flex max-w-7xl flex-col items-center gap-10 px-4 sm:gap-16 sm:px-6 lg:gap-24 lg:px-8'>
+    <section className='relative -mt-20 overflow-hidden bg-[#050814] pt-28 text-white sm:pt-32 lg:pt-32 xl:pt-36'>
+      <div className='pointer-events-none absolute inset-0 z-0'>
+        <Orb hoverIntensity={0.35} rotateOnHover={false} hue={0} forceHoverState={false} backgroundColor='#0617f5' scale={1.4} />
+      </div>
+      <div className='pointer-events-none absolute inset-x-0 bottom-0 z-5 h-24 bg-linear-to-t from-[#050814] to-transparent' />
+      <div className='relative z-10 mx-auto flex max-w-7xl flex-col items-center gap-8 px-4 sm:gap-14 sm:px-6 lg:gap-16 lg:px-8'>
         {/* Hero Content */}
         <div className='flex flex-col items-center gap-3 text-center sm:gap-4'>
           <HeroBadge />
@@ -28,25 +33,24 @@ const HeroSection = () => {
             slide={{ direction: 'down', offset: 50 }}
             delay={0.2}
             transition={{ duration: 0.5, ease: 'easeOut' }}
-            className='max-w-5xl text-4xl font-semibold leading-[0.98] tracking-[-0.04em] text-balance sm:text-6xl lg:text-7xl'
+            className='max-w-5xl text-4xl font-semibold leading-[0.92] tracking-[-0.04em] text-balance sm:text-6xl sm:leading-[0.95] lg:text-7xl'
           >
-            <span className='flex flex-wrap items-center justify-center gap-x-3 gap-y-1.5'>
+            <span className='flex flex-wrap items-baseline justify-center gap-x-3 gap-y-0 sm:gap-y-1'>
               <span>Software para</span>
               <RotatingText
                 texts={['academias', 'gimnasios', 'psicólogos', 'coaches']}
-                mainClassName='mt-4 bg-transparent !text-primary overflow-visible px-1 pt-1.5 pb-3 sm:pt-2 sm:pb-3.5'
+                mainClassName='bg-transparent !text-primary overflow-visible px-1 pt-0.5 pb-1 sm:pt-2 sm:pb-3.5'
                 staggerFrom='last'
                 initial={{ y: '100%' }}
                 animate={{ y: 0 }}
                 exit={{ y: '-105%' }}
                 staggerDuration={0.03}
-                splitLevelClassName='overflow-hidden pb-2 sm:pb-2.5'
+                splitLevelClassName='overflow-hidden pb-1 sm:pb-2.5'
                 elementLevelClassName='leading-[1.1]'
                 transition={{ type: 'spring', damping: 30, stiffness: 400 }}
                 rotationInterval={4000}
               />
-              <span>y mucho más</span>
-              <span className='text-primary'>.</span>
+              <span>y mucho más.</span>
             </span>
           </MotionPreset>
           <MotionPreset
@@ -55,7 +59,7 @@ const HeroSection = () => {
             slide={{ direction: 'down', offset: 50 }}
             delay={0.4}
             transition={{ duration: 0.5, ease: 'easeOut' }}
-            className='text-muted-foreground max-w-3xl text-base leading-relaxed sm:text-xl'
+            className='max-w-3xl text-base leading-relaxed text-white/75 sm:text-xl'
           >
             Crea tu web, automatiza matrículas online y centraliza alumnos, pagos y comunicación desde una única plataforma pensada para captar más clientes y reducir gestión manual.
           </MotionPreset>
@@ -64,17 +68,17 @@ const HeroSection = () => {
             slide={{ direction: 'down', offset: 50 }}
             delay={0.6}
             transition={{ duration: 0.5, ease: 'easeOut' }}
-            className='flex w-full flex-col items-center justify-center gap-3 sm:w-auto sm:flex-row sm:gap-4'
+            className='flex w-full flex-col items-center justify-center gap-3 md:w-auto md:flex-row md:flex-nowrap md:gap-4'
           >
             <Link
               href='https://admin.classtrack.academy/signup'
-              className='bg-primary text-primary-foreground inline-flex w-full max-w-sm items-center justify-center rounded-lg px-5 py-2.5 text-sm font-medium transition-opacity hover:opacity-90 sm:min-w-60 sm:px-6 sm:py-3 sm:text-base'
+              className='bg-primary text-primary-foreground inline-flex w-full max-w-sm items-center justify-center rounded-lg px-5 py-2.5 text-sm font-medium transition-opacity hover:opacity-90 md:w-auto md:min-w-60 md:max-w-none md:px-6 md:py-3 md:text-base'
             >
-              Empieza tu prueba de 14 días gratis
+              Prueba gratis 14 días
             </Link>
             <Link
               href='https://admin.classtrack.academy/signup'
-              className='border-border bg-background text-foreground inline-flex w-full max-w-sm items-center justify-center gap-3 rounded-lg border px-5 py-2.5 text-sm font-medium transition-colors hover:bg-accent sm:min-w-60 sm:px-6 sm:py-3 sm:text-base'
+              className='border-border bg-background text-foreground inline-flex w-full max-w-sm items-center justify-center gap-3 rounded-lg border px-5 py-2.5 text-sm font-medium transition-colors hover:bg-accent md:w-auto md:min-w-60 md:max-w-none md:px-6 md:py-3 md:text-base'
             >
               <svg aria-hidden='true' viewBox='0 0 24 24' className='size-5 shrink-0'>
                 <path
@@ -94,7 +98,7 @@ const HeroSection = () => {
                   fill='#EA4335'
                 />
               </svg>
-              Empieza con Google
+              Empieza gratis con Google
             </Link>
           </MotionPreset>
           <MotionPreset
@@ -103,13 +107,13 @@ const HeroSection = () => {
             slide={{ direction: 'down', offset: 30 }}
             delay={0.75}
             transition={{ duration: 0.45, ease: 'easeOut' }}
-            className='text-muted-foreground text-xs sm:text-sm'
+            className='text-xs text-white/60 sm:text-sm'
           >
             Sin tarjeta de crédito · Cancela cuando quieras
           </MotionPreset>
         </div>
 
-        <div className='relative flex w-full items-end justify-center pt-19'>
+        <div className='relative flex w-full items-end justify-center pt-6 sm:pt-14 lg:pt-16'>
           {/* Floating card 1 */}
           <MotionPreset
             fade
@@ -130,7 +134,7 @@ const HeroSection = () => {
                 }
               }
             }}
-            className='bg-card absolute top-[3.5%] left-[19%] flex -rotate-3 items-center gap-2 rounded-lg border px-3 py-1.5 max-lg:hidden'
+            className='bg-card text-foreground absolute top-[3.5%] left-[19%] flex -rotate-3 items-center gap-2 rounded-lg border px-3 py-1.5 max-lg:hidden'
           >
             <span className='grid size-8 place-content-center rounded-full border shadow-sm'>🎓</span>
             <span className='font-medium'>Nueva matrícula</span>
@@ -164,7 +168,7 @@ const HeroSection = () => {
                 }
               }
             }}
-            className='bg-card absolute top-[16.4%] left-3 flex -rotate-3 items-center gap-1.5 rounded-full px-3 py-2 max-lg:hidden'
+            className='bg-card text-foreground absolute top-[16.4%] left-3 flex -rotate-3 items-center gap-1.5 rounded-full px-3 py-2 max-lg:hidden'
           >
             <span className='grid size-10 place-content-center rounded-full border shadow-sm'>
               <InfoIcon className='size-5.5' />
@@ -195,7 +199,7 @@ const HeroSection = () => {
                 }
               }
             }}
-            className='bg-card absolute top-[7.5%] right-[10.5%] flex rotate-3 flex-col gap-1 rounded-xl border px-3 py-4 shadow-xl max-lg:hidden'
+            className='bg-card text-foreground absolute top-[7.5%] right-[10.5%] flex rotate-3 flex-col gap-1 rounded-xl border px-3 py-4 shadow-xl max-lg:hidden'
           >
             <span className='text-muted-foreground text-sm'>Matrículas este mes</span>
             <div className='flex items-center justify-between gap-2'>
@@ -308,19 +312,8 @@ const HeroSection = () => {
             />
           </MotionPreset>
         </div>
-        <div className='from-background absolute inset-x-0 bottom-0 h-16 bg-linear-to-t to-transparent' />
+        <PlatformStrip variant='dark' className='-mt-4 pt-0 pb-8 sm:-mt-6 sm:pt-0 sm:pb-10 lg:-mt-4 lg:pt-0 lg:pb-12' />
       </div>
-
-      {/* Background Marquee */}
-      <Marquee duration={50} gap={0} className='absolute inset-0 -z-1 p-0'>
-        <img src='/images/cloud-image.webp' alt='Cloud image' className='inset-0 opacity-60 dark:hidden' />
-
-        <img
-          src='/images/cloud-image-dark.webp'
-          alt='Cloud image dark'
-          className='inset-0 hidden opacity-40 dark:inline-block'
-        />
-      </Marquee>
 
     </section>
   )

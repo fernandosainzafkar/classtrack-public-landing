@@ -9,11 +9,11 @@ const HeroBadge = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.45, ease: 'easeOut' }}
-      className='border-primary/15 bg-background/80 text-foreground flex items-center gap-3 rounded-full border px-4 py-2 text-xs shadow-sm backdrop-blur-sm sm:gap-4 sm:px-7 sm:py-3 sm:text-base'
+      className='border-primary/15 bg-background/80 text-foreground flex items-center gap-2 rounded-full border px-3 py-1.5 text-[11px] shadow-sm backdrop-blur-sm sm:gap-3 sm:px-5 sm:py-2 sm:text-sm lg:px-6 lg:py-2.5'
     >
-      <span className='bg-primary size-3 rounded-full' />
+      <span className='bg-primary size-2.5 rounded-full' />
       <span className='text-balance'>
-        Web, matrículas, pagos y comunicación en una sola plataforma
+        Web, matrículas y pagos en una sola plataforma
       </span>
     </motion.div>
   )
