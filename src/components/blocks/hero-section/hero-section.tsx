@@ -249,7 +249,14 @@ const HeroSection = () => {
             delay={1}
             transition={{ duration: 0.7 }}
             className='bg-background absolute right-1/2 bottom-0 aspect-square w-[28%] -translate-x-[78%] -rotate-2 rounded-md opacity-50 max-sm:hidden'
-          />
+          >
+            <img src='/images/widget-left-2.png' alt='Panel de gestión académica de ClassTrack' className='dark:hidden' />
+            <img
+              src='/images/widget-left-2.png'
+              alt='Panel de gestión académica de ClassTrack'
+              className='hidden dark:inline-block rounded-md'
+            />
+          </MotionPreset>
 
           {/* Card Behind 2 */}
           <MotionPreset
@@ -259,8 +266,15 @@ const HeroSection = () => {
             delay={1}
             transition={{ duration: 0.7 }}
             className='bg-background absolute bottom-0 left-1/2 aspect-square w-[28%] translate-x-[78%] rotate-2 rounded-md opacity-50 max-sm:hidden'
-          />
-
+          >
+          <img src='/images/widget-right-2.png' alt='Panel de gestión académica de ClassTrack' className='dark:hidden' />
+            <img
+              src='/images/widget-right-2.png'
+              alt='Panel de gestión académica de ClassTrack'
+              className='hidden dark:inline-block rounded-md'
+            />
+          </MotionPreset>
+          
           {/* Widget card left */}
           <MotionPreset
             fade
@@ -274,7 +288,7 @@ const HeroSection = () => {
             <img
               src='/images/widget-left.png'
               alt='Panel de gestión académica de ClassTrack'
-              className='hidden dark:inline-block'
+              className='hidden dark:inline-block rounded-md'
             />
           </MotionPreset>
 
@@ -291,7 +305,7 @@ const HeroSection = () => {
             <img
               src='/images/widget-right.png'
               alt='Módulos de automatización para academias'
-              className='hidden dark:inline-block'
+              className='hidden dark:inline-block rounded-md'
             />
           </MotionPreset>
 
@@ -304,9 +318,9 @@ const HeroSection = () => {
             transition={{ duration: 0.7 }}
             className='w-full max-w-[37.5%] min-w-xs'
           >
-            <img src='/images/hero-mobile.png' alt='El software para academias ClassTrack' className='dark:hidden' />
+            <img src='/images/hero-mobile_.png' alt='El software para academias ClassTrack' className='dark:hidden' />
             <img
-              src='/images/hero-mobile.png'
+              src='/images/hero-mobile_.png'
               alt='Software para academias ClassTrack'
               className='hidden dark:inline-block'
             />
