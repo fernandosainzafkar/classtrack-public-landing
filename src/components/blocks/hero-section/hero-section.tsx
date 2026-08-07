@@ -250,7 +250,7 @@ const HeroSection = () => {
             transition={{ duration: 0.7 }}
             className='bg-background absolute right-1/2 bottom-0 aspect-square w-[28%] -translate-x-[78%] -rotate-2 rounded-md opacity-50 max-sm:hidden'
           >
-            <img src='/images/widget-left-2.png' alt='Panel de gestión académica de ClassTrack' className='dark:hidden' />
+            <img src='/images/widget-left-2.png' alt='Panel de gestión académica de ClassTrack' className='dark:hidden rounded-md' />
             <img
               src='/images/widget-left-2.png'
               alt='Panel de gestión académica de ClassTrack'
@@ -267,7 +267,7 @@ const HeroSection = () => {
             transition={{ duration: 0.7 }}
             className='bg-background absolute bottom-0 left-1/2 aspect-square w-[28%] translate-x-[78%] rotate-2 rounded-md opacity-50 max-sm:hidden'
           >
-          <img src='/images/widget-right-2.png' alt='Panel de gestión académica de ClassTrack' className='dark:hidden' />
+          <img src='/images/widget-right-2.png' alt='Panel de gestión académica de ClassTrack' className='dark:hidden rounded-md' />
             <img
               src='/images/widget-right-2.png'
               alt='Panel de gestión académica de ClassTrack'
@@ -284,7 +284,7 @@ const HeroSection = () => {
             transition={{ duration: 0.7 }}
             className='absolute right-1/2 bottom-0 w-[32.25%] -translate-x-[38%] max-sm:hidden'
           >
-            <img src='/images/widget-left.png' alt='Panel de gestión académica de ClassTrack' className='dark:hidden' />
+            <img src='/images/widget-left.png' alt='Panel de gestión académica de ClassTrack' className='dark:hidden rounded-md' />
             <img
               src='/images/widget-left.png'
               alt='Panel de gestión académica de ClassTrack'
@@ -301,11 +301,11 @@ const HeroSection = () => {
             transition={{ duration: 0.7 }}
             className='absolute bottom-0 left-1/2 w-[32.25%] translate-x-[38%] max-sm:hidden'
           >
-            <img src='/images/widget-right.png' alt='Módulos de automatización para academias' className='dark:hidden' />
+            <img src='/images/widget-right.png' alt='Módulos de automatización para academias' className='dark:hidden rounded-md' />
             <img
               src='/images/widget-right.png'
               alt='Módulos de automatización para academias'
-              className='hidden dark:inline-block rounded-md'
+              className='hidden dark:inline-block rounded-md rounded-md'
             />
           </MotionPreset>
 
