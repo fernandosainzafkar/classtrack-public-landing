@@ -147,18 +147,27 @@ const PricingSection = ({ plans }: PricingProps) => {
                       ))}
                     </div>
 
-                    {!plan.isHighlighted && (
-                      <CalendlyButton
-                        className='border-border bg-background text-foreground hover:bg-accent inline-flex w-full items-center justify-center rounded-lg border px-6 py-3 text-base font-medium transition-colors'
+                    {plan.ctaHref ? (
+                      <a
+                        href={plan.ctaHref}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        className={cn(
+                          'inline-flex w-full items-center justify-center rounded-lg border px-6 py-3 text-base font-medium transition-colors',
+                          plan.isHighlighted
+                            ? 'bg-primary text-primary-foreground border-transparent hover:opacity-90'
+                            : 'border-border bg-background text-foreground hover:bg-accent'
+                        )}
                       >
-                        Solicitar demo
+                        {plan.ctaLabel}
+                      </a>
+                    ) : !plan.isHighlighted ? (
+                      <CalendlyButton className='border-border bg-background text-foreground hover:bg-accent inline-flex w-full items-center justify-center rounded-lg border px-6 py-3 text-base font-medium transition-colors'>
+                        {plan.ctaLabel}
                       </CalendlyButton>
-                    )}
-                    {plan.isHighlighted && (
-                      <CalendlyButton
-                        className='bg-primary text-primary-foreground inline-flex w-full items-center justify-center rounded-lg px-6 py-3 text-base font-medium transition-opacity hover:opacity-90'
-                      >
-                        Solicitar demo
+                    ) : (
+                      <CalendlyButton className='bg-primary text-primary-foreground inline-flex w-full items-center justify-center rounded-lg px-6 py-3 text-base font-medium transition-opacity hover:opacity-90'>
+                        {plan.ctaLabel}
                       </CalendlyButton>
                     )}
                   </CardContent>

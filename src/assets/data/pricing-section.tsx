@@ -14,6 +14,8 @@ export type PricingPlan = {
   features: string[]
   isHighlighted?: boolean
   isLimited?: boolean
+  ctaLabel: string
+  ctaHref?: string
 }
 
 export const pricingPlans: PricingPlan[] = [
@@ -29,7 +31,9 @@ export const pricingPlans: PricingPlan[] = [
       'Integración con Holded',
       'Integración con Moodle',
       'Soporte vía chat/correo'
-    ]
+    ],
+    ctaLabel: 'Empieza tu prueba gratuita',
+    ctaHref: 'https://admin.classtrack.academy/signup'
   },
   {
     name: 'Pro',
@@ -45,7 +49,9 @@ export const pricingPlans: PricingPlan[] = [
       'Soporte vía account manager dedicado',
       'Acompañamiento personalizado a la implementación'
     ],
-    isHighlighted: false
+    isHighlighted: false,
+    ctaLabel: 'Empieza tu prueba gratuita',
+    ctaHref: 'https://admin.classtrack.academy/signup'
   },
   {
     name: 'Enterprise',
@@ -58,6 +64,7 @@ export const pricingPlans: PricingPlan[] = [
       'APIs e integraciones avanzadas con sistemas externos',
       'Gestión multicampus y franquicias'
     ],
-    isLimited: false
+    isLimited: false,
+    ctaLabel: 'Solicitar demo'
   }
 ]

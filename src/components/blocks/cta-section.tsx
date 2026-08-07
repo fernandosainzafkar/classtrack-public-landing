@@ -34,10 +34,12 @@ const CTASection = () => {
                   </CalendlyButton>
 
                   <Link
-                    href='#pricing'
+                    href='https://admin.classtrack.academy/signup'
+                    target='_blank'
+                    rel='noopener noreferrer'
                     className='border-border bg-background text-foreground hover:bg-accent inline-flex min-w-50 items-center justify-center rounded-lg border px-6 py-3 text-base font-medium transition-colors'
                   >
-                    Ver planes
+                    Empieza tu prueba gratuita
                   </Link>
                 </div>
 
