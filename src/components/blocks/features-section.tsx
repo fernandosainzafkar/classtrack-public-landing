@@ -90,7 +90,7 @@ const Features = ({ features }: { features: FeatureItem[] }) => {
     ? useTransform(
         sectionProgress,
         [0, 0.18, 0.4, 0.58, 0.76, 1],
-        ['0%', '0%', '-17%', '-34%', '-53%', '-73%']
+        ['0%', '-0%', '-25%', '-34%', '-43%', '-76%']
       )
     : useTransform(
         sectionProgress,

@@ -5,6 +5,7 @@ import HeroSection from '@/components/blocks/hero-section/hero-section'
 import Features from '@/components/blocks/features-section'
 import Benefits from '@/components/blocks/benefits-section/benefits-section'
 import Quote from '@/components/blocks/quote-section'
+import IntegrationsSection from '@/components/blocks/integrations-section'
 import Testimonials from '@/components/blocks/testimonials-section/testimonials-section'
 import PricingSection from '@/components/blocks/pricing-section'
 import FAQ from '@/components/blocks/faq-section'
@@ -94,6 +95,7 @@ const Home = () => {
         academyModules={academyModules}
       />
       <Quote />
+      <IntegrationsSection />
       <Testimonials testimonials={testimonialsData} />
       <PricingSection plans={pricingPlans} />
       <FAQ faqItems={faqData} />
