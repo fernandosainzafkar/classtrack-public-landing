@@ -5,25 +5,25 @@ export const testimonialsData: TestimonialItem[] = [
     name: 'Adrián M.',
     rating: 5,
     content:
-      'Lo que más valoro de Classtrack es la solidez. Mis alumnos sienten que están en una plataforma de primer nivel, no en un simple repositorio de archivos. Ha elevado el valor percibido de mis cursos.'
+      'Lo que más valoro de Classtrack es la solidez. Mis clientes sienten que están en una plataforma de primer nivel, no en un simple repositorio de archivos. Ha elevado el valor percibido de mis cursos.'
   },
   {
     name: 'Beatriz Rivas',
     rating: 5,
     content:
-      'Tener los horarios, los materiales y el seguimiento de notas en un solo panel ha sido un respiro. Classtrack ha eliminado el ruido mental que supone llevar una academia. Todo está donde debe estar.'
+      'Tener los horarios, los materiales y el seguimiento de notas en un solo panel ha sido un respiro. Classtrack ha eliminado el ruido mental que supone llevar un centro. Todo está donde debe estar.'
   },
   {
     name: 'Carlos Tejada',
     rating: 5,
     content:
-      'Antes perdía horas enviando PDFs por correo y confirmando fechas por WhatsApp. Ahora centralizo todo en mi portal de Classtrack y los alumnos se autogestionan. Me ha devuelto mi tiempo libre.'
+      'Antes perdía horas enviando PDFs por correo y confirmando fechas por WhatsApp. Ahora centralizo todo en mi portal de Classtrack y los clientes se autogestionan. Me ha devuelto mi tiempo libre.'
   },
   {
     name: 'Valentina Rossi',
     rating: 5,
     content:
-      'Lo que diferencia a Classtrack es cómo profesionaliza la relación con el alumno. El portal es tan intuitivo que refuerza nuestra imagen de marca en cada interacción. No es solo un software, es parte de nuestra propuesta de valor.'
+      'Lo que diferencia a Classtrack es cómo profesionaliza la relación con el cliente. El portal es tan intuitivo que refuerza nuestra imagen de marca en cada interacción. No es solo un software, es parte de nuestra propuesta de valor.'
   },
   {
     name: 'Roberto Sánchez',

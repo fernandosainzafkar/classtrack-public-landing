@@ -152,7 +152,7 @@ const MoneyPageTemplate = ({
           <div className='space-y-2'>
             <h2 className='text-2xl font-semibold md:text-3xl'>Recursos relacionados</h2>
             <p className='text-muted-foreground'>
-              Explora otras páginas estratégicas de ClassTrack para seguir evaluando la mejor solución para tu academia.
+              Explora otras páginas estratégicas de ClassTrack para seguir evaluando la mejor solución para tu centro.
             </p>
           </div>
           <div className='flex flex-wrap gap-3'>

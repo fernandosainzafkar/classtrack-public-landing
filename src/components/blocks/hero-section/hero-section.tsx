@@ -38,7 +38,7 @@ const HeroSection = () => {
             <span className='flex flex-wrap items-baseline justify-center gap-x-3 gap-y-0 sm:gap-y-1'>
               <span>Software para</span>
               <RotatingText
-                texts={['academias', 'gimnasios', 'psicólogos', 'coaches']}
+                texts={['academias', 'gimnasios', 'fisioterapeutas', 'psicólogos', 'coaches']}
                 mainClassName='bg-transparent !text-primary overflow-visible px-1 pt-0.5 pb-1 sm:pt-2 sm:pb-3.5'
                 staggerFrom='last'
                 initial={{ y: '100%' }}
@@ -48,7 +48,7 @@ const HeroSection = () => {
                 splitLevelClassName='overflow-hidden pb-1 sm:pb-2.5'
                 elementLevelClassName='leading-[1.1]'
                 transition={{ type: 'spring', damping: 30, stiffness: 400 }}
-                rotationInterval={4000}
+                rotationInterval={2000}
               />
               <span>y mucho más.</span>
             </span>
@@ -61,7 +61,7 @@ const HeroSection = () => {
             transition={{ duration: 0.5, ease: 'easeOut' }}
             className='max-w-3xl text-base leading-relaxed text-white/75 sm:text-xl'
           >
-            Crea tu web, automatiza matrículas online y centraliza alumnos, pagos y comunicación desde una única plataforma pensada para captar más clientes y reducir gestión manual.
+            Crea tu web, automatiza matrículas online y centraliza clientes, pagos y comunicación desde una única plataforma pensada para captar más clientes y reducir gestión manual.
           </MotionPreset>
           <MotionPreset
             fade
@@ -139,7 +139,7 @@ const HeroSection = () => {
             <span className='grid size-8 place-content-center rounded-full border shadow-sm'>🎓</span>
             <span className='font-medium'>Nueva matrícula</span>
             <span className='text-muted-foreground text-xs'>Marketing Digital</span>
-            <span className='ml-6 text-sm text-emerald-600'>+1 alumno</span>
+            <span className='ml-6 text-sm text-emerald-600'>+1 cliente</span>
           </MotionPreset>
 
           {/* Floating card 2 */}
@@ -250,10 +250,10 @@ const HeroSection = () => {
             transition={{ duration: 0.7 }}
             className='bg-background absolute right-1/2 bottom-0 aspect-square w-[28%] -translate-x-[78%] -rotate-2 rounded-md opacity-50 max-sm:hidden'
           >
-            <img src='/images/widget-left-2.png' alt='Panel de gestión académica de ClassTrack' className='dark:hidden rounded-md' />
+            <img src='/images/widget-left-2.png' alt='Panel de gestión de ClassTrack' className='dark:hidden rounded-md' />
             <img
               src='/images/widget-left-2.png'
-              alt='Panel de gestión académica de ClassTrack'
+              alt='Panel de gestión de ClassTrack'
               className='hidden dark:inline-block rounded-md'
             />
           </MotionPreset>
@@ -267,10 +267,10 @@ const HeroSection = () => {
             transition={{ duration: 0.7 }}
             className='bg-background absolute bottom-0 left-1/2 aspect-square w-[28%] translate-x-[78%] rotate-2 rounded-md opacity-50 max-sm:hidden'
           >
-          <img src='/images/widget-right-2.png' alt='Panel de gestión académica de ClassTrack' className='dark:hidden rounded-md' />
+          <img src='/images/widget-right-2.png' alt='Panel de gestión de ClassTrack' className='dark:hidden rounded-md' />
             <img
               src='/images/widget-right-2.png'
-              alt='Panel de gestión académica de ClassTrack'
+              alt='Panel de gestión de ClassTrack'
               className='hidden dark:inline-block rounded-md'
             />
           </MotionPreset>
@@ -284,10 +284,10 @@ const HeroSection = () => {
             transition={{ duration: 0.7 }}
             className='absolute right-1/2 bottom-0 w-[32.25%] -translate-x-[38%] max-sm:hidden'
           >
-            <img src='/images/widget-left.png' alt='Panel de gestión académica de ClassTrack' className='dark:hidden rounded-md' />
+            <img src='/images/widget-left.png' alt='Panel de gestión de ClassTrack' className='dark:hidden rounded-md' />
             <img
               src='/images/widget-left.png'
-              alt='Panel de gestión académica de ClassTrack'
+              alt='Panel de gestión de ClassTrack'
               className='hidden dark:inline-block rounded-md'
             />
           </MotionPreset>
@@ -301,10 +301,10 @@ const HeroSection = () => {
             transition={{ duration: 0.7 }}
             className='absolute bottom-0 left-1/2 w-[32.25%] translate-x-[38%] max-sm:hidden'
           >
-            <img src='/images/widget-right.png' alt='Módulos de automatización para academias' className='dark:hidden rounded-md' />
+            <img src='/images/widget-right.png' alt='Módulos de automatización para centros' className='dark:hidden rounded-md' />
             <img
               src='/images/widget-right.png'
-              alt='Módulos de automatización para academias'
+              alt='Módulos de automatización para centros'
               className='hidden dark:inline-block rounded-md rounded-md'
             />
           </MotionPreset>
@@ -318,10 +318,10 @@ const HeroSection = () => {
             transition={{ duration: 0.7 }}
             className='w-full max-w-[37.5%] min-w-xs'
           >
-            <img src='/images/hero-mobile_.png' alt='El software para academias ClassTrack' className='dark:hidden' />
+            <img src='/images/hero-mobile_.png' alt='El software para centros ClassTrack' className='dark:hidden' />
             <img
               src='/images/hero-mobile_.png'
-              alt='Software para academias ClassTrack'
+              alt='Software para centros ClassTrack'
               className='hidden dark:inline-block'
             />
           </MotionPreset>

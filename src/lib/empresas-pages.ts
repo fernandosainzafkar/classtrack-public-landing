@@ -8,35 +8,35 @@ type EmpresasPageData = MoneyPageTemplateProps & {
 }
 
 const siteRelatedLinks: LinkItem[] = [
-  { href: '/software-para-academias', label: 'Software para academias' },
-  { href: '/gestion-de-academias', label: 'Gestión de academias' },
+  { href: '/software-para-academias', label: 'Software para centros' },
+  { href: '/gestion-de-academias', label: 'Gestión de centros' },
   { href: '/matriculas-online-para-academias', label: 'Matrículas online' },
   { href: '/articles', label: 'Artículos y recursos' }
 ]
 
 const academiasIdiomasFaqs: FAQItem[] = [
   {
-    question: '¿ClassTrack sirve para academias de idiomas con varios niveles y grupos?',
+    question: '¿ClassTrack sirve para centros de idiomas con varios niveles y grupos?',
     answer:
-      'Sí. Está pensado para organizar alumnos, grupos y operativa diaria de forma centralizada, evitando herramientas dispersas.'
+      'Sí. Está pensado para organizar clientes, grupos y operativa diaria de forma centralizada, evitando herramientas dispersas.'
   },
   {
-    question: '¿Puedo captar alumnos desde una web y matricularlos online?',
+    question: '¿Puedo captar clientes desde una web y matricularlos online?',
     answer:
       'Sí. La idea es conectar la captación con la matrícula online y la gestión interna para reducir fricción y aumentar conversión.'
   },
   {
     question: '¿Se puede usar para varias sedes o centros?',
     answer:
-      'Sí. Es una base escalable para academias en crecimiento que necesitan ordenar procesos sin multiplicar herramientas.'
+      'Sí. Es una base escalable para centros en crecimiento que necesitan ordenar procesos sin multiplicar herramientas.'
   }
 ]
 
 const refuerzoEscolarFaqs: FAQItem[] = [
   {
-    question: '¿Es útil para academias con refuerzo por asignaturas o niveles?',
+    question: '¿Es útil para centros con refuerzo por asignaturas o niveles?',
     answer:
-      'Sí. Permite centralizar la información del alumno y la operativa del centro para trabajar con más control y menos carga administrativa.'
+      'Sí. Permite centralizar la información del cliente y la operativa del centro para trabajar con más control y menos carga administrativa.'
   },
   {
     question: '¿Ayuda a gestionar comunicación con familias?',
@@ -52,9 +52,9 @@ const refuerzoEscolarFaqs: FAQItem[] = [
 
 const oposicionesFaqs: FAQItem[] = [
   {
-    question: '¿Sirve para academias con programas y preparación por convocatorias?',
+    question: '¿Sirve para centros con programas y preparación por convocatorias?',
     answer:
-      'Sí. Te ayuda a mantener la operativa ordenada, con alumnos, pagos y procesos internos centralizados.'
+      'Sí. Te ayuda a mantener la operativa ordenada, con clientes, pagos y procesos internos centralizados.'
   },
   {
     question: '¿Puedo reducir tareas administrativas sin perder control?',
@@ -70,9 +70,9 @@ const oposicionesFaqs: FAQItem[] = [
 
 const musicaFaqs: FAQItem[] = [
   {
-    question: '¿ClassTrack se adapta a academias de música con distintos formatos de clases?',
+    question: '¿ClassTrack se adapta a centros de música con distintos formatos de clases?',
     answer:
-      'Sí. Es una base flexible para organizar inscripciones, alumnos y operativa interna con procesos más claros.'
+      'Sí. Es una base flexible para organizar inscripciones, clientes y operativa interna con procesos más claros.'
   },
   {
     question: '¿Puedo facilitar el alta y las matrículas online?',
@@ -82,7 +82,7 @@ const musicaFaqs: FAQItem[] = [
   {
     question: '¿Ayuda a tener más control sobre cobros y pagos?',
     answer:
-      'Sí. Centralizar pagos y estado del alumno permite una gestión más eficiente y con menos incidencias.'
+      'Sí. Centralizar pagos y estado del cliente permite una gestión más eficiente y con menos incidencias.'
   }
 ]
 
@@ -126,7 +126,7 @@ const coachesFaqs: FAQItem[] = [
   {
     question: '¿Funciona para coaches con servicios individuales o programas?',
     answer:
-      'Sí. Te ayuda a estructurar captación, altas y pagos con procesos más claros y una experiencia más profesional.'
+      'Sí. Te ayuda a estructurar captación, altas y cobros con procesos más claros y una experiencia más profesional.'
   },
   {
     question: '¿Puedo automatizar parte de la administración?',
@@ -143,32 +143,32 @@ const coachesFaqs: FAQItem[] = [
 export const empresasPages: Record<string, EmpresasPageData> = {
   academiasIdiomas: {
     path: '/empresas/academias-de-idiomas',
-    metadataTitle: 'Software para academias de idiomas',
+    metadataTitle: 'Software para centros de idiomas',
     metadataDescription:
-      'Software para academias de idiomas: web, matrículas online, alumnos, pagos y comunicación en una sola plataforma. Descubre ClassTrack.',
-    keywords: ['software academias de idiomas', 'software para academias de idiomas', 'gestión academias de idiomas', 'matrículas online idiomas'],
-    badge: 'Empresas · Academias de idiomas',
-    title: 'Software para academias de idiomas: más matrículas, menos fricción',
+      'Software para centros de idiomas: web, matrículas online, clientes, pagos y comunicación en una sola plataforma. Descubre ClassTrack.',
+    keywords: ['software centros de idiomas', 'software para centros de idiomas', 'gestión centros de idiomas', 'matrículas online idiomas'],
+    badge: 'Empresas · Centros de idiomas',
+    title: 'Software para centros de idiomas: más matrículas, menos fricción',
     intro:
-      'ClassTrack ayuda a academias de idiomas a centralizar web, captación, matrículas online, pagos y gestión de alumnos para crecer con procesos más claros.',
+      'ClassTrack ayuda a centros de idiomas a centralizar web, captación, matrículas online, pagos y gestión de clientes para crecer con procesos más claros.',
     highlights: ['Web orientada a conversión', 'Matrículas online conectadas', 'Gestión operativa centralizada'],
-    problemsTitle: 'Problemas habituales en academias de idiomas',
+    problemsTitle: 'Problemas habituales en centros de idiomas',
     problems: [
       'La captación y la matrícula no están conectadas con la operativa real del centro.',
-      'La información del alumno se dispersa entre hojas de cálculo, formularios y conversaciones.',
-      'El aumento de alumnos incrementa tareas administrativas y errores manuales.'
+      'La información del cliente se dispersa entre hojas de cálculo, formularios y conversaciones.',
+      'El aumento de clientes incrementa tareas administrativas y errores manuales.'
     ],
     benefitsTitle: 'Qué aporta ClassTrack',
     benefits: [
-      'Un proceso más fluido desde la web hasta la matrícula y el alta del alumno.',
-      'Más control sobre pagos, estado del alumno y comunicación desde un solo lugar.',
+      'Un proceso más fluido desde la web hasta la matrícula y el alta del cliente.',
+      'Más control sobre pagos, estado del cliente y comunicación desde un solo lugar.',
       'Una base operativa escalable para crecer sin multiplicar herramientas.'
     ],
-    featuresTitle: 'Funciones clave para academias de idiomas',
+    featuresTitle: 'Funciones clave para centros de idiomas',
     features: [
-      'Web para academias de idiomas con estructura y mensajes orientados a captar alumnos.',
+      'Web para centros de idiomas con estructura y mensajes orientados a captar clientes.',
       'Matrículas online que reducen fricción y aceleran altas.',
-      'Gestión de alumnos y operativa diaria desde una fuente única de información.',
+      'Gestión de clientes y operativa diaria desde una fuente única de información.',
       'Pagos y control administrativo centralizados para evitar errores y retrasos.',
       'Comunicación más ordenada para seguimiento y coordinación interna.'
     ],
@@ -178,33 +178,33 @@ export const empresasPages: Record<string, EmpresasPageData> = {
   },
   refuerzoEscolar: {
     path: '/empresas/academias-de-refuerzo-escolar',
-    metadataTitle: 'Software para academias de refuerzo escolar',
+    metadataTitle: 'Software para centros de refuerzo escolar',
     metadataDescription:
-      'Software para academias de refuerzo escolar: organiza alumnos, matrículas, pagos y comunicación en una plataforma diseñada para crecer con control.',
-    keywords: ['software academias de refuerzo escolar', 'gestión academias refuerzo', 'programa para academias de refuerzo', 'matrículas online refuerzo'],
+      'Software para centros de refuerzo escolar: organiza clientes, matrículas, pagos y comunicación en una plataforma diseñada para crecer con control.',
+    keywords: ['software centros de refuerzo escolar', 'gestión centros refuerzo', 'programa para centros de refuerzo', 'matrículas online refuerzo'],
     badge: 'Empresas · Refuerzo escolar',
-    title: 'Software para academias de refuerzo escolar con gestión centralizada',
+    title: 'Software para centros de refuerzo escolar con gestión centralizada',
     intro:
-      'ClassTrack te ayuda a ordenar la operativa de tu academia: alumnos, matrículas, pagos y comunicación, evitando dispersión y procesos manuales.',
-    highlights: ['Gestión por alumno', 'Operativa más clara', 'Menos tareas administrativas'],
+      'ClassTrack te ayuda a ordenar la operativa de tu centro: clientes, matrículas, pagos y comunicación, evitando dispersión y procesos manuales.',
+    highlights: ['Gestión por cliente', 'Operativa más clara', 'Menos tareas administrativas'],
     problemsTitle: 'Qué suele complicar la gestión del refuerzo escolar',
     problems: [
       'Cambios de grupos, horarios y coordinación generan carga operativa.',
       'La comunicación con familias se dispersa en múltiples canales.',
-      'Los datos del alumno y el estado de pagos se pierden entre herramientas.'
+      'Los datos del cliente y el estado de pagos se pierden entre herramientas.'
     ],
     benefitsTitle: 'Resultados esperables',
     benefits: [
-      'Más control sobre alumnos, matrículas y pagos con menos fricción operativa.',
+      'Más control sobre clientes, matrículas y pagos con menos fricción operativa.',
       'Procesos más ordenados para el equipo y mejor experiencia para familias.',
       'Una base escalable para crecer sin depender de hojas de cálculo.'
     ],
-    featuresTitle: 'Funciones clave para academias de refuerzo',
+    featuresTitle: 'Funciones clave para centros de refuerzo',
     features: [
       'Matrículas online conectadas con la gestión interna para reducir trabajo manual.',
-      'Gestión centralizada del alumno para seguimiento y coordinación más simple.',
+      'Gestión centralizada del cliente para seguimiento y coordinación más simple.',
       'Control administrativo y pagos más claros para evitar incidencias.',
-      'Comunicación más ordenada entre equipo, alumnos y familias.'
+      'Comunicación más ordenada entre equipo, clientes y familias.'
     ],
     faqTitle: 'Preguntas frecuentes',
     faqs: refuerzoEscolarFaqs,
@@ -212,16 +212,16 @@ export const empresasPages: Record<string, EmpresasPageData> = {
   },
   oposiciones: {
     path: '/empresas/academias-de-oposiciones',
-    metadataTitle: 'Software para academias de oposiciones',
+    metadataTitle: 'Software para centros de oposiciones',
     metadataDescription:
-      'Software para academias de oposiciones: matrículas online, alumnos, pagos y gestión centralizada para escalar sin perder control.',
-    keywords: ['software academias de oposiciones', 'gestión academias oposiciones', 'programa para academia de oposiciones', 'matrículas online oposiciones'],
+      'Software para centros de oposiciones: matrículas online, clientes, pagos y gestión centralizada para escalar sin perder control.',
+    keywords: ['software centros de oposiciones', 'gestión centros oposiciones', 'programa para centro de oposiciones', 'matrículas online oposiciones'],
     badge: 'Empresas · Oposiciones',
-    title: 'Software para academias de oposiciones: más control, menos administración',
+    title: 'Software para centros de oposiciones: más control, menos administración',
     intro:
-      'ClassTrack centraliza captación, matrículas, alumnos y pagos para que tu academia de oposiciones trabaje con procesos más claros y escalables.',
+      'ClassTrack centraliza captación, matrículas, clientes y pagos para que tu centro de oposiciones trabaje con procesos más claros y escalables.',
     highlights: ['Operativa central', 'Procesos conectados', 'Escalabilidad'],
-    problemsTitle: 'Problemas habituales en academias de oposiciones',
+    problemsTitle: 'Problemas habituales en centros de oposiciones',
     problems: [
       'Los procesos comerciales y administrativos están separados y generan fricción.',
       'El crecimiento aumenta la carga de coordinación y el riesgo de errores manuales.',
@@ -229,15 +229,15 @@ export const empresasPages: Record<string, EmpresasPageData> = {
     ],
     benefitsTitle: 'Qué consigues con ClassTrack',
     benefits: [
-      'Más claridad sobre matrículas, pagos y estado de alumnos desde una sola plataforma.',
+      'Más claridad sobre matrículas, pagos y estado de clientes desde una sola plataforma.',
       'Menos tareas repetitivas y mayor control de la operativa diaria.',
       'Una base sólida para crecer por convocatorias, programas o centros.'
     ],
-    featuresTitle: 'Funciones clave para academias de oposiciones',
+    featuresTitle: 'Funciones clave para centros de oposiciones',
     features: [
       'Web y captación conectadas con la matrícula para reducir fricción.',
       'Matrículas online pensadas para aumentar conversión y acelerar el alta.',
-      'Gestión centralizada del alumno y control administrativo en un mismo sistema.',
+      'Gestión centralizada del cliente y control administrativo en un mismo sistema.',
       'Pagos y seguimiento con información unificada para decisiones más claras.'
     ],
     faqTitle: 'Preguntas frecuentes',
@@ -246,20 +246,20 @@ export const empresasPages: Record<string, EmpresasPageData> = {
   },
   musica: {
     path: '/empresas/academias-de-musica',
-    metadataTitle: 'Software para academias de música',
+    metadataTitle: 'Software para centros de música',
     metadataDescription:
-      'Software para academias de música: web, inscripciones, pagos y gestión operativa centralizados para crecer con menos fricción.',
-    keywords: ['software academias de música', 'software para academias de musica', 'gestión academias de música', 'inscripciones academia de música'],
+      'Software para centros de música: web, inscripciones, pagos y gestión operativa centralizados para crecer con menos fricción.',
+    keywords: ['software centros de música', 'software para centros de musica', 'gestión centros de música', 'inscripciones centro de música'],
     badge: 'Empresas · Música',
-    title: 'Software para academias de música con inscripción y gestión centralizadas',
+    title: 'Software para centros de música con inscripción y gestión centralizadas',
     intro:
-      'ClassTrack ayuda a academias de música a organizar inscripciones, alumnos, pagos y operativa diaria con procesos más claros y una experiencia más profesional.',
+      'ClassTrack ayuda a centros de música a organizar inscripciones, clientes, pagos y operativa diaria con procesos más claros y una experiencia más profesional.',
     highlights: ['Inscripción más ágil', 'Operativa más ordenada', 'Pagos centralizados'],
-    problemsTitle: 'Problemas habituales en academias de música',
+    problemsTitle: 'Problemas habituales en centros de música',
     problems: [
       'La gestión diaria se dispersa entre herramientas y comunicaciones sueltas.',
       'La inscripción y el alta requieren demasiados pasos manuales.',
-      'El control de pagos y estado del alumno no está centralizado.'
+      'El control de pagos y estado del cliente no está centralizado.'
     ],
     benefitsTitle: 'Qué aporta ClassTrack',
     benefits: [
@@ -267,10 +267,10 @@ export const empresasPages: Record<string, EmpresasPageData> = {
       'Más control operativo y menos carga administrativa para el equipo.',
       'Una base escalable para crecer sin aumentar complejidad.'
     ],
-    featuresTitle: 'Funciones clave para academias de música',
+    featuresTitle: 'Funciones clave para centros de música',
     features: [
       'Web para presentar tu oferta y captar solicitudes de forma más efectiva.',
-      'Matrículas online conectadas con la gestión interna del alumno.',
+      'Matrículas online conectadas con la gestión interna del cliente.',
       'Control administrativo y de pagos desde un mismo lugar.',
       'Procesos conectados para reducir errores y coordinación manual.'
     ],

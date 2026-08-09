@@ -24,7 +24,7 @@ const TestimonialsComponent = ({ testimonials }: TestimonialsComponentProps) => 
           Testimonios
         </Badge>
 
-        <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>Más de 1000 alumnos ya utilizan ClassTrack</h2>
+        <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>Más de 1000 clientes ya utilizan ClassTrack</h2>
 
         <p className='text-muted-foreground text-lg md:text-xl'>
           Una plataforma construida en torno a la seguridad, la claridad y el éxito del usuario{' '}

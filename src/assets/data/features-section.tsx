@@ -1,48 +1,37 @@
-import ChecklistMinimalistic from '@/assets/svg/checklist-minimalistic'
-import PhoneNotification from '@/assets/svg/phone-notification'
-import Target from '@/assets/svg/target'
-import UserId from '@/assets/svg/user-id'
-import UsersArrow from '@/assets/svg/users-arrow'
-
 export const FeaturesData = [
   {
-    id: 'personalized-budgeting',
-    icon: <UserId />,
-    title: 'Crea la web de tu academia y capta más matrículas.',
+    id: 'web',
+    title: 'Paso 1 · Tu web lista en minutos.',
     description:
-      'Publica una web profesional adaptada a tu marca para que tus futuros alumnos descubran tu oferta formativa, encuentren la información clave y completen su matrícula online sin fricción.',
+      'Lanza una web profesional con tus cursos, precios y matrícula online. Sin código y lista para vender desde el día uno.',
     position: 'left' as const
   },
   {
-    id: 'smart-expense-tracking',
-    icon: <ChecklistMinimalistic />,
-    title: 'Automatiza matrículas, formularios e inscripciones.',
+    id: 'matriculas',
+    title: 'Paso 2 · Matrículas automáticas 24/7.',
     description:
-      'Optimiza el proceso de captación y admisión con formularios, solicitudes y matrículas digitales que reducen tareas manuales y mejoran la conversión.',
+      'El cliente se inscribe, paga online y queda matriculado al instante. Tú no revisas correos ni rellenas fichas.',
     position: 'right' as const
   },
   {
-    id: 'seamless-transactions',
-    icon: <UsersArrow />,
-    title: 'Gestiona alumnos, grupos y operativa diaria.',
+    id: 'pagos',
+    title: 'Paso 3 · Pagos automáticos cada mes.',
     description:
-      'Centraliza alumnos, clases, grupos, seguimiento y tareas administrativas para que tu equipo trabaje con más orden, menos errores y mayor eficiencia.',
+      'Pagos con tarjeta y por remesa. ClassTrack cobra, registra cada pago y te avisa si hay un impagado.',
     position: 'left' as const
   },
   {
-    id: 'goal-oriented-savings',
-    icon: <Target />,
-    title: 'Controla pagos, asistencia y rendimiento en tiempo real.',
+    id: 'facturacion',
+    title: 'Paso 4 · Facturas y avisos automáticos.',
     description:
-      'Consulta métricas clave de tu academia, visualiza la evolución de matrículas y pagos, y toma decisiones apoyadas en datos reales de tu negocio.',
+      'Genera y envía facturas, recordatorios de pago y comunicaciones sin intervención manual. Todo al momento.',
     position: 'right' as const
   },
   {
-    id: 'instant-financial-insights',
-    icon: <PhoneNotification />,
-    title: 'Todo tu centro formativo en una sola plataforma.',
+    id: 'control',
+    title: 'Paso 5 · Todo tu centro en un panel.',
     description:
-      'Integra web, gestión académica, pagos, comunicación y automatizaciones en una solución intuitiva y segura accesible desde cualquier dispositivo.',
+      'Clientes, grupos, asistencia, caja y rendimiento en un solo sitio. Sabrás lo que ocurre sin abrir 5 herramientas.',
     position: 'left' as const
   }
 ]

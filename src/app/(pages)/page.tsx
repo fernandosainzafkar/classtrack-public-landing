@@ -19,14 +19,14 @@ import { faqData } from '@/assets/data/faq-section'
 const siteUrl = process.env.NEXT_PUBLIC_APP_URL ?? 'https://www.classtrack.academy'
 
 export const metadata: Metadata = {
-  title: 'Software para academias en España',
+  title: 'Software para centros en España',
   description:
-    'ClassTrack es el software de gestión para academias con web, matrículas online, alumnos, pagos y comunicación centralizados en una sola plataforma.',
+    'ClassTrack es el software de gestión para centros con web, matrículas online, clientes, pagos y comunicación centralizados en una sola plataforma.',
   keywords: [
-    'software para academias',
-    'software de gestión para academias',
-    'programa para academias',
-    'matrículas online para academias',
+    'software para centros',
+    'software de gestión para centros',
+    'programa para centros',
+    'matrículas online para centros',
     'software para centros de formación'
   ],
   alternates: {
@@ -43,7 +43,7 @@ const jsonLd = {
       '@id': `${siteUrl}#website`,
       name: 'ClassTrack',
       description:
-        'Software de gestión para academias con web, matrículas, alumnos, pagos y comunicación en una sola plataforma.',
+        'Software de gestión para centros con web, matrículas, clientes, pagos y comunicación en una sola plataforma.',
       url: siteUrl,
       inLanguage: 'es-ES'
     },
@@ -62,7 +62,7 @@ const jsonLd = {
       applicationCategory: 'BusinessApplication',
       operatingSystem: 'Web',
       description:
-        'Software para academias que centraliza captación, matrículas, gestión de alumnos, pagos y comunicación con familias y alumnos.',
+        'Software para centros que centraliza captación, matrículas, gestión de clientes, pagos y comunicación con familias y clientes.',
       url: siteUrl,
       publisher: {
         '@id': `${siteUrl}#organization`

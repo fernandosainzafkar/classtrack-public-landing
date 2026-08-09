@@ -16,9 +16,9 @@ const RelatedBlogSection = ({ posts }: { posts: PostMetadata[] }) => {
           <Badge className='border-primary text-primary px-3 py-1 text-sm [&>svg]:size-6' variant='outline'>
             ARTÍCULOS
           </Badge>
-          <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>Sigue explorando recursos para academias</h2>
+          <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>Sigue explorando recursos para centros</h2>
           <p className='text-muted-foreground text-base md:text-xl'>
-            Descubre más contenidos sobre digitalización, matrículas, gestión de alumnos y crecimiento de tu centro.
+            Descubre más contenidos sobre digitalización, matrículas, gestión de clientes y crecimiento de tu centro.
           </p>
         </div>
 

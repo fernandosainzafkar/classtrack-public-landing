@@ -21,7 +21,7 @@ const BenefitsSection = ({
   academyModules: string[]
 }) => {
   return (
-    <section id='benefits' className='pt-6 pb-8 sm:pt-10 sm:pb-16 lg:pt-14 lg:pb-24'>
+    <section id='benefits' className='pt-2 pb-8 sm:pt-3 sm:pb-16 lg:pt-8 lg:pb-24'>
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         {/* Header */}
         <div className='mb-12 space-y-4 text-center sm:mb-16 lg:mb-24'>
@@ -50,8 +50,8 @@ const BenefitsSection = ({
             delay={0.4}
             transition={{ duration: 0.7 }}
           >
-            ClassTrack centraliza la captación, la gestión académica y la operativa diaria de tu academia para que tu
-            equipo trabaje con más claridad, menos tareas manuales y una mejor experiencia para el alumno.
+            ClassTrack centraliza la captación, los calendarios, los pagos, la comunicación, la gestión académica y la operativa diaria de tu centro para que tu
+            equipo trabaje con más claridad, menos tareas manuales y una mejor experiencia para el cliente.
           </MotionPreset>
         </div>
 
@@ -96,9 +96,9 @@ const BenefitsSection = ({
                       blur
                       slide={{ direction: 'down', offset: 15 }}
                       delay={1.35}
-                      className='text-2xl font-semibold md:text-3xl lg:text-4xl'
+                      className='text-xl font-semibold md:text-2xl lg:text-3xl'
                     >
-                      Una experiencia clara para tu equipo y tus alumnos
+                      Una experiencia clara para ti y tus clientes
                     </MotionPreset>
 
                     <MotionPreset
@@ -109,7 +109,7 @@ const BenefitsSection = ({
                       delay={1.5}
                       className='text-muted-foreground text-base md:text-lg'
                     >
-                      Diseñado para simplificar procesos complejos: matrículas, seguimiento del alumno, pagos,
+                      Diseñado para simplificar procesos complejos: matrículas, seguimiento del cliente, pagos,
                       comunicación y gestión diaria en una interfaz intuitiva y fácil de adoptar.
                     </MotionPreset>
                   </div>

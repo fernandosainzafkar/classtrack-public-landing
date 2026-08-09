@@ -87,7 +87,7 @@ const AcademyOperations = ({ activities }: { activities: ActivityRow[] }) => {
           transition={{ duration: 0.5 }}
           className='text-xl font-semibold md:text-center md:text-2xl'
         >
-          Controla la operación diaria de tu academia
+          Controla la operación diaria de tu centro
         </MotionPreset>
 
         <MotionPreset
@@ -99,7 +99,7 @@ const AcademyOperations = ({ activities }: { activities: ActivityRow[] }) => {
           transition={{ duration: 0.5 }}
           className='text-muted-foreground text-base md:text-center md:text-lg'
         >
-          Supervisa matrículas, pagos, actividad académica y tareas clave en tiempo real para gestionar tu academia con
+          Supervisa matrículas, pagos, actividad académica y tareas clave en tiempo real para gestionar tu centro con
           más control y menos trabajo manual.
         </MotionPreset>
       </CardContent>

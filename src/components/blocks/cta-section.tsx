@@ -18,11 +18,11 @@ const CTASection = () => {
                 </Badge>
 
                 <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>
-                  Centraliza tu academia y prepárala para crecer
+                  Centraliza tu centro y prepáralo para crecer
                 </h2>
 
                 <p className='text-muted-foreground mb-8 text-xl'>
-                  Descubre cómo ClassTrack te ayuda a captar alumnos, automatizar matrículas, simplificar pagos y
+                  Descubre cómo ClassTrack te ayuda a captar clientes, automatizar matrículas, simplificar pagos y
                   gestionar tu operación diaria desde una sola plataforma.
                 </p>
 
@@ -56,12 +56,12 @@ const CTASection = () => {
 
               <div className='flex flex-1 items-end justify-center'>
                 <img
-                  src='/images/cta-mobile.png'
+                  src='/images/cta-mobile-2.png'
                   alt='Panel de gestión de ClassTrack'
                   className='transition-transform duration-300 group-hover:scale-105 md:max-xl:w-100 dark:hidden'
                 />
                 <img
-                  src='/images/cta-mobile.png'
+                  src='/images/cta-mobile-2.png'
                   alt='Panel de gestión de ClassTrack en modo oscuro'
                   className='hidden transition-transform duration-300 group-hover:scale-105 md:max-xl:w-100 dark:block'
                 />

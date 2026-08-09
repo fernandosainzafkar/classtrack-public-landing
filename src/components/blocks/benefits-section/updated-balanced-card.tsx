@@ -116,7 +116,7 @@ const AcademyGrowthCard = ({
                         <MoveUpRightIcon className='size-3.5 shrink-0' />
                       )}
                       {event.type === 'increase' ? '+' : '-'}
-                      {event.amount} alumnos
+                      {event.amount} clientes
                     </span>
                   </CarouselItem>
                 ))}
@@ -124,7 +124,7 @@ const AcademyGrowthCard = ({
             </Carousel>
 
             <div className='bg-background relative flex w-36 shrink-0 flex-col items-center rounded-xl border px-4.5 py-4 lg:w-40'>
-              <span className='text-muted-foreground text-sm lg:text-base'>Alumnos activos</span>
+              <span className='text-muted-foreground text-sm lg:text-base'>Clientes activos</span>
               <span className='text-xl font-semibold lg:text-2xl'>
                 <NumberTicker value={currentTotal} delay={0.2} />
               </span>
@@ -160,7 +160,7 @@ const AcademyGrowthCard = ({
                         <MoveUpRightIcon className='size-3.5 shrink-0' />
                       )}
                       {event.type === 'increase' ? '+' : '-'}
-                      {event.amount} alumnos
+                      {event.amount} clientes
                     </span>
                   </CarouselItem>
                 ))}
@@ -242,7 +242,7 @@ const AcademyGrowthCard = ({
           transition={{ duration: 0.5 }}
           className='text-xl font-semibold md:text-center md:text-2xl'
         >
-          Sigue el pulso de tu academia en tiempo real
+          Sigue el pulso de tu centro en tiempo real
         </MotionPreset>
 
         <MotionPreset
@@ -254,7 +254,7 @@ const AcademyGrowthCard = ({
           transition={{ duration: 0.5 }}
           className='text-muted-foreground text-base md:text-center md:text-lg'
         >
-          Visualiza la evolución de alumnos, matrículas y áreas clave de tu operación para tomar decisiones más rápidas
+          Visualiza la evolución de clientes, matrículas y áreas clave de tu operación para tomar decisiones más rápidas
           y gestionar el crecimiento con más control.
         </MotionPreset>
       </CardContent>

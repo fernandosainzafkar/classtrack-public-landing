@@ -14,7 +14,7 @@ const Footer = () => {
               <Link href='/#home' className='text-foreground block'>
                 <Logo />
               </Link>
-              <p className='max-w-lg'>ClassTrack es una plataforma todo en uno para la gestión de tu academia.</p>
+              <p className='max-w-lg'>ClassTrack es una plataforma todo en uno para la gestión de tu centro.</p>
             </div>
 
             <div className='flex gap-20 max-sm:flex-col max-sm:gap-8'>
@@ -22,10 +22,10 @@ const Footer = () => {
                 <h3 className='text-foreground text-lg font-semibold'>ClassTrack</h3>
                 <div className='flex flex-col gap-3'>
                   <Link href='/software-para-academias' className='hover:text-foreground transition-colors duration-300'>
-                    Software para academias
+                    Software para centros
                   </Link>
                   <Link href='/gestion-de-academias' className='hover:text-foreground transition-colors duration-300'>
-                    Gestión de academias
+                    Gestión de centros
                   </Link>
                   <Link
                     href='/matriculas-online-para-academias'
@@ -62,7 +62,7 @@ const Footer = () => {
               <Link href='/#home' className='hover:text-foreground transition-colors duration-300'>
                 ClassTrack
               </Link>
-              , software para modernizar la gestión de academias.
+              , software para modernizar la gestión de centros.
             </span>
             <div className='flex items-center gap-4'>
               <Link href='#' className='hover:text-foreground transition-colors duration-300' aria-label='Instagram'>

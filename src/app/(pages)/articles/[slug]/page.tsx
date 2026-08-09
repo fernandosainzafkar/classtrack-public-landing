@@ -111,7 +111,7 @@ const BlogDetailsPage = async ({ params }: { params: Promise<{ slug: string }> }
         '@id': `${siteUrl}#website`,
         name: 'ClassTrack',
         description:
-          'Software para academias con web, matrículas, alumnos, pagos y comunicación en una sola plataforma.',
+          'Software para centros con web, matrículas, clientes, pagos y comunicación en una sola plataforma.',
         url: siteUrl,
         inLanguage: 'es-ES'
       },

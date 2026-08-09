@@ -30,22 +30,22 @@ const robotoMono = Roboto_Mono({
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - ClassTrack | Gestión integral de academias',
-    default: 'ClassTrack - Gestión integral de academias'
+    template: '%s - ClassTrack | Gestión integral de centros',
+    default: 'ClassTrack - Gestión integral de centros'
   },
   description:
-    'Software de gestión para academias en España: crea tu web, automatiza matrículas y centraliza alumnos, pagos y comunicación en una sola plataforma.',
+    'Software de gestión para centros en España: crea tu web, automatiza matrículas y centraliza clientes, pagos y comunicación en una sola plataforma.',
   robots: 'index,follow',
   applicationName: 'ClassTrack',
   keywords: [
-    'software para academias',
-    'software de gestión para academias',
-    'programa para academias',
-    'gestión de academias',
-    'matrículas online para academias',
+    'software para centros',
+    'software de gestión para centros',
+    'programa para centros',
+    'gestión de centros',
+    'matrículas online para centros',
     'software para centros de formación',
-    'gestión de alumnos y pagos',
-    'software academias España'
+    'gestión de clientes y pagos',
+    'software centros España'
   ],
   icons: {
     icon: [
@@ -90,11 +90,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   openGraph: {
     title: {
-      template: 'ClassTrack - Gestión integral de academias',
-      default: 'ClassTrack - Gestión integral de academias'
+      template: 'ClassTrack - Gestión integral de centros',
+      default: 'ClassTrack - Gestión integral de centros'
     },
     description:
-      'Impulsa tu academia con una plataforma todo en uno para web, matrículas, gestión de alumnos, pagos y comunicación.',
+      'Impulsa tu centro con una plataforma todo en uno para web, matrículas, gestión de clientes, pagos y comunicación.',
     type: 'website',
     siteName: 'ClassTrack',
     url: siteUrl,
@@ -105,18 +105,18 @@ export const metadata: Metadata = {
         type: 'image/png',
         width: 1200,
         height: 630,
-        alt: 'ClassTrack - Gestión integral de academias'
+        alt: 'ClassTrack - Gestión integral de centros'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
     title: {
-      template: 'ClassTrack - Gestión integral de academias',
-      default: 'ClassTrack - Gestión integral de academias'
+      template: 'ClassTrack - Gestión integral de centros',
+      default: 'ClassTrack - Gestión integral de centros'
     },
     description:
-      'Software para academias con web, matrículas, alumnos, pagos y comunicación centralizados en una sola plataforma.'
+      'Software para centros con web, matrículas, clientes, pagos y comunicación centralizados en una sola plataforma.'
   }
 }
 

@@ -17,9 +17,9 @@ export const navigationData: Navigation[] = [
       },
       {
         icon: <ReceiptTextIcon className='size-4' />,
-        title: 'Control de alumnos y actividad',
+        title: 'Control de clientes y actividad',
         href: '/#smart-expense-tracking',
-        description: 'Gestiona alumnos, cursos y seguimiento académico de forma sencilla.'
+        description: 'Gestiona clientes, cursos y seguimiento académico de forma sencilla.'
       },
       {
         icon: <SendIcon className='size-4' />,
@@ -39,25 +39,25 @@ export const navigationData: Navigation[] = [
         icon: <LanguagesIcon className='size-4' />,
         title: 'Academias de idiomas',
         href: '/empresas/academias-de-idiomas',
-        description: 'Web, matrículas online, pagos y gestión de alumnos para academias de idiomas.'
+        description: 'Web, matrículas online, pagos y gestión de clientes para centros de idiomas.'
       },
       {
         icon: <BookOpenIcon className='size-4' />,
         title: 'Academias de refuerzo escolar',
         href: '/empresas/academias-de-refuerzo-escolar',
-        description: 'Organiza alumnos, grupos, pagos y comunicación en centros de apoyo escolar.'
+        description: 'Organiza clientes, grupos, pagos y comunicación en centros de apoyo escolar.'
       },
       {
         icon: <GraduationCapIcon className='size-4' />,
         title: 'Academias de oposiciones',
         href: '/empresas/academias-de-oposiciones',
-        description: 'Gestiona matrículas, alumnos, pagos y seguimiento para preparación de oposiciones.'
+        description: 'Gestiona matrículas, clientes, pagos y seguimiento para preparación de oposiciones.'
       },
       {
         icon: <MusicIcon className='size-4' />,
         title: 'Academias de música',
         href: '/empresas/academias-de-musica',
-        description: 'Centraliza inscripciones, gestión de clases y cobros en academias de música.'
+        description: 'Centraliza inscripciones, gestión de clases y cobros en centros de música.'
       },
        {
         icon: <DumbbellIcon className='size-4' />,

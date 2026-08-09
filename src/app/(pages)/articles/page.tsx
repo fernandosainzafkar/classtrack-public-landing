@@ -13,15 +13,15 @@ import { MotionPreset } from '@/components/ui/motion-preset'
 const siteUrl = process.env.NEXT_PUBLIC_APP_URL ?? 'https://www.classtrack.academy'
 
 export const metadata: Metadata = {
-  title: 'Artículos y recursos para academias',
+  title: 'Artículos y recursos para centros',
   description:
-    'Guías, ideas y recursos sobre gestión de academias, matrículas, captación de alumnos, pagos y digitalización de centros formativos.',
+    'Guías, ideas y recursos sobre gestión de centros, matrículas, captación de clientes, pagos y digitalización de centros formativos.',
   keywords: [
-    'artículos para academias',
-    'recursos para academias',
-    'gestión de academias',
+    'artículos para centros',
+    'recursos para centros',
+    'gestión de centros',
     'matrículas online',
-    'captación de alumnos'
+    'captación de clientes'
   ],
   alternates: {
     canonical: `${siteUrl}/articles`
@@ -37,7 +37,7 @@ const jsonLd = {
       '@id': `${siteUrl}#website`,
       name: 'ClassTrack',
       description:
-        'Software para academias con web, matrículas, alumnos, pagos y comunicación en una sola plataforma.',
+        'Software para centros con web, matrículas, clientes, pagos y comunicación en una sola plataforma.',
       url: siteUrl,
       inLanguage: 'es-ES'
     },
@@ -45,9 +45,9 @@ const jsonLd = {
       '@context': 'https://schema.org',
       '@type': 'CollectionPage',
       '@id': `${siteUrl}/articles#webpage`,
-      name: 'Artículos y recursos para academias',
+      name: 'Artículos y recursos para centros',
       description:
-        'Colección de artículos y recursos sobre gestión, digitalización, matrículas y crecimiento de academias.',
+        'Colección de artículos y recursos sobre gestión, digitalización, matrículas y crecimiento de centros formativos.',
       url: `${siteUrl}/articles`,
       isPartOf: {
         '@id': `${siteUrl}#website`
@@ -76,7 +76,7 @@ const ArticlesPage = async () => {
           transition={{ duration: 0.5, ease: 'easeOut' }}
           className='text-2xl font-semibold md:text-3xl lg:text-5xl'
         >
-          Recursos y guías para gestionar tu academia
+          Recursos y guías para gestionar tu centro
         </MotionPreset>
         <MotionPreset
           component='p'
@@ -86,7 +86,7 @@ const ArticlesPage = async () => {
           transition={{ duration: 0.5, ease: 'easeOut' }}
           className='text-muted-foreground text-xl'
         >
-          Explora artículos sobre matrículas, captación de alumnos, pagos, automatización y gestión diaria para academias
+          Explora artículos sobre matrículas, captación de clientes, pagos, automatización y gestión diaria para centros
           y centros formativos.
         </MotionPreset>
       </section>
@@ -102,11 +102,11 @@ const ArticlesPage = async () => {
                   Demo
                 </Badge>
                 <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>
-                  ¿Quieres digitalizar tu academia?
+                  ¿Quieres digitalizar tu centro?
                 </h2>
                 <p className='text-muted-foreground mb-8 text-xl'>
-                  Descubre cómo centralizar web, matrículas, alumnos, pagos y comunicación desde una única plataforma
-                  diseñada para academias.
+                  Descubre cómo centralizar web, matrículas, clientes, pagos y comunicación desde una única plataforma
+                  diseñada para centros.
                 </p>
                 <form className='flex gap-3 max-lg:justify-center max-md:flex-col'>
                   <Input
@@ -123,12 +123,12 @@ const ArticlesPage = async () => {
                 <MotionPreset fade blur slide={{ direction: 'down' }} delay={0.6} transition={{ duration: 0.5 }}>
                   <img
                     src='/images/cta-mobile.png'
-                    alt='Panel de gestión para academias'
+                    alt='Panel de gestión para centros'
                     className='transition-transform duration-300 group-hover:scale-105 dark:hidden'
                   />
                   <img
                     src='/images/cta-mobile.png'
-                    alt='Panel de gestión para academias'
+                    alt='Panel de gestión para centros'
                     className='hidden transition-transform duration-300 group-hover:scale-105 dark:block'
                   />
                 </MotionPreset>

@@ -6,8 +6,6 @@ import { useRef } from 'react'
 import type { MotionValue } from 'motion/react'
 import { motion, useScroll, useTransform } from 'motion/react'
 
-import LogoVector from '@/assets/svg/logo-vector'
-
 import { Badge } from '@/components/ui/badge'
 import { cn } from '@/lib/utils'
 
@@ -16,7 +14,7 @@ import { useIsMobile } from '@/hooks/use-mobile'
 
 type FeatureItem = {
   id: string
-  icon: ReactNode
+  icon?: ReactNode
   title: string
   description: string
   position: 'left' | 'right'
@@ -26,7 +24,15 @@ function useParallax(value: MotionValue<number>, distance: number) {
   return useTransform(value, [0, 1], [-distance, distance])
 }
 
-function FeatureCard({ feature, isMobile = false }: { feature: FeatureItem; isMobile?: boolean }) {
+function FeatureCard({
+  feature,
+  isLast = false,
+  isMobile = false
+}: {
+  feature: FeatureItem
+  isLast?: boolean
+  isMobile?: boolean
+}) {
   const ref = useRef(null)
 
   const { scrollYProgress } = useScroll({
@@ -38,17 +44,26 @@ function FeatureCard({ feature, isMobile = false }: { feature: FeatureItem; isMo
 
   const opacity = useTransform(
     scrollYProgress,
-    isMobile ? [0, 0.3, 0.7, 1] : [0, 0.4, 0.5, 0.6, 1],
-    isMobile ? [0, 1, 1, 0] : [0, 1, 1, 1, 0]
+    isMobile
+      ? [0, 0.3, 0.7, 1]
+      : isLast
+        ? [0, 0.25, 0.55, 0.85, 1]
+        : [0, 0.4, 0.5, 0.6, 1],
+    isMobile ? [0, 1, 1, 0] : isLast ? [0, 1, 1, 1, 0] : [0, 1, 1, 1, 0]
   )
 
   return (
     <section
       ref={ref}
       id={feature.id}
-      className={
-        isMobile ? 'flex min-h-[30vh] justify-center px-4 pb-8' : 'flex min-h-[60vh] items-center justify-center pt-8'
-      }
+      className={cn(
+        'flex items-center justify-center',
+        isMobile
+          ? 'min-h-[30vh] justify-center px-4 pb-8'
+          : isLast
+            ? 'min-h-[60vh] pt-4 pb-0'
+            : 'min-h-[60vh] pt-8'
+      )}
     >
       <motion.div
         className={
@@ -58,18 +73,10 @@ function FeatureCard({ feature, isMobile = false }: { feature: FeatureItem; isMo
         }
         style={{ opacity, y }}
       >
-        <div className='flex items-center gap-4'>
-          <div
-            className={cn(
-              'from-primary/10 to-primary/20 flex shrink-0 items-center justify-center rounded-lg border bg-linear-to-b',
-              isMobile ? 'size-12' : 'size-15'
-            )}
-          >
-            {feature.icon}
-          </div>
+        <div className='space-y-2'>
           <h3 className='text-2xl font-semibold'>{feature.title}</h3>
+          <p className='text-muted-foreground'>{feature.description}</p>
         </div>
-        <p className='text-muted-foreground'>{feature.description}</p>
       </motion.div>
     </section>
   )
@@ -78,12 +85,12 @@ function FeatureCard({ feature, isMobile = false }: { feature: FeatureItem; isMo
 const Features = ({ features }: { features: FeatureItem[] }) => {
   const containerRef = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({ target: containerRef, offset: ['start start', 'end end'] })
-  const imageY = useTransform(scrollYProgress, [0, 1], ['0%', '-60%'])
+  const imageY = useTransform(scrollYProgress, [0, 1], ['0%', '-75%'])
 
   const isMobileScreen = useIsMobile()
 
   return (
-    <section id='features' className='pt-8 pb-0 sm:pt-16 sm:pb-4 lg:pt-24 lg:pb-8'>
+    <section id='features' className='pt-8 pb-0 sm:pt-16 sm:pb-0 lg:pt-24 lg:pb-0'>
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         {/* Header */}
         <div className='mb-12 space-y-4 text-center'>
@@ -113,12 +120,12 @@ const Features = ({ features }: { features: FeatureItem[] }) => {
             transition={{ duration: 0.7 }}
           >
             Con tecnología potente y un diseño intuitivo, elimina los mayores dolores de cabeza en la gestión diaria de
-            tu academia.
+            tu centro.
           </MotionPreset>
         </div>
 
         <MotionPreset fade slide={{ direction: 'down', offset: 50 }} delay={0.6} transition={{ duration: 0.7 }}>
-          <div ref={containerRef} className='relative'>
+          <div ref={containerRef} className='relative pb-0 sm:pb-0 lg:pb-0'>
             {/* Sticky Laptop */}
             <div className='pointer-events-none sticky top-4 z-10 flex w-full justify-center px-4 md:top-0 md:h-screen md:items-center md:justify-end lg:justify-center'>
               <div className='relative flex w-[85%] max-w-md flex-col items-center sm:w-[90%] md:mr-8 md:w-full lg:mr-0 lg:max-w-[480px] xl:max-w-lg'>
@@ -132,13 +139,13 @@ const Features = ({ features }: { features: FeatureItem[] }) => {
                     style={{ aspectRatio: '14/10' }}
                   >
                     <motion.img
-                      src='/images/perplexity.jpg'
+                      src='/images/classtrack_flow.png'
                       alt='App Content'
                       className='h-auto w-full dark:hidden'
                       style={{ originY: 0, y: imageY }}
                     />
                     <motion.img
-                      src='/images/perplexity.jpg'
+                      src='/images/classtrack_flow.png'
                       alt='App Content'
                       className='hidden h-auto w-full dark:inline-block'
                       style={{ originY: 0, y: imageY }}
@@ -155,9 +162,18 @@ const Features = ({ features }: { features: FeatureItem[] }) => {
 
             {/* Mobile Feature Cards */}
             <div className='relative max-md:mt-[55vh] md:-mt-[80vh]'>
-              {features.map(feature => (
-                <FeatureCard key={feature.id} feature={feature} isMobile={isMobileScreen} />
+              {features.map((feature, index) => (
+                <FeatureCard
+                  key={feature.id}
+                  feature={feature}
+                  isLast={index === features.length - 1}
+                  isMobile={isMobileScreen}
+                />
               ))}
+              <div
+                aria-hidden='true'
+                className='pointer-events-none max-md:h-0 md:h-[20vh]'
+              />
             </div>
           </div>
         </MotionPreset>

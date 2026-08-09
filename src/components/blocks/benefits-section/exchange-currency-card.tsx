@@ -287,7 +287,7 @@ const AcademyIntegrationsCard = () => {
                             <GraduationCapIcon className='size-3' />
                           </motion.span>
 
-                          <motion.span>Alumno matriculado</motion.span>
+                          <motion.span>Cliente matriculado</motion.span>
                         </motion.div>
                       </div>
                     </div>
@@ -315,7 +315,7 @@ const AcademyIntegrationsCard = () => {
           delay={2.1}
           className='text-xl font-semibold md:text-center md:text-2xl'
         >
-          Automatiza procesos clave de tu academia
+          Automatiza procesos clave de tu centro
         </MotionPreset>
 
         <MotionPreset

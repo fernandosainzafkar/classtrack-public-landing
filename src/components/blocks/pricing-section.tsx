@@ -38,7 +38,7 @@ const PricingSection = ({ plans }: PricingProps) => {
             delay={0.2}
             transition={{ duration: 0.7 }}
           >
-            Planes para academias de todos los tamaños
+            Planes para centros de todos los tamaños
           </MotionPreset>
 
           <MotionPreset
@@ -49,7 +49,7 @@ const PricingSection = ({ plans }: PricingProps) => {
             delay={0.4}
             transition={{ duration: 0.7 }}
           >
-            Desde academias pequeñas hasta centros con cientos de alumnos. Elige el plan que mejor se adapta a tu operativa, equipo y ritmo de crecimiento.
+            Desde centros pequeños hasta centros con cientos de clientes. Elige el plan que mejor se adapta a tu operativa, equipo y ritmo de crecimiento.
           </MotionPreset>
         </div>
 
