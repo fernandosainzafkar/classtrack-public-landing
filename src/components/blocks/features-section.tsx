@@ -37,19 +37,19 @@ function FeatureCard({
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: isMobile ? ['start 0.85', 'start 0.4'] : ['start end', 'end start']
+    offset: isMobile ? ['start 0.72', 'start 0.28'] : ['start end', 'end start']
   })
 
-  const y = useParallax(scrollYProgress, isMobile ? 40 : 100)
+  const y = useParallax(scrollYProgress, isMobile ? 32 : 100)
 
   const opacity = useTransform(
     scrollYProgress,
     isMobile
-      ? [0, 0.3, 0.7, 1]
+      ? [0, 0.2, 0.55, 0.76, 1]
       : isLast
         ? [0, 0.25, 0.55, 0.85, 1]
         : [0, 0.4, 0.5, 0.6, 1],
-    isMobile ? [0, 1, 1, 0] : isLast ? [0, 1, 1, 1, 0] : [0, 1, 1, 1, 0]
+    isMobile ? [0, 1, 1, 0, 0] : isLast ? [0, 1, 1, 1, 0] : [0, 1, 1, 1, 0]
   )
 
   return (
@@ -59,7 +59,7 @@ function FeatureCard({
       className={cn(
         'flex items-center justify-center',
         isMobile
-          ? 'min-h-[30vh] justify-center px-4 pb-8'
+          ? 'min-h-[28vh] justify-center px-4 pb-10'
           : isLast
             ? 'min-h-[60vh] pt-4 pb-0'
             : 'min-h-[60vh] pt-8'
@@ -84,10 +84,19 @@ function FeatureCard({
 
 const Features = ({ features }: { features: FeatureItem[] }) => {
   const containerRef = useRef<HTMLDivElement>(null)
-  const { scrollYProgress } = useScroll({ target: containerRef, offset: ['start start', 'end end'] })
-  const imageY = useTransform(scrollYProgress, [0, 1], ['0%', '-75%'])
-
   const isMobileScreen = useIsMobile()
+  const { scrollYProgress: sectionProgress } = useScroll({ target: containerRef, offset: ['start start', 'end end'] })
+  const imageY = isMobileScreen
+    ? useTransform(
+        sectionProgress,
+        [0, 0.18, 0.4, 0.58, 0.76, 1],
+        ['0%', '0%', '-17%', '-34%', '-53%', '-73%']
+      )
+    : useTransform(
+        sectionProgress,
+        [0, 0.18, 0.32, 0.48, 0.64, 1],
+        ['0%', '-10%', '-28%', '-40%', '-50%', '-76%']
+      )
 
   return (
     <section id='features' className='pt-8 pb-0 sm:pt-16 sm:pb-0 lg:pt-24 lg:pb-0'>
@@ -127,7 +136,7 @@ const Features = ({ features }: { features: FeatureItem[] }) => {
         <MotionPreset fade slide={{ direction: 'down', offset: 50 }} delay={0.6} transition={{ duration: 0.7 }}>
           <div ref={containerRef} className='relative pb-0 sm:pb-0 lg:pb-0'>
             {/* Sticky Laptop */}
-            <div className='pointer-events-none sticky top-4 z-10 flex w-full justify-center px-4 md:top-0 md:h-screen md:items-center md:justify-end lg:justify-center'>
+            <div className='pointer-events-none sticky top-4 z-10 flex w-full justify-center px-4 max-md:top-[12vh] max-md:h-[42vh] max-md:items-start md:top-0 md:h-screen md:items-center md:justify-end lg:justify-center'>
               <div className='relative flex w-[85%] max-w-md flex-col items-center sm:w-[90%] md:mr-8 md:w-full lg:mr-0 lg:max-w-[480px] xl:max-w-lg'>
                 {/* Laptop Top / Screen Border */}
                 <div className='relative w-full rounded-t-xl border-4 border-b-0 border-zinc-800 bg-zinc-900 p-1 sm:rounded-t-3xl sm:border-6 sm:p-1.5'>
@@ -161,7 +170,7 @@ const Features = ({ features }: { features: FeatureItem[] }) => {
             </div>
 
             {/* Mobile Feature Cards */}
-            <div className='relative max-md:mt-[55vh] md:-mt-[80vh]'>
+            <div className='relative max-md:mt-[28vh] md:-mt-[80vh]'>
               {features.map((feature, index) => (
                 <FeatureCard
                   key={feature.id}
