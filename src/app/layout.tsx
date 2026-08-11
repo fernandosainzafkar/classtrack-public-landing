@@ -137,6 +137,11 @@ const RootLayout = ({ children }: Readonly<{ children: ReactNode }>) => {
             gtag('config', 'G-RLTRQ32PGE');
           `}
         </Script>
+        <Script
+          id='hs-script-loader'
+          strategy='afterInteractive'
+          src='//js-eu1.hs-scripts.com/149079039.js'
+        />
         <ThemeProvider attribute='class' enableSystem={false} disableTransitionOnChange>
           <TooltipProvider>{children}</TooltipProvider>
         </ThemeProvider>

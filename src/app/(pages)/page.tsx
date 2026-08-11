@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Script from 'next/script'
 
 import HeroSection from '@/components/blocks/hero-section/hero-section'
 import Features from '@/components/blocks/features-section'
@@ -20,7 +19,7 @@ import { faqData } from '@/assets/data/faq-section'
 const siteUrl = process.env.NEXT_PUBLIC_APP_URL ?? 'https://www.classtrack.academy'
 
 export const metadata: Metadata = {
-  title: 'Software para centros en España',
+  title: 'ClassTrack | Software para centros en España',
   description:
     'ClassTrack es el software de gestión para centros con web, matrículas online, clientes, pagos y comunicación centralizados en una sola plataforma.',
   keywords: [
